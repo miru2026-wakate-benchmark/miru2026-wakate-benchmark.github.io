@@ -1,117 +1,117 @@
 // Generated from the survey workbook. Do not edit by hand.
 window.PAPERS = [
   {
-    "url": "",
+    "url": "https://arxiv.org/abs/2311.16502",
     "title": "MMMU: A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI",
     "authors": "Xiang Yue, Yuansheng Ni, Kai Zhang, Tianyu Zheng, Ruoqi Liu, Ge Zhang, Samuel Stevens, Dongfu Jiang, Weiming Ren, Yuxuan Sun, Cong Wei, Botao Yu, Ruibin Yuan, Renliang Sun, Ming Yin, Boyuan Zheng, Zhenzhu Yang, Yibo Liu, Wenhao Huang, Huan Sun, Yu Su, Wenhu Chen",
     "venue": "CVPR",
     "year": "2024",
     "field": "Multimodal系",
     "motivation": "領域開拓型",
-    "clarity": "",
+    "clarity": "図1：6領域・30科目，異種画像，画像とテキストの交互入力，専門知識に基づく知覚・推論という4つの特徴を1枚にまとめ，MMMUが単に大規模なVQAベンチマークではないことを冒頭で理解できる．図2：各領域の実問題をSubject／Subfield／Image Type／Difficultyとともに提示し，評価対象と難しさを具体例から把握できる．図3：既存ベンチマークとのbreadth／depth比較により，領域開拓上の差分を明確にしている．",
     "summary": "motivation: domain-establishing\n「LMMの専門知識を含む高度なマルチモーダル理解」という研究領域の立ち上げ"
   },
   {
-    "url": "",
+    "url": "https://arxiv.org/pdf/2504.01848",
     "title": "PaperBench: Evaluating AI’s Ability to Replicate AI Research",
     "authors": "Giulio Starace, Oliver Jaffe, Dane Sherburn, James Aung, Jun Shern Chan, Leon Maksin, Rachel Dias, Evan Mays, Benjamin Kinsella, Wyatt Thompson, Johannes Heidecke, Amelia Glaese, Tejal Patwardhan",
     "venue": "ICML",
     "year": "2025",
     "field": "AI Agents系",
     "motivation": "領域開拓型",
-    "clarity": "",
+    "clarity": "図1：研究論文とrubricを入力として，agentがcodebaseを作成し，fresh VMで再実行した結果をjudgeが採点する流れを1枚にまとめており，open-endedな研究再現をどのように評価可能にしたかが直感的に分かる．図2・2.2〜2.3節：再現要件を階層的なrubricに分解し，leaf nodeのpass／failと重みからscoreを集約するため，部分的な達成も含めて客観的に評価できる理由が理解しやすい．",
     "summary": "motivation: domain-establishing\n「AI Agentが既存AI研究を再現できるか (research replication) 」という研究領域の立ち上げ"
   },
   {
-    "url": "",
+    "url": "https://arxiv.org/abs/2401.13649",
     "title": "VisualWebArena: Evaluating Multimodal Agents on Realistic Visual Web Tasks",
     "authors": "Jing Yu Koh, Robert Lo, Lawrence Jang, Vikram Duvvur, Ming Chong Lim, Po-Yu Huang, Graham Neubig, Shuyan Zhou, Ruslan Salakhutdinov, Daniel Fried",
     "venue": "ACL",
     "year": "2024",
     "field": "AI Agents系",
     "motivation": "欠落補完型",
-    "clarity": "",
+    "clarity": "図1：3種類のWeb環境，具体的なtask instruction，Web画面，agentの操作を並べ，画像を見なければ解けないWebタスクとは何かを冒頭で具体化しているため，WebArenaとの差分が直感的に伝わる．図2・3.1〜3.3節：Set-of-Marksによる画面要素とaction IDの対応に加え，observation／action／evaluationを順に説明しており，モデルへの入出力と評価protocolを具体的に想像しやすい．",
     "summary": "motivation: gap-filling (modality)\nWebArenaという広く使われているweb agent benchmarkがtext-basedであることを踏まえ、視覚情報を必要とするタスクへ拡張"
   },
   {
-    "url": "",
+    "url": "https://arxiv.org/abs/2310.02255",
     "title": "MathVista: Evaluating Mathematical Reasoning of Foundation Models in Visual Contexts",
     "authors": "Pan Lu, Hritik Bansal, Tony Xia, Jiacheng Liu, Chunyuan Li, Hannaneh Hajishirzi, Hao Cheng, Kai-Wei Chang, Michel Galley, Jianfeng Gao",
     "venue": "ICLR",
     "year": "2024",
     "field": "Multimodal系",
     "motivation": "欠落補完型",
-    "clarity": "",
+    "clarity": "図2：新規に作成したIQTest／FunctionQA／PaperQAの具体例を並べ，既存データの統合だけでなく，欠けていたvisual domainを何によって補ったかが分かる．図3・The MathVista Dataset／Data Analysis節：31のsource datasetに加え，task type・mathematical reasoning type・visual contextの分布を別々に可視化し，どの能力空間をどこまで覆うベンチマークかを体系的に理解できる．実験も同じ分類軸で細分化され，総合scoreだけでは見えないモデルの得意・不得意を解釈しやすい．",
     "summary": "motivation: gap-filling (skill)\nLMMにおける数学的推論が十分に理解されていないことを踏まえ、visual mathematical reasoningを測るbenchmarkを作成"
   },
   {
-    "url": "",
+    "url": "https://arxiv.org/abs/2410.17250",
     "title": "JMMMU: A Japanese Massive Multi-discipline Multimodal Understanding Benchmark for Culture-aware Evaluation",
     "authors": "Shota Onohara, Atsuyuki Miyai, Yuki Imajuku, Kazuki Egashira, Jeonghun Baek, Xiang Yue, Graham Neubig, Kiyoharu Aizawa",
     "venue": "NAACL",
     "year": "2025",
     "field": "Multimodal系",
     "motivation": "欠落補完型",
-    "clarity": "",
+    "clarity": "図1：文化非依存（CA）と文化依存（CS）の2 subsetを科目構成と件数まで可視化し，単なる日本語訳ではなく，言語差と文化理解を切り分けて測る設計が一目で分かる．表1：既存の日本語LMMベンチマークを文化考慮・難易度・問題数・画像数で比較し，JMMMUが補う欠落を明確にしている．3.2節・図2：文化依存科目の置換と，文化非依存科目における画像内テキストの日本語化を説明し，データ設計の判断と品質保証の根拠が伝わる．",
     "summary": "motivation: gap-filling (language / culture)\nMMMUを日本語・日本文化文脈へ拡張し、言語・文化依存の性能ギャップを検証"
   },
   {
-    "url": "",
+    "url": "https://arxiv.org/abs/2406.01574",
     "title": "MMLU-Pro: A More Robust and Challenging Multi-Task Language Understanding Benchmark",
     "authors": "Yubo Wang, Xueguang Ma, Ge Zhang, Yuansheng Ni, Abhranil Chandra, Shiguang Guo, Weiming Ren, Aaran Arulraj, Xuan He, Ziyan Jiang, Tianle Li, Max Ku, Kai Wang, Alex Zhuang, Rongqi Fan, Xiang Yue, Wenhu Chen",
     "venue": "NeurIPS D&B",
     "year": "2024",
     "field": "NLP系",
     "motivation": "更新・難化型",
-    "clarity": "",
+    "clarity": "図1：MMLUとのaccuracy gap，24種類のpromptに対するscore分布，CoT／Directの差を1枚にまとめ，「難しくしただけでなく，識別性とprompt頑健性も改善した」という主張が直感的に伝わる．Introduction：MMLUの弱点を少ない選択肢・知識偏重・trivial／noisyな問題に分解し，10択化・推論重視問題・expert reviewという設計判断に対応づけている．図2：easy questionの除外からoption augmentation，expert reviewまでを可視化し，difficultyとqualityをどのように作ったかが明確である．",
     "summary": "motivation: saturation-driven\nMMLUの性能飽和を踏まえ、reasoningをより必要とするような難易度の高いタスクへ拡張"
   },
   {
-    "url": "",
+    "url": "https://arxiv.org/abs/2501.14249",
     "title": "Humanity’s Last Exam / A benchmark of expert-level academic questions to assess AI capabilities",
     "authors": "Center for AI Safety., Scale AI., HLE Contributors Consortium.",
     "venue": "Nature",
     "year": "2026",
     "field": "Multimodal系",
     "motivation": "更新・難化型",
-    "clarity": "",
+    "clarity": "図1：既存ベンチマークの飽和とHLE上での低いscoreを同じ図で比較し，なぜさらに高難度な評価が必要かを冒頭で強く示している．図2：分野の異なる実問題を並べ，expert-levelという抽象的な難しさを具体化している．図4・3.2節：LLM difficulty check→expert review／refinement→最終承認→public／private splitの流れを図示し，「難しいだけでなく，検証可能で高品質な問題である」ことをどのように保証したかが分かりやすい．",
     "summary": "motivation: saturation-driven\nMMLUなどの性能飽和を踏まえ、より高難易度な学術タスクを新規に作成"
   },
   {
-    "url": "",
+    "url": "https://arxiv.org/abs/2510.13626",
     "title": "LIBERO-Plus: A Progressive Robustness Benchmark for Visual-Language-Action Models",
     "authors": "Senyu Fei, Siyin Wang, Junhao Shi, Zihao Dai, Jikun Cai, Pengfang Qian, Li Ji, Xinzhe He, Shiduo Zhang, Zhaoye Fei, Jinlan Fu, Jingjing Gong, Xipeng Qiu",
     "venue": "CVPR",
     "year": "2026",
     "field": "Embodied AI系",
     "motivation": "評価再設計型",
-    "clarity": "",
+    "clarity": "図1・図2：10,030タスクを7種類のperturbation factorと21の下位カテゴリに整理し，さらにL1〜L5の難易度を設ける構造を可視化しているため，robustnessを何の軸で測るかが一目で分かる．表1：既存のVLA robustness benchmarkを自動化・fine-grained性・perturbation coverageで比較し，評価再設計上の差分を明確にしている．結果分析では，難易度別の性能低下に加えて言語入力の除去や目標置換などを行い，見かけの高scoreを真の頑健性や言語理解と誤解しないための解釈まで示している．",
     "summary": "motivation: evaluation validity\nVLAで広く用いられるLIBEROというベンチマークについて、わずかなpurturbationによりその性能が大きく劣化することを示す (robustness validity)"
   },
   {
-    "url": "",
+    "url": "https://arxiv.org/abs/2406.04127",
     "title": "Are We Done with MMLU? (MMLU-Redux)",
     "authors": "Aryo Pradipta Gema, Joshua Ong Jun Leang, Giwon Hong, Alessio Devoto, Alberto Carlo Maria Mancino, Rohit Saxena, Xuanli He, Yu Zhao, Xiaotang Du, Mohammad Reza Ghasemi Madani, Claire Barale, Robert McHardy, Joshua Harris, Jean Kaddour, Emile van Krieken, Pasquale Minervini",
     "venue": "NAACL",
     "year": "2025",
     "field": "NLP系",
     "motivation": "評価再設計型",
-    "clarity": "",
+    "clarity": "図1：MMLUに含まれる誤答ラベルや曖昧な問題の実例を冒頭で示し，広く使われるベンチマークの品質問題を具体的に理解できる．図2・2.1節：question clarity，option clarity，正解数，ground truthとの一致を順に確認するerror annotation protocolをdecision treeで示しており，何をエラーと判定するかが再現可能である．表2・図5〜6：再アノテーション前後のscoreやモデル順位の変化を示し，データ品質がモデル比較を歪めるという主張を定量的に回収している．",
     "summary": "motivation: evaluation validity\nMMLUの正解ラベルや問題品質を検証し、benchmark annotationの曖昧さが性能比較を歪めることを示唆 (annotation validity)"
   },
   {
-    "url": "",
+    "url": "https://arxiv.org/abs/2404.01318",
     "title": "JailbreakBench: An Open Robustness Benchmark for Jailbreaking Large Language Models",
     "authors": "Patrick Chao, Edoardo Debenedetti, Alexander Robey, Maksym Andriushchenko, Francesco Croce, Vikash Sehwag, Edgar Dobriban, Nicolas Flammarion, George J. Pappas, Florian Tramer, Hamed Hassani, Eric Wong",
     "venue": "NeurIPS D&B",
     "year": "2024",
     "field": "NLP系",
     "motivation": "評価再設計型",
-    "clarity": "",
+    "clarity": "図1・3章：leaderboard，jailbreak artifacts，attack／defenseの評価結果を1つの公開基盤として示し，JailbreakBenchが単なるデータセットではなく「比較のルール」を標準化するベンチマークであることが分かる．3.5節・表1：複数のjudgeを人間ラベルとの一致率・FPR・FNRで比較し，採用するjudgeの妥当性を定量的に説明している．3.6節：system prompt，judge，生成条件，local／cloud modelを固定した評価frameworkを明記し，従来研究で比較不能だった要因と提案内容の対応が明確である．",
     "summary": "motivation: standardization\njailbreak研究の問題設定・評価方法などがバラバラであることを踏まえ、標準化された評価プロトコルを提案"
   },
   {
-    "url": "",
+    "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Wang_LVBench_An_Extreme_Long_Video_Understanding_Benchmark_ICCV_2025_paper.html",
     "title": "LVBench: An Extreme Long Video Understanding Benchmark",
     "authors": "Weihan Wang, Zehai He, Wenyi Hong, Yean Cheng, Xiaohan Zhang, Ji Qi, Xiaotao Gu, Shiyu Huang, Bin Xu, Yuxiao Dong, Ming Ding, Jie Tang",
     "venue": "ICCV",
@@ -122,7 +122,7 @@ window.PAPERS = [
     "summary": "motivation: gap-filling (temporal scale)\n既存の動画ベンチマークが短尺中心であることを踏まえ、数時間規模の長尺動画理解を測る評価基盤を作成"
   },
   {
-    "url": "",
+    "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Wang_IDEATOR_Jailbreaking_and_Benchmarking_Large_Vision-Language_Models_Using_Themselves_ICCV_2025_paper.html",
     "title": "IDEATOR: Jailbreaking and Benchmarking Large Vision-Language Models Using Themselves",
     "authors": "Ruofan Wang, Juncheng Li, Yixu Wang, Bo Wang, Xiaosen Wang, Yan Teng, Yingchun Wang, Xingjun Ma, Yu-Gang Jiang",
     "venue": "ICCV",
@@ -133,7 +133,7 @@ window.PAPERS = [
     "summary": "motivation: evaluation validity (safety)\n既存のVLM jailbreak評価が手作業・低多様性の攻撃に依存していることを踏まえ、多様な攻撃生成と安全性評価ベンチマークを構築"
   },
   {
-    "url": "",
+    "url": "https://arxiv.org/abs/2504.12516",
     "title": "BrowseComp",
     "authors": "Jason Wei, Zhiqing Sun, Spencer Papay, Scott McKinney, Jeffrey Han, Isa Fulford, Hyung Won Chung, Alex Tachard Passos, William Fedus, Amelia Glaese",
     "venue": "",
@@ -144,7 +144,7 @@ window.PAPERS = [
     "summary": "motivation: saturation-driven\n既存の情報検索系ベンチマークが飽和しつつあることを踏まえ、粘り強いweb browsing能力そのものを測る高難度ベンチマークを作成"
   },
   {
-    "url": "",
+    "url": "https://arxiv.org/abs/2404.12390",
     "title": "BLINK: Multimodal Large Language Models Can See but Not Perceive",
     "authors": "Xingyu Fu, Yushi Hu, Bangzheng Li, Yu Feng, Haoyu Wang, Xudong Lin, Dan Roth, Noah A. Smith, Wei-Chiu Ma, Ranjay Krishna",
     "venue": "ECCV",
@@ -155,7 +155,7 @@ window.PAPERS = [
     "summary": "motivation: gap-filling (perception)\n既存のマルチモーダル評価が言語知識や推論に偏っていることを踏まえ、純粋な視覚知覚能力を測るベンチマークを構築"
   },
   {
-    "url": "",
+    "url": "https://arxiv.org/abs/2511.21750",
     "title": "SO-Bench: A Structural Output Evaluation of Multimodal LLMs",
     "authors": "Di Feng, Kaixin Ma, Feng Nan, Haofeng Chen, Bohan Zhai, David Griffiths, Mingfei Gao, Zhe Gan, Eshan Verma, Yinfei Yang, Zhifeng Chen, Afshin Dehghan",
     "venue": "CVPR",
@@ -166,7 +166,7 @@ window.PAPERS = [
     "summary": "motivation: gap-filling (structured output)\n実運用で重要なschema準拠の構造化出力について視覚入力ベースで体系的に評価する基盤が不足していたため、その評価ベンチマークを作成"
   },
   {
-    "url": "",
+    "url": "https://arxiv.org/abs/2406.11230",
     "title": "Multimodal Needle in a Haystack: Benchmarking Long-Context Capability of Multimodal Large Language Models",
     "authors": "Hengyi Wang, Haizhou Shi, Shiwei Tan, Weiyi Qin, Wenyuan Wang, Tunyu Zhang, Akshay Nambi, Tanuja Ganu, Hao Wang",
     "venue": "NAACL",
@@ -177,7 +177,7 @@ window.PAPERS = [
     "summary": "motivation: gap-filling (long context)\nMLLMの長文脈・多数画像文脈での検索能力が十分に検証されていないことを踏まえ、needle-in-a-haystack設定で長文脈性能を測定"
   },
   {
-    "url": "",
+    "url": "https://arxiv.org/abs/2510.26794",
     "title": "The Quest for Generalizable Motion Generation: Data, Model, and Evaluation",
     "authors": "Jing Lin, Ruisi Wang, Junzhe Lu, Ziqi Huang, Guorui Song, Ailing Zeng, Xian Liu, Chen Wei, Wanqi Yin, Qingping Sun, Zhongang Cai, Lei Yang, Ziwei Liu",
     "venue": "ICLR",
@@ -188,7 +188,7 @@ window.PAPERS = [
     "summary": "motivation: generalization-driven\n既存のtext-to-motion研究が標準ベンチマーク上では強くても汎化性に限界があることを踏まえ、データ・モデル・評価を一体で拡張"
   },
   {
-    "url": "",
+    "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Wang_AniMo_Species-Aware_Model_for_Text-Driven_Animal_Motion_Generation_CVPR_2025_paper.html",
     "title": "AniMo: Species-Aware Model for Text-Driven Animal Motion Generation",
     "authors": "Xuan Wang, Kai Ruan, Xing Zhang, Gaoang Wang",
     "venue": "CVPR",
@@ -199,7 +199,7 @@ window.PAPERS = [
     "summary": "motivation: gap-filling (species)\ntext-driven motion generationが人間中心で動物種ごとの差異を十分扱えていないことを踏まえ、種依存性を考慮した動物モーション生成モデルを提案"
   },
   {
-    "url": "",
+    "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Li_VidHalluc_Evaluating_Temporal_Hallucinations_in_Multimodal_Large_Language_Models_for_CVPR_2025_paper.html",
     "title": "VidHalluc: Evaluating Temporal Hallucinations in Multimodal Large Language Models for Video Understanding",
     "authors": "Chaoyu Li, Eun Woo Im, Pooyan Fazli",
     "venue": "CVPR",
@@ -210,7 +210,7 @@ window.PAPERS = [
     "summary": "motivation: evaluation validity (hallucination)\n動画理解における時間的hallucinationが十分に評価されていないことを踏まえ、行動・時系列・場面転換の観点から検証するベンチマークを構築"
   },
   {
-    "url": "",
+    "url": "https://aclanthology.org/2025.emnlp-main.695/",
     "title": "Unmasking Deceptive Visuals: Benchmarking Multimodal Large Language Models on Misleading Chart Question Answering",
     "authors": "Zixin Chen, Sicheng Song, Kashun Shum, Yanna Lin, Rui Sheng, Weiqi Wang, Huamin Qu",
     "venue": "EMNLP",
@@ -260,7 +260,7 @@ window.PAPERS = [
     "venue": "AAAI",
     "year": "2023-06-26",
     "field": "Multimodal系",
-    "motivation": "更新・難化型",
+    "motivation": "領域開拓型",
     "clarity": "表1：従来データセットとの比較をチェックリスト形式で並べて示している　図1：「ユーザーの自然言語による指示」から「具体的な編集コマンドと対象座標（バウンディングボックス）」を出力するという新しいタスクの入出力関係を、実際のドキュメント画像を用いて視覚化している",
     "summary": "motivation: language-guided document editing 専門的な文書編集ツールを自然言語で操作するには、文書内の視覚・テキスト・レイアウト文脈へのgroundingが必要であることを踏まえ、局所文書編集タスクを提案。"
   },
@@ -331,7 +331,7 @@ window.PAPERS = [
     "summary": "motivation: physical world prediction 画像認識モデルが物体を認識できても物理シーンの未来を理解しているとは限らないことを踏まえ、人間比較付きで物理予測能力を評価。"
   },
   {
-    "url": "10.1007/978-3-319-10602-1_48",
+    "url": "https://doi.org/10.1007/978-3-319-10602-1_48",
     "title": "Microsoft COCO: Common Objects in Context",
     "authors": "Tsung-Yi Lin et al.",
     "venue": "ECCV 2014",
@@ -342,7 +342,7 @@ window.PAPERS = [
     "summary": "Fig.1〜5で「タスク定義→収集→annotation設計→品質分析→統計→baseline」を論証する黄金律を体現。benchmark論文の骨格の教科書。"
   },
   {
-    "url": "10.1109/CVPR.2016.350",
+    "url": "https://doi.org/10.1109/CVPR.2016.350",
     "title": "The Cityscapes Dataset for Semantic Urban Scene Understanding",
     "authors": "Marius Cordts et al.",
     "venue": "CVPR 2016",
@@ -353,7 +353,7 @@ window.PAPERS = [
     "summary": "「既存datasetは都市シーン複雑性が不足」という一言のgapを冒頭で確立し、全設計がそこへ収束する。Introductionのgap設定の手本。"
   },
   {
-    "url": "10.48550/arXiv.1811.00982",
+    "url": "https://doi.org/10.48550/arXiv.1811.00982",
     "title": "The Open Images Dataset V4: Unified Image Classification, Object Detection, and Visual Relationship Detection at Scale",
     "authors": "Alina Kuznetsova et al.",
     "venue": "ECCV 2018",
@@ -364,7 +364,7 @@ window.PAPERS = [
     "summary": "「unified annotations」で3タスク統合を主張し、スケーリング曲線で規模的価値を実験的に証明。「量ではなく設計の統一性」を論文の軸にする書き方の手本。"
   },
   {
-    "url": "10.48550/arXiv.1801.00868",
+    "url": "https://doi.org/10.48550/arXiv.1801.00868",
     "title": "Panoptic Segmentation",
     "authors": "Alexander Kirillov et al.",
     "venue": "CVPR 2019",
@@ -375,7 +375,7 @@ window.PAPERS = [
     "summary": "PQ = SQ × RQという乗法分解でinterpretabilityを担保。「タスク定義→指標設計動機→数式→実験検証」という指標提案論文の論証の手本。"
   },
   {
-    "url": "10.48550/arXiv.1908.03195",
+    "url": "https://doi.org/10.48550/arXiv.1908.03195",
     "title": "LVIS: A Dataset for Large Vocabulary Instance Segmentation",
     "authors": "Agrim Gupta, Piotr Dollár, Ross Girshick",
     "venue": "CVPR 2019",
@@ -386,7 +386,7 @@ window.PAPERS = [
     "summary": "Zipf的ロングテール分布を「問題設定」の主役に据え、federated evaluationで指標設計まで一気通貫。統計図を飾りではなく主張の証拠として機能させる手本。"
   },
   {
-    "url": "10.48550/arXiv.2005.10356",
+    "url": "https://doi.org/10.48550/arXiv.2005.10356",
     "title": "TAO: A Large-Scale Benchmark for Tracking Any Object",
     "authors": "Achal Dave et al.",
     "venue": "ECCV 2020",
@@ -397,7 +397,7 @@ window.PAPERS = [
     "summary": "既存benchmarkのカテゴリ偏りをバブルチャートで即証明し、「既存trackerが低精度」という結果を末尾で回収。benchmark論文は「新研究課題の証明」で完結させる書き方の体現。"
   },
   {
-    "url": "10.48550/arXiv.2008.08115",
+    "url": "https://doi.org/10.48550/arXiv.2008.08115",
     "title": "TIDE: A General Toolbox for Identifying Object Detection Errors",
     "authors": "Daniel Bolya, Sean Foley, James Hays, Judy Hoffman",
     "venue": "ECCV 2020",
@@ -408,7 +408,7 @@ window.PAPERS = [
     "summary": "mAPの「なぜ悪いのか」を6エラー型に分解・独立定量化。Fig.2でCOCO progressive evalの順序依存バイアスをbefore/afterで暴き、leaderboardを診断表に変換する手本。"
   },
   {
-    "url": "10.48550/arXiv.2107.02314",
+    "url": "https://doi.org/10.48550/arXiv.2107.02314",
     "title": "The RSNA-ASNR-MICCAI BraTS 2021 Benchmark on Brain Tumor Segmentation and Radiogenomic Classification",
     "authors": "Ujjwal Baid et al.",
     "venue": "MICCAI 2021",
@@ -419,7 +419,7 @@ window.PAPERS = [
     "summary": "2タスク統合の臨床的根拠・DSC+HD95の指標選択理由・dot-and-box plotによる分布提示を一論文にまとめる。MICCAIチャレンジ論文の標準的な型を学べる。"
   },
   {
-    "url": "10.1038/s41467-022-30695-9",
+    "url": "https://doi.org/10.1038/s41467-022-30695-9",
     "title": "The Medical Segmentation Decathlon",
     "authors": "Michela Antonelli, Annika Reinke et al.",
     "venue": "Nature Communications 2022",
@@ -430,7 +430,7 @@ window.PAPERS = [
     "summary": "development→mystery phaseの二段階設計で「汎用モデルが専用モデルを超えられるか」を実験的に検証。multi-task benchmarkの設計思想の転換点。"
   },
   {
-    "url": "10.1038/s41592-020-01008-z",
+    "url": "https://doi.org/10.1038/s41592-020-01008-z",
     "title": "nnU-Net: A Self-Configuring Method for Deep Learning-Based Biomedical Image Segmentation",
     "authors": "Fabian Isensee, Paul F. Jaeger et al.",
     "venue": "Nature Methods 2021",
@@ -441,7 +441,7 @@ window.PAPERS = [
     "summary": "「アーキテクチャ革新よりpipeline設定が重要」という主張を23 datasets横断の比較表で一括証明。benchmark比較表のデザインと論証の流れの手本。"
   },
   {
-    "url": "10.1038/s41592-023-02151-z",
+    "url": "https://doi.org/10.1038/s41592-023-02151-z",
     "title": "Metrics Reloaded: Recommendations for Image Analysis Validation",
     "authors": "Lena Maier-Hein, Annika Reinke et al.",
     "venue": "Nature Methods 2024",
@@ -452,7 +452,7 @@ window.PAPERS = [
     "summary": "problem fingerprintから適切な指標を選ぶフレームワークをDelphiプロセスで構築。分類・検出・seg横断でpitfallを体系化した参考書的存在。"
   },
   {
-    "url": "10.1109/TMI.2021.3090082",
+    "url": "https://doi.org/10.1109/TMI.2021.3090082",
     "title": "Multi-Centre, Multi-Vendor and Multi-Disease Cardiac Segmentation: The M&Ms Challenge",
     "authors": "Víctor M. Campello, Polyxeni Gkontra et al.",
     "venue": "IEEE TMI 2021",
@@ -463,7 +463,7 @@ window.PAPERS = [
     "summary": "「単一施設・単一スキャナ」偏りをdataで明示しドメインシフトを主役に。vendor別boxplotで「平均では見えない弱点」を炙り出す分析設計の手本。"
   },
   {
-    "url": "10.1038/s41467-024-44824-z",
+    "url": "https://doi.org/10.1038/s41467-024-44824-z",
     "title": "Segment Anything in Medical Images (MedSAM)",
     "authors": "Jun Ma, Yuting He, Feifei Li et al.",
     "venue": "Nature Communications 2024",
@@ -474,7 +474,7 @@ window.PAPERS = [
     "summary": "内部86+外部60タスクの2段階評価で学習済みタスクと未知タスクの汎化を分離。強みと弱みを因子別に正直に開示するscientific integrityの手本。"
   },
   {
-    "url": "10.48550/arXiv.2304.09324",
+    "url": "https://doi.org/10.48550/arXiv.2304.09324",
     "title": "Computer-Vision Benchmark Segment-Anything Model in Medical Images: Accuracy in 12 Datasets",
     "authors": "Sheng He et al.",
     "venue": "arXiv 2023",
@@ -485,7 +485,7 @@ window.PAPERS = [
     "summary": "12 datasets横断で「SAMが苦手な条件プロファイル」を因子別boxplotで可視化。「平均精度で評価しない」設計思想がfoundation model benchmarkingの参考になる。"
   },
   {
-    "url": "10.48550/arXiv.2205.12358",
+    "url": "https://doi.org/10.48550/arXiv.2205.12358",
     "title": "A Benchmark and Asymmetrical-Similarity Learning for Practical Image Copy Detection",
     "authors": "Wenhao Wang, Yifan Sun, Yi Yang",
     "venue": "AAAI 2023",
@@ -496,7 +496,7 @@ window.PAPERS = [
     "summary": "symmetric metricとasymmetric copy processのミスマッチを定量的に暴く。benchmark noveltyを「設計思想が間違っていた」として主張する書き方の実例。"
   },
   {
-    "url": "10.48550/arXiv.1901.05495",
+    "url": "https://doi.org/10.48550/arXiv.1901.05495",
     "title": "An Underwater Image Enhancement Benchmark Dataset and Beyond",
     "authors": "Chongyi Li et al.",
     "venue": "IEEE 2019",
@@ -507,7 +507,7 @@ window.PAPERS = [
     "summary": "paired/challenging dataの二分割で客観・主観評価を両立。qualitative評価を本文Figureの中心に置く「domain interestに正直なbenchmark」の手本。"
   },
   {
-    "url": "10.48550/arXiv.1811.10862",
+    "url": "https://doi.org/10.48550/arXiv.1811.10862",
     "title": "Sampling Techniques for Large-Scale Object Detection from Sparsely Annotated Objects",
     "authors": "Yusuke Niitani et al.",
     "venue": "CVPR 2019",
@@ -518,7 +518,7 @@ window.PAPERS = [
     "summary": "大規模benchmarkのsparse negative label問題を診断しmethod設計に活かす。benchmarkを「批判的に分析する対象」として扱う研究視点の実例。"
   },
   {
-    "url": "10.48550/arXiv.1911.10194",
+    "url": "https://doi.org/10.48550/arXiv.1911.10194",
     "title": "Panoptic-DeepLab: A Simple, Strong, and Fast Baseline for Bottom-Up Panoptic Segmentation",
     "authors": "Bowen Cheng et al.",
     "venue": "CVPR 2020",
@@ -531,110 +531,110 @@ window.PAPERS = [
   {
     "url": "https://openreview.net/forum?id=1yOnfDpkVe",
     "title": "Battle of the Backbones: A Large-Scale Comparison of Pretrained Models across Computer Vision Tasks",
-    "authors": "-",
+    "authors": "Micah Goldblum, Hossein Souri, Renkun Ni, Manli Shu, Viraj Uday Prabhu, Gowthami Somepalli, Prithvijit Chattopadhyay, Mark Ibrahim, Adrien Bardes, Judy Hoffman, Rama Chellappa, Andrew Gordon Wilson, Tom Goldstein",
     "venue": "NeurIPS DB",
     "year": "2023",
     "field": "CV系",
-    "motivation": "領域開拓型",
+    "motivation": "評価再設計型",
     "clarity": "セクション1.1（イントロのサブセクション）：異端的ではあるが，イントロの最後にTLDRのセクションを設け，計測から得られる示唆を列挙している．手法の性質および，どのモデルを使えばよいかという結論をベンチマーク結果で求めているわけなので，良い意味で実務に最適化されているように思う．",
     "summary": "motivation: backbone models；結局どのbackbone modelを，どういうケースで使えばいいんですか？への解"
   },
   {
     "url": "https://openreview.net/forum?id=L7KDMsqWl9",
     "title": "HHD-EthiopicA Historical Handwritten Dataset for Ethiopic OCR with Baseline Models and Human-level Performance",
-    "authors": "-",
+    "authors": "Birhanu Hailu Belay, Isabelle Guyon, Tadele Mengiste, Bezawork Tilahun, Marcus Liwicki, Tesfa Tegegne, Romain Egele",
     "venue": "ICLR (Reject)",
     "year": "2023",
     "field": "CV系",
-    "motivation": "領域開拓型",
+    "motivation": "欠落補完型",
     "clarity": "（強いて言えばFig2）論文としての品質は高くないが，fig2で示されるように取り扱う問題の困難性を早期に示すことは評価できる",
     "summary": "エチオピア文字の手書き文書ベンチ；逆説的に論文として読みにくい理由を汲み取れる"
   },
   {
     "url": "https://arxiv.org/abs/2412.07626",
     "title": "OmniDocBench: Benchmarking Diverse PDF Document Parsing with Comprehensive Annotations",
-    "authors": "-",
+    "authors": "Linke Ouyang, Yuan Qu, Hongbin Zhou, Jiawei Zhu, Rui Zhang, Qunshu Lin, Bin Wang, Zhiyuan Zhao, Man Jiang, Xiaomeng Zhao, Jin Shi, Fan Wu, Pei Chu, Minghao Liu, Zhenxiang Li, Chao Xu, Bo Zhang, Botian Shi, Zhongying Tu, Conghui He",
     "venue": "CVPR",
     "year": "2025",
     "field": "CV系",
-    "motivation": "領域開拓型",
+    "motivation": "評価再設計型",
     "clarity": "１ページ目（イントロおよび図）：複数モデルのレーダーチャートを１Pに示すことで，結果としてどのモデルを使えばよいかという答えが即時に汲み取れる．",
     "summary": "OCR性能の評価をより横断的に拡張"
   },
   {
     "url": "https://openreview.net/forum?id=Vb6i3Dp24N",
     "title": "OCRBench v2: An Improved Benchmark for Evaluating Large Multimodal Models on Visual Text Localization and Reasoning",
-    "authors": "-",
+    "authors": "Ling Fu, Zhebin Kuang, Jiajun Song, Mingxin Huang, Biao Yang, Yuzhe Li, Linghao Zhu, Qidi Luo, Xinyu Wang, Hao Lu, Zhang Li, Guozhi Tang, Bin Shan, Chunhui Lin, Qi Liu, Binghong Wu, Hao Feng, Hao Liu, Can Huang, Jingqun Tang, Wei Chen, Lianwen Jin, Yuliang Liu, Xiang Bai",
     "venue": "NeruIPS DB",
     "year": "2025",
     "field": "CV系",
-    "motivation": "領域開拓型",
+    "motivation": "更新・難化型",
     "clarity": "セクション１（イントロ）：問題提起「Do models perform well enough on text-oriented visual understanding tasks in the\nLMM era, or do existing benchmarks fail to capture the broader challenges in diverse environments?」とその解答へ向けた本研究の位置づけが，明瞭に対応しており，モチベーションおよび意義が理解しやすい",
     "summary": "LMMが文書を「読める能力」だけではなく，「見つけて考える」能力を計測"
   },
   {
     "url": "https://arxiv.org/abs/2407.01523",
     "title": "MMLongBench-Doc: Benchmarking Long-context Document Understanding with Visualizations",
-    "authors": "-",
+    "authors": "Yubo Ma, Yuhang Zang, Liangyu Chen, Meiqi Chen, Yizhu Jiao, Xinze Li, Xinyuan Lu, Ziyu Liu, Yan Ma, Xiaoyi Dong, Pan Zhang, Liangming Pan, Yu-Gang Jiang, Jiaqi Wang, Yixin Cao, Aixin Sun",
     "venue": "NeurIPS DB",
     "year": "2024",
     "field": "CV系",
-    "motivation": "領域開拓型",
+    "motivation": "欠落補完型",
     "clarity": "Fig1: 扱うデータの内容およびモデルの評価結果と得られる考察をすべて包含しており，概要を掴みやすい",
     "summary": "長いPDFだけではなく，レイアウトをまたいで根拠付きに理解できるか"
   },
   {
     "url": "https://arxiv.org/abs/2501.07244",
     "title": "Can Vision-Language Models Evaluate Handwritten Math?",
-    "authors": "-",
+    "authors": "Oikantik Nath, Hanani Bathina, Mohammed Safi Ur Rahman Khan, Mitesh M. Khapra",
     "venue": "ACL",
     "year": "2025",
     "field": "CV系",
-    "motivation": "領域開拓型",
+    "motivation": "評価再設計型",
     "clarity": "セクション１（イントロ）：特段評価しうる点が難しいが，セクション１で問題点を示し，自分の研究の立ち位置を明らかにする点は評価できる．ただ，包括性について触れているが，これを文章で真に回収できいるかは微妙であるように思う．",
     "summary": "手書き数学答案の採点を，正誤判定だけでなく「誤りの発見・位置特定・修正」まで測れる評価問題に引き上げ"
   },
   {
     "url": "https://arxiv.org/abs/2505.16470",
     "title": "Benchmarking Retrieval-Augmented Multimodal Generation for Document Question Answering",
-    "authors": "-",
+    "authors": "Kuicai Dong, Yujing Chang, Shijie Huang, Yasheng Wang, Ruiming Tang, Yong Liu",
     "venue": "NeurIPS DB",
     "year": "2025",
     "field": "CV系",
-    "motivation": "領域開拓型",
+    "motivation": "欠落補完型",
     "clarity": "Fig3: アノテーションパイプラインを図と合わせ示すことで，概要が掴みやすい．このパイプラインを文章で示されるとあまりわからないと思う．一方で，Fig1で概要をすべて織り込んでいるが，情報過多であまりよくわからない．",
     "summary": "文書QAのRAGにおいて，テキスト検索だけでなく「図表を根拠として探し答えに組み込めるか」を評価"
   },
   {
     "url": "https://arxiv.org/abs/2411.17125",
     "title": "DOGR: Towards Versatile Visual Document Grounding and Referring",
-    "authors": "-",
+    "authors": "Yinan Zhou, Yuxin Chen, Haokun Lin, Yichen Wu, Shuyu Yang, Zhongang Qi, Chen Ma, Li Zhu, Ying Shan",
     "venue": "ICCV",
     "year": "2025",
     "field": "CV系",
-    "motivation": "領域開拓型",
+    "motivation": "欠落補完型",
     "clarity": "全体的なヴィジュアライズとセクション４：Fig3(a)ではどのようにデータを構成したかがわかりやすい（一方でこれはベンチマーク特有のものではない気もする．）Fig4は記号的表現が理解のスムーズさを減らすが，ベンチマーク的な意味では，データと評価がどのように対応しているのかがわかりやすい",
     "summary": "文書VQAにおいて，「どこを見て，指定箇所がなにを意味するか」まで扱えるようにした"
   },
   {
     "url": "https://arxiv.org/abs/2512.20174",
     "title": "Towards Natural Language-Based Document Image Retrieval: New Dataset and Benchmark",
-    "authors": "-",
+    "authors": "Hao Guo, Xugong Qin, Jun Jie Ou Yang, Peng Zhang, Gangyan Zeng, Yubo Li, Hailun Lin",
     "venue": "CVPR",
     "year": "2025",
     "field": "CV系",
-    "motivation": "領域開拓型",
+    "motivation": "欠落補完型",
     "clarity": "セクション１および図１：現在の分野の動向を示したうえで，その問題点と提案モデル（本論文では合わせてモデルも提案した）を示しており，納得感を生みやすい構造になっている．",
     "summary": "文書画像検索を，「似た画像を探す」から「自然文の細かな意味で探す」問題へ引き上げ．"
   },
   {
     "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Yang_CC-OCR_A_Comprehensive_and_Challenging_OCR_Benchmark_for_Evaluating_Large_ICCV_2025_paper.html",
     "title": "CC-OCR: A Comprehensive and Challenging OCR Benchmark for Evaluating Large Multimodal Models in Literacy",
-    "authors": "-",
+    "authors": "Zhibo Yang, Jun Tang, Zhaohai Li, Pengfei Wang, Jianqiang Wan, Humen Zhong, Xuejing Liu, Mingkun Yang, Peng Wang, Shuai Bai, Lianwen Jin, Junyang Lin",
     "venue": "ICCV",
     "year": "2025",
     "field": "CV系",
-    "motivation": "領域開拓型",
+    "motivation": "欠落補完型",
     "clarity": "table1:既存ベンチマークと比較して，カバレッジが示せている．一方で，図表の情報量がすくなくもったいないところもある．",
     "summary": "LMMのOCR能力を，場面・言語・文書解析・情報抽出まで含めた「総合的な読み書き能力」として測れるに設計"
   },
