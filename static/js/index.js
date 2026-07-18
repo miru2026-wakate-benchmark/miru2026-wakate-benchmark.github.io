@@ -175,14 +175,26 @@
       );
     }
 
-    const toggle = el("button", "paper-toggle", "+");
+    const toggle = el("button", "paper-toggle");
     toggle.type = "button";
     toggle.setAttribute("aria-expanded", "false");
     toggle.setAttribute("aria-label", `${paper.title} の詳細を表示`);
 
+    const updateToggle = (open) => {
+      const copy = el(
+        "span",
+        "paper-toggle-copy",
+        open ? "詳細表示を閉じる" : "概要＆わかりやすいポイントを見る",
+      );
+      const icon = el("span", "paper-toggle-icon", open ? "−" : "＋");
+      icon.setAttribute("aria-hidden", "true");
+      toggle.replaceChildren(copy, icon);
+    };
+    updateToggle(false);
+
     const details = el("div", "paper-details");
     details.append(
-      detailBlock("概要", paper.abstractJa, "日本語要約は準備中です。"),
+      detailBlock("ABSTRACT（日本語要約）", paper.abstractJa, "日本語要約は準備中です。"),
       detailBlock("CLARITY NOTE", paper.clarity, "わかりやすさに関するコメントは整理中です。"),
     );
     const url = safeUrl(paper.url);
@@ -196,6 +208,7 @@
 
     toggle.addEventListener("click", () => {
       const open = article.classList.toggle("is-open");
+      updateToggle(open);
       toggle.setAttribute("aria-expanded", String(open));
       toggle.setAttribute("aria-label", `${paper.title} の詳細を${open ? "閉じる" : "表示"}`);
     });
