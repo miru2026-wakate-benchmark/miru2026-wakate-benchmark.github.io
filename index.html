@@ -28,7 +28,7 @@
         <a href="#about">概要</a>
         <a href="#principles">読みやすさの指針</a>
         <a href="#papers">論文リスト</a>
-        <a class="nav-cta" href="./docs/miru2026wakte_benchmark_0629.pdf">ポスターを見る ↗</a>
+        <a class="nav-cta" href="./static/data/miru2026wakte_benchmark_0629.pdf">ポスターを見る ↗</a>
       </nav>
     </header>
 
@@ -39,7 +39,7 @@
         <div class="hero-copy">
           <p class="eyebrow"><span>Research Project</span> MIRU2026 若手プログラム</p>
           <h1 id="hero-title">ベンチマーク論文を<br><em>ベンチマーク</em>する。</h1>
-          <p class="hero-lead">よい「物差し」は、どう説明されているのか。68本の論文を読み比べ、ベンチマーク論文の<span class="marker">わかりやすさ・読みやすさ</span>をセクションごとに整理しました。</p>
+          <p class="hero-lead">68本の論文を読み比べ、ベンチマーク論文の<span class="marker">わかりやすさ・読みやすさ</span>を7つの観点に整理しました。</p>
           <div class="hero-actions">
             <a class="button button-primary" href="#principles">7つの観点を読む <span aria-hidden="true">↓</span></a>
             <a class="button button-ghost" href="#papers">論文を探す</a>
@@ -59,47 +59,40 @@
         </aside>
       </section>
 
-      <section class="ticker" aria-label="調査キーワード">
-        <div>
-          <span>INTRODUCTION</span><i>✦</i><span>FIGURE 1</span><i>✦</i><span>DATA DESIGN</span><i>✦</i><span>QUALITY</span><i>✦</i><span>METRICS</span><i>✦</i><span>ANALYSIS</span><i>✦</i><span>REUSABILITY</span>
-        </div>
-      </section>
-
       <section class="section intro-section" id="about">
         <div class="section-label"><span>01</span> ABOUT</div>
         <div class="intro-heading">
           <p class="display-small">Benchmark<br><span>≠</span> Dataset</p>
           <div>
             <h2>ベンチマークは、研究コミュニティの「物差し」。</h2>
-            <p>データセット論文ではデータそのものが主役です。一方、ベンチマーク論文では、何を・どのように・どこまで測るかという評価の仕組みと、その品質が主役になります。</p>
-            <p>本プロジェクトでは、具体的な論文の工夫から、初学者にも経験ある研究者にも再利用できる書き方の指針を抽出しました。</p>
+            <p>データそのものではなく、何を・どのように・どこまで測るかという評価の仕組みと品質が主役です。具体的な論文の工夫から、再利用できる書き方の指針を抽出しました。</p>
           </div>
         </div>
 
         <div class="motivation-grid" aria-label="ベンチマークの4つのモチベーション">
-          <article class="motivation-card card-lime">
+          <article class="motivation-card palette-red">
             <span class="motivation-no">01</span>
             <div class="motivation-icon" aria-hidden="true">↗</div>
             <h3>領域開拓型</h3>
-            <p>新しいタスクや評価対象を定義し、新しい物差し自体をつくる。</p>
+            <p>新しい評価対象と物差しをつくる。</p>
           </article>
-          <article class="motivation-card card-blue">
+          <article class="motivation-card palette-orange">
             <span class="motivation-no">02</span>
             <div class="motivation-icon" aria-hidden="true">＋</div>
             <h3>欠落補完型</h3>
-            <p>既存評価が見落としていた能力・言語・モダリティを測れるようにする。</p>
+            <p>見落とされていた能力や領域を測る。</p>
           </article>
-          <article class="motivation-card card-orange">
+          <article class="motivation-card palette-green">
             <span class="motivation-no">03</span>
             <div class="motivation-icon" aria-hidden="true">⇧</div>
             <h3>更新・難化型</h3>
-            <p>性能飽和やデータ汚染に対応し、物差しの範囲や難易度を更新する。</p>
+            <p>評価範囲や難易度を更新する。</p>
           </article>
-          <article class="motivation-card card-pink">
+          <article class="motivation-card palette-blue">
             <span class="motivation-no">04</span>
             <div class="motivation-icon" aria-hidden="true">◎</div>
             <h3>評価再設計型</h3>
-            <p>指標やプロトコルを見直し、本当に測りたい能力を測れているか問い直す。</p>
+            <p>指標やプロトコルの妥当性を問い直す。</p>
           </article>
         </div>
       </section>
@@ -108,61 +101,45 @@
         <div class="section-label section-label-light"><span>02</span> PRINCIPLES</div>
         <div class="principles-heading">
           <h2>セクション別に見る、<br>「わかりやすい」のつくり方。</h2>
-          <p>読者が迷う場所を先回りし、比較・設計判断・根拠を視覚化する。調査から見えてきた7つの観点です。</p>
+          <p>比較・設計判断・根拠を視覚化するための7つの観点。</p>
         </div>
 
         <div class="principle-list">
           <article class="principle-row">
             <div class="principle-index">01</div>
             <div class="principle-name"><span>INTRODUCTION</span><h3>差分を先に示す</h3></div>
-            <div class="principle-copy"><p>既存ベンチマークの限界と提案の差分を明記し、「なぜ今この物差しが必要か」を早い段階で共有する。</p><ul><li>Key findingsで改善余地や新しい知見を端的に述べる</li><li>SOTA手法の具体的な失敗例を示す</li></ul></div>
+            <div class="principle-copy"><p>既存ベンチマークの限界と提案の差分を明記し、「なぜ今必要か」を早い段階で共有する。</p></div>
           </article>
           <article class="principle-row">
             <div class="principle-index">02</div>
             <div class="principle-name"><span>FIGURE 1</span><h3>一枚で全体像を語る</h3></div>
-            <div class="principle-copy"><p>タスクの入出力、カテゴリ、評価の流れを一枚に集約し、本文の定義を読む前から概要をつかめるようにする。</p><ul><li>実際の設問・出力例を使う</li><li>既存手法との違いを図中で比較する</li></ul></div>
+            <div class="principle-copy"><p>入出力、カテゴリ、評価の流れを一枚に集約し、本文より先に概要を伝える。</p></div>
           </article>
           <article class="principle-row">
             <div class="principle-index">03</div>
             <div class="principle-name"><span>DATA DESIGN</span><h3>含める理由を説明する</h3></div>
-            <div class="principle-copy"><p>評価したい能力からタスクとカテゴリを逆算し、何を含め、何を含めなかったかという設計判断を言語化する。</p><ul><li>カテゴリ・ドメイン・難易度の分布を可視化する</li><li>カバレッジを従来ベンチと比較する</li></ul></div>
+            <div class="principle-copy"><p>評価したい能力からタスクとカテゴリを逆算し、含める・含めない理由を説明する。</p></div>
           </article>
           <article class="principle-row">
             <div class="principle-index">04</div>
             <div class="principle-name"><span>QUALITY</span><h3>品質保証を透明にする</h3></div>
-            <div class="principle-copy"><p>データ作成、アノテーション、フィルタリングの流れと、人間・専門家による確認箇所を追跡できるようにする。</p><ul><li>エラー分類と除外基準を明示する</li><li>データ品質が評価へ与える影響を検証する</li></ul></div>
+            <div class="principle-copy"><p>作成・アノテーション・除外の流れと、専門家による確認箇所を追跡可能にする。</p></div>
           </article>
           <article class="principle-row">
             <div class="principle-index">05</div>
             <div class="principle-name"><span>METRICS</span><h3>測り方の妥当性を示す</h3></div>
-            <div class="principle-copy"><p>入力形式から出力、採点までの評価プロトコルを明瞭にし、指標の計算方法と妥当性を説明する。</p><ul><li>人間判断との整合性を確認する</li><li>カバレッジや頑健性を検証する</li></ul></div>
+            <div class="principle-copy"><p>入力から採点までを明瞭にし、指標の計算方法と人間判断との整合性を示す。</p></div>
           </article>
           <article class="principle-row">
             <div class="principle-index">06</div>
             <div class="principle-name"><span>ANALYSIS</span><h3>スコアの内側を見る</h3></div>
-            <div class="principle-copy"><p>総合点だけで終わらず、カテゴリ・難易度ごとの性能差とFailure Caseを分類し、手法の得意・不得意を明らかにする。</p><ul><li>高スコアの要因を検証する</li><li>見かけの性能と真の能力を切り分ける</li></ul></div>
+            <div class="principle-copy"><p>カテゴリ別の性能差と失敗例を分類し、手法の得意・不得意を明らかにする。</p></div>
           </article>
           <article class="principle-row">
             <div class="principle-index">07</div>
             <div class="principle-name"><span>REUSABILITY</span><h3>次の研究へつなぐ</h3></div>
-            <div class="principle-copy"><p>コードやリーダーボードを公開し、同一条件で比較できる状態を保つ。未評価の能力や改善点を後続研究への問いとして残す。</p><ul><li>評価資産を再利用可能にする</li><li>限界と発展可能性を具体的に述べる</li></ul></div>
+            <div class="principle-copy"><p>コードと評価資産を公開し、限界や未評価の能力を後続研究への問いとして残す。</p></div>
           </article>
-        </div>
-      </section>
-
-      <section class="case-study section" aria-labelledby="case-title">
-        <div class="case-visual" aria-hidden="true">
-          <div class="mini-paper paper-back"><i></i><i></i><i></i></div>
-          <div class="mini-paper paper-front"><span>FIG. 1</span><strong>INPUT</strong><b>→</b><strong>OUTPUT</strong><i></i><i></i></div>
-          <div class="annotation annotation-a">全体像</div>
-          <div class="annotation annotation-b">具体例</div>
-        </div>
-        <div class="case-copy">
-          <p class="eyebrow">A GOOD STARTING POINT</p>
-          <h2 id="case-title">まず、Figure 1を<br>“入口”として設計する。</h2>
-          <p>優れたFigure 1は装飾ではありません。課題、入出力、提案の差分、結果の予告を結び、読者が論文を読み進めるための地図になります。</p>
-          <blockquote>「本文で定義を読む前に、何を測るベンチマークなのか大まかに理解できる」</blockquote>
-          <a class="text-link" href="./docs/miru2026wakte_benchmark_0629.pdf">調査ポスターをPDFで見る <span>↗</span></a>
         </div>
       </section>
 
@@ -217,8 +194,7 @@
             <p>各自がわかりやすいと感じる論文を持ち寄り、どの要素が理解を助けるのかを分析しました。具体例から一般的な指針を抽出し、自分の論文へ落とし込めるリソースを目指しています。</p>
             <p class="members"><span>Benchmark Group</span>田上 鈴奈（中京大学）／加藤 駿（慶應義塾大学）／趙 在瀛（東京大学）／石山 遼（九州大学）／堀田 南（早稲田大学）／千葉 倫太郎（慶應義塾大学）</p>
             <div class="resource-links">
-              <a href="./docs/miru2026wakte_benchmark_0629.pdf"><span>01</span> 発表ポスター <b>PDF ↗</b></a>
-              <a href="./docs/MIRU2026_キックオフ_v2%20(2).pdf"><span>02</span> キックオフ資料 <b>PDF ↗</b></a>
+              <a href="./static/data/miru2026wakte_benchmark_0629.pdf"><span>01</span> 発表ポスター <b>PDF ↗</b></a>
             </div>
           </div>
         </div>
