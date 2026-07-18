@@ -14,7 +14,7 @@ MIRU2026若手プログラム「わかりやすい、読みやすいを深掘る
    - 欠落補完型
    - 更新・難化型
    - 評価再設計型
-3. わかりやすいベンチマーク論文を構成する7つの観点
+3. わかりやすいベンチマーク論文を構成する8つの観点
 4. 調査論文リスト
 5. プロジェクトメンバーと発表ポスター
 
@@ -22,11 +22,11 @@ MIRU2026若手プログラム「わかりやすい、読みやすいを深掘る
 
 論文データは `static/js/papers.js` から読み込みます。現在の主な機能は以下のとおりです。
 
-- タイトル・著者・掲載先・分野・コメントを対象としたキーワード検索
-- 分野による絞り込み
+- タイトル・著者・掲載先・分野・モチベーションタグ・日本語要約・コメントを対象としたキーワード検索
+- 分野とモチベーションタグによる絞り込み
 - 各論文のモチベーション分類を色付きラベルで表示
 - 掲載順、新しい順、古い順、タイトル順での並び替え
-- 論文のポイントと「わかりやすさ」コメントの展開表示
+- Abstractに基づく日本語要約と「わかりやすさ」コメントの展開表示
 - 外部論文ページへのリンク
 - 16件単位の追加表示
 - `Command/Ctrl + K` による検索欄へのフォーカス
@@ -54,11 +54,13 @@ MIRU2026若手プログラム「わかりやすい、読みやすいを深掘る
 .
 ├── index.html
 ├── scripts/
-│   └── extract_papers.py
+│   ├── extract_papers.py
+│   └── fetch_abstracts.py
 └── static/
     ├── css/
     │   └── index.css
     ├── data/
+    │   ├── abstracts_ja.json
     │   ├── miru2026wakte_benchmark_0629.pdf
     │   └── サーベイ論文（ベンチマークグループ）.xlsx
     └── js/
@@ -88,7 +90,14 @@ python3 scripts/extract_papers.py \
 | H | `field` | 分野・ジャンル |
 | I | `motivation` | モチベーション分類 |
 | J | `clarity` | わかりやすさに関するコメント |
-| K | `summary` | 論文のポイント・紹介理由 |
+
+`static/data/abstracts_ja.json` には、論文名をキーとして各論文のAbstractに基づく日本語要約を保存します。抽出時にExcelの論文名と照合し、`abstractJa` として `papers.js` へ自動結合します。要約の不足や、Excelに存在しない古い要約がある場合は抽出時に警告されます。
+
+論文URLから確認用の原文Abstractを取得する場合は、次のコマンドを実行します。取得結果はそのまま公開せず、内容と取得元を確認してから `abstracts_ja.json` の日本語要約を更新してください。
+
+```bash
+python3 scripts/fetch_abstracts.py static/js/papers.js /tmp/abstracts_raw.json
+```
 
 生成された `static/js/papers.js` もGitへ追加してください。内容は自動生成されるため、原則として直接編集しません。
 
@@ -106,5 +115,6 @@ python3 -m http.server 8000
 
 - `static/data/` のPDFとExcelがGitに追加されていること
 - Excel更新後に `static/js/papers.js` を再生成していること
+- 新規論文に対応する日本語要約が `static/data/abstracts_ja.json` にあること
 - ポスターリンクと各論文の外部リンクが開けること
 - デスクトップとモバイルの両方で表示を確認すること
