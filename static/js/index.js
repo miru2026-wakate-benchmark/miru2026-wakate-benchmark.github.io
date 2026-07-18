@@ -7,11 +7,13 @@
   const pageSize = 16;
   let visibleCount = pageSize;
   let activeField = "すべて";
+  let activeMotivation = "すべて";
 
   const list = document.querySelector("#paper-list");
   const search = document.querySelector("#paper-search");
   const sort = document.querySelector("#paper-sort");
   const filters = document.querySelector("#field-filters");
+  const motivationFilters = document.querySelector("#motivation-filters");
   const count = document.querySelector("#result-count");
   const loadMore = document.querySelector("#load-more");
   const emptyState = document.querySelector("#empty-state");
@@ -71,6 +73,36 @@
       });
       filters.append(button);
     });
+
+    const motivationClasses = {
+      "領域開拓型": "palette-red",
+      "欠落補完型": "palette-orange",
+      "更新・難化型": "palette-green",
+      "評価再設計型": "palette-blue",
+    };
+    ["すべて", ...Object.keys(motivationClasses)].forEach((motivation) => {
+      const palette = motivationClasses[motivation] || "";
+      const button = el(
+        "button",
+        `filter-button motivation-filter ${palette}`.trim(),
+        motivation,
+      );
+      button.type = "button";
+      button.dataset.motivation = motivation;
+      button.classList.toggle("is-active", motivation === activeMotivation);
+      button.setAttribute("aria-pressed", String(motivation === activeMotivation));
+      button.addEventListener("click", () => {
+        activeMotivation = motivation;
+        visibleCount = pageSize;
+        motivationFilters.querySelectorAll("button").forEach((item) => {
+          const selected = item.dataset.motivation === activeMotivation;
+          item.classList.toggle("is-active", selected);
+          item.setAttribute("aria-pressed", String(selected));
+        });
+        render();
+      });
+      motivationFilters.append(button);
+    });
   }
 
   function filteredPapers() {
@@ -78,6 +110,7 @@
     const terms = query.split(" ").filter(Boolean);
     const result = papers.filter((paper) => {
       if (activeField !== "すべて" && paper.field !== activeField) return false;
+      if (activeMotivation !== "すべて" && paper.motivation !== activeMotivation) return false;
       if (!terms.length) return true;
       const haystack = normalize(
         [
@@ -88,7 +121,7 @@
           paper.field,
           paper.motivation,
           paper.clarity,
-          paper.summary,
+          paper.abstractJa,
         ].join(" "),
       );
       return terms.every((term) => haystack.includes(term));
@@ -149,7 +182,7 @@
 
     const details = el("div", "paper-details");
     details.append(
-      detailBlock("WHY IT MATTERS", paper.summary, "論文のポイントは整理中です。"),
+      detailBlock("概要", paper.abstractJa, "日本語要約は準備中です。"),
       detailBlock("CLARITY NOTE", paper.clarity, "わかりやすさに関するコメントは整理中です。"),
     );
     const url = safeUrl(paper.url);
@@ -200,9 +233,15 @@
     search.value = "";
     sort.value = "source";
     activeField = "すべて";
+    activeMotivation = "すべて";
     visibleCount = pageSize;
     filters.querySelectorAll("button").forEach((item) => {
       const selected = item.dataset.field === activeField;
+      item.classList.toggle("is-active", selected);
+      item.setAttribute("aria-pressed", String(selected));
+    });
+    motivationFilters.querySelectorAll("button").forEach((item) => {
+      const selected = item.dataset.motivation === activeMotivation;
       item.classList.toggle("is-active", selected);
       item.setAttribute("aria-pressed", String(selected));
     });

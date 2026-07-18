@@ -1,4 +1,4 @@
-// Generated from the survey workbook. Do not edit by hand.
+// Generated from the survey workbook and abstracts_ja.json. Do not edit by hand.
 window.PAPERS = [
   {
     "url": "https://arxiv.org/abs/2311.16502",
@@ -9,7 +9,7 @@ window.PAPERS = [
     "field": "Multimodal系",
     "motivation": "領域開拓型",
     "clarity": "図1：6領域・30科目，異種画像，画像とテキストの交互入力，専門知識に基づく知覚・推論という4つの特徴を1枚にまとめ，MMMUが単に大規模なVQAベンチマークではないことを冒頭で理解できる．図2：各領域の実問題をSubject／Subfield／Image Type／Difficultyとともに提示し，評価対象と難しさを具体例から把握できる．図3：既存ベンチマークとのbreadth／depth比較により，領域開拓上の差分を明確にしている．",
-    "summary": "motivation: domain-establishing\n「LMMの専門知識を含む高度なマルチモーダル理解」という研究領域の立ち上げ"
+    "abstractJa": "大学レベルの6分野・30科目から11,500問を収録し、専門知識、視覚知覚、推論を組み合わせるマルチモーダル能力を評価する。"
   },
   {
     "url": "https://arxiv.org/pdf/2504.01848",
@@ -20,7 +20,7 @@ window.PAPERS = [
     "field": "AI Agents系",
     "motivation": "領域開拓型",
     "clarity": "図1：研究論文とrubricを入力として，agentがcodebaseを作成し，fresh VMで再実行した結果をjudgeが採点する流れを1枚にまとめており，open-endedな研究再現をどのように評価可能にしたかが直感的に分かる．図2・2.2〜2.3節：再現要件を階層的なrubricに分解し，leaf nodeのpass／failと重みからscoreを集約するため，部分的な達成も含めて客観的に評価できる理由が理解しやすい．",
-    "summary": "motivation: domain-establishing\n「AI Agentが既存AI研究を再現できるか (research replication) 」という研究領域の立ち上げ"
+    "abstractJa": "AIエージェントがICML論文20本をゼロから再現できるかを8,316項目で評価し、最良モデルでも達成率21%という研究自動化の難しさを示す。"
   },
   {
     "url": "https://arxiv.org/abs/2401.13649",
@@ -31,7 +31,7 @@ window.PAPERS = [
     "field": "AI Agents系",
     "motivation": "欠落補完型",
     "clarity": "図1：3種類のWeb環境，具体的なtask instruction，Web画面，agentの操作を並べ，画像を見なければ解けないWebタスクとは何かを冒頭で具体化しているため，WebArenaとの差分が直感的に伝わる．図2・3.1〜3.3節：Set-of-Marksによる画面要素とaction IDの対応に加え，observation／action／evaluationを順に説明しており，モデルへの入出力と評価protocolを具体的に想像しやすい．",
-    "summary": "motivation: gap-filling (modality)\nWebArenaという広く使われているweb agent benchmarkがtext-basedであることを踏まえ、視覚情報を必要とするタスクへ拡張"
+    "abstractJa": "画像とテキストの理解が必要な実在に近いWeb操作タスクを整備し、現在のマルチモーダルエージェントの実用上の限界を評価する。"
   },
   {
     "url": "https://arxiv.org/abs/2310.02255",
@@ -42,7 +42,7 @@ window.PAPERS = [
     "field": "Multimodal系",
     "motivation": "欠落補完型",
     "clarity": "図2：新規に作成したIQTest／FunctionQA／PaperQAの具体例を並べ，既存データの統合だけでなく，欠けていたvisual domainを何によって補ったかが分かる．図3・The MathVista Dataset／Data Analysis節：31のsource datasetに加え，task type・mathematical reasoning type・visual contextの分布を別々に可視化し，どの能力空間をどこまで覆うベンチマークかを体系的に理解できる．実験も同じ分類軸で細分化され，総合scoreだけでは見えないモデルの得意・不得意を解釈しやすい．",
-    "summary": "motivation: gap-filling (skill)\nLMMにおける数学的推論が十分に理解されていないことを踏まえ、visual mathematical reasoningを測るbenchmarkを作成"
+    "abstractJa": "図表や画像を伴う数学問題6,141問を集め、基盤モデルの視覚理解と多段階の数学的推論を人間と比較する。"
   },
   {
     "url": "https://arxiv.org/abs/2410.17250",
@@ -53,7 +53,7 @@ window.PAPERS = [
     "field": "Multimodal系",
     "motivation": "欠落補完型",
     "clarity": "図1：文化非依存（CA）と文化依存（CS）の2 subsetを科目構成と件数まで可視化し，単なる日本語訳ではなく，言語差と文化理解を切り分けて測る設計が一目で分かる．表1：既存の日本語LMMベンチマークを文化考慮・難易度・問題数・画像数で比較し，JMMMUが補う欠落を明確にしている．3.2節・図2：文化依存科目の置換と，文化非依存科目における画像内テキストの日本語化を説明し，データ設計の判断と品質保証の根拠が伝わる．",
-    "summary": "motivation: gap-filling (language / culture)\nMMMUを日本語・日本文化文脈へ拡張し、言語・文化依存の性能ギャップを検証"
+    "abstractJa": "翻訳した文化非依存問題と日本固有の問題を併用し、日本語モデルの言語能力と文化的知識を切り分けて評価する。"
   },
   {
     "url": "https://arxiv.org/abs/2406.01574",
@@ -64,7 +64,7 @@ window.PAPERS = [
     "field": "NLP系",
     "motivation": "更新・難化型",
     "clarity": "図1：MMLUとのaccuracy gap，24種類のpromptに対するscore分布，CoT／Directの差を1枚にまとめ，「難しくしただけでなく，識別性とprompt頑健性も改善した」という主張が直感的に伝わる．Introduction：MMLUの弱点を少ない選択肢・知識偏重・trivial／noisyな問題に分解し，10択化・推論重視問題・expert reviewという設計判断に対応づけている．図2：easy questionの除外からoption augmentation，expert reviewまでを可視化し，difficultyとqualityをどのように作ったかが明確である．",
-    "summary": "motivation: saturation-driven\nMMLUの性能飽和を踏まえ、reasoningをより必要とするような難易度の高いタスクへ拡張"
+    "abstractJa": "MMLUの曖昧・自明な問題を整理し選択肢を10個に増やすことで、より難しくプロンプト変化に頑健な推論評価を実現する。"
   },
   {
     "url": "https://arxiv.org/abs/2501.14249",
@@ -75,7 +75,7 @@ window.PAPERS = [
     "field": "Multimodal系",
     "motivation": "更新・難化型",
     "clarity": "図1：既存ベンチマークの飽和とHLE上での低いscoreを同じ図で比較し，なぜさらに高難度な評価が必要かを冒頭で強く示している．図2：分野の異なる実問題を並べ，expert-levelという抽象的な難しさを具体化している．図4・3.2節：LLM difficulty check→expert review／refinement→最終承認→public／private splitの流れを図示し，「難しいだけでなく，検証可能で高品質な問題である」ことをどのように保証したかが分かりやすい．",
-    "summary": "motivation: saturation-driven\nMMLUなどの性能飽和を踏まえ、より高難易度な学術タスクを新規に作成"
+    "abstractJa": "幅広い学術分野の専門家が作成した2,500の難問により、最先端AIの専門知識、推論、確信度校正を評価する。"
   },
   {
     "url": "https://arxiv.org/abs/2510.13626",
@@ -86,7 +86,7 @@ window.PAPERS = [
     "field": "Embodied AI系",
     "motivation": "評価再設計型",
     "clarity": "図1・図2：10,030タスクを7種類のperturbation factorと21の下位カテゴリに整理し，さらにL1〜L5の難易度を設ける構造を可視化しているため，robustnessを何の軸で測るかが一目で分かる．表1：既存のVLA robustness benchmarkを自動化・fine-grained性・perturbation coverageで比較し，評価再設計上の差分を明確にしている．結果分析では，難易度別の性能低下に加えて言語入力の除去や目標置換などを行い，見かけの高scoreを真の頑健性や言語理解と誤解しないための解釈まで示している．",
-    "summary": "motivation: evaluation validity\nVLAで広く用いられるLIBEROというベンチマークについて、わずかなpurturbationによりその性能が大きく劣化することを示す (robustness validity)"
+    "abstractJa": "ロボット操作モデルを7種類の摂動下で段階評価し、標準条件で高性能なモデルも環境変化や言語指示に脆いことを示す。"
   },
   {
     "url": "https://arxiv.org/abs/2406.04127",
@@ -97,7 +97,7 @@ window.PAPERS = [
     "field": "NLP系",
     "motivation": "評価再設計型",
     "clarity": "図1：MMLUに含まれる誤答ラベルや曖昧な問題の実例を冒頭で示し，広く使われるベンチマークの品質問題を具体的に理解できる．図2・2.1節：question clarity，option clarity，正解数，ground truthとの一致を順に確認するerror annotation protocolをdecision treeで示しており，何をエラーと判定するかが再現可能である．表2・図5〜6：再アノテーション前後のscoreやモデル順位の変化を示し，データ品質がモデル比較を歪めるという主張を定量的に回収している．",
-    "summary": "motivation: evaluation validity\nMMLUの正解ラベルや問題品質を検証し、benchmark annotationの曖昧さが性能比較を歪めることを示唆 (annotation validity)"
+    "abstractJa": "MMLUの5,700問を人手で再注釈して誤りを修正し、データ品質がモデル性能や順位の解釈に与える影響を検証する。"
   },
   {
     "url": "https://arxiv.org/abs/2404.01318",
@@ -108,7 +108,7 @@ window.PAPERS = [
     "field": "NLP系",
     "motivation": "評価再設計型",
     "clarity": "図1・3章：leaderboard，jailbreak artifacts，attack／defenseの評価結果を1つの公開基盤として示し，JailbreakBenchが単なるデータセットではなく「比較のルール」を標準化するベンチマークであることが分かる．3.5節・表1：複数のjudgeを人間ラベルとの一致率・FPR・FNRで比較し，採用するjudgeの妥当性を定量的に説明している．3.6節：system prompt，judge，生成条件，local／cloud modelを固定した評価frameworkを明記し，従来研究で比較不能だった要因と提案内容の対応が明確である．",
-    "summary": "motivation: standardization\njailbreak研究の問題設定・評価方法などがバラバラであることを踏まえ、標準化された評価プロトコルを提案"
+    "abstractJa": "100の有害行動、脅威モデル、攻撃テンプレート、判定器を標準化し、LLMへの脱獄攻撃を再現可能に比較する。"
   },
   {
     "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Wang_LVBench_An_Extreme_Long_Video_Understanding_Benchmark_ICCV_2025_paper.html",
@@ -119,7 +119,7 @@ window.PAPERS = [
     "field": "Multimodal系",
     "motivation": "欠落補完型",
     "clarity": "",
-    "summary": "motivation: gap-filling (temporal scale)\n既存の動画ベンチマークが短尺中心であることを踏まえ、数時間規模の長尺動画理解を測る評価基盤を作成"
+    "abstractJa": "数時間規模の動画と質問を用いて長期記憶と時系列理解を測り、既存モデルの長い視覚文脈を統合する能力不足を示す。"
   },
   {
     "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Wang_IDEATOR_Jailbreaking_and_Benchmarking_Large_Vision-Language_Models_Using_Themselves_ICCV_2025_paper.html",
@@ -130,7 +130,7 @@ window.PAPERS = [
     "field": "Multimodal系",
     "motivation": "評価再設計型",
     "clarity": "",
-    "summary": "motivation: evaluation validity (safety)\n既存のVLM jailbreak評価が手作業・低多様性の攻撃に依存していることを踏まえ、多様な攻撃生成と安全性評価ベンチマークを構築"
+    "abstractJa": "視覚言語モデル自身に有害な画像・文章対を生成させ、3,654例と11モデルで脱獄攻撃の転移性と安全上の弱点を検証する。"
   },
   {
     "url": "https://arxiv.org/abs/2504.12516",
@@ -141,7 +141,7 @@ window.PAPERS = [
     "field": "AI Agents系",
     "motivation": "更新・難化型",
     "clarity": "",
-    "summary": "motivation: saturation-driven\n既存の情報検索系ベンチマークが飽和しつつあることを踏まえ、粘り強いweb browsing能力そのものを測る高難度ベンチマークを作成"
+    "abstractJa": "単純検索では見つけにくい情報を問う1,266問により、エージェントがWebを粘り強く探索し、短く検証可能な答えを得る能力を測る。"
   },
   {
     "url": "https://arxiv.org/abs/2404.12390",
@@ -152,7 +152,7 @@ window.PAPERS = [
     "field": "Multimodal系",
     "motivation": "欠落補完型",
     "clarity": "",
-    "summary": "motivation: gap-filling (perception)\n既存のマルチモーダル評価が言語知識や推論に偏っていることを踏まえ、純粋な視覚知覚能力を測るベンチマークを構築"
+    "abstractJa": "14の古典的視覚タスクを3,807の選択問題に変換し、画像入力が可能なモデルにも基本的な視覚知覚の不足があることを示す。"
   },
   {
     "url": "https://arxiv.org/abs/2511.21750",
@@ -163,7 +163,7 @@ window.PAPERS = [
     "field": "Multimodal系",
     "motivation": "欠落補完型",
     "clarity": "",
-    "summary": "motivation: gap-filling (structured output)\n実運用で重要なschema準拠の構造化出力について視覚入力ベースで体系的に評価する基盤が不足していたため、その評価ベンチマークを作成"
+    "abstractJa": "文書、グラフ、UIなどの画像から指定スキーマに従う構造化出力を生成する能力を、内容の正確さと形式遵守の両面で評価する。"
   },
   {
     "url": "https://arxiv.org/abs/2406.11230",
@@ -174,7 +174,7 @@ window.PAPERS = [
     "field": "Multimodal系",
     "motivation": "欠落補完型",
     "clarity": "",
-    "summary": "motivation: gap-filling (long context)\nMLLMの長文脈・多数画像文脈での検索能力が十分に検証されていないことを踏まえ、needle-in-a-haystack設定で長文脈性能を測定"
+    "abstractJa": "多数の画像中から対象画像を探す課題により長い視覚文脈の検索能力を測り、対象がない場合の幻覚などを明らかにする。"
   },
   {
     "url": "https://arxiv.org/abs/2510.26794",
@@ -185,7 +185,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "評価再設計型",
     "clarity": "",
-    "summary": "motivation: generalization-driven\n既存のtext-to-motion研究が標準ベンチマーク上では強くても汎化性に限界があることを踏まえ、データ・モデル・評価を一体で拡張"
+    "abstractJa": "多様な人物動作データ、フローマッチング生成モデル、品質・忠実度・汎化性を測る階層的評価を一体として提案する。"
   },
   {
     "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Wang_AniMo_Species-Aware_Model_for_Text-Driven_Animal_Motion_Generation_CVPR_2025_paper.html",
@@ -196,7 +196,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "欠落補完型",
     "clarity": "",
-    "summary": "motivation: gap-filling (species)\ntext-driven motion generationが人間中心で動物種ごとの差異を十分扱えていないことを踏まえ、種依存性を考慮した動物モーション生成モデルを提案"
+    "abstractJa": "114種・約7.8万動作のAniMo4Dと種の身体構造を考慮するモデルにより、テキストから多様な動物の動きを生成する。"
   },
   {
     "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Li_VidHalluc_Evaluating_Temporal_Hallucinations_in_Multimodal_Large_Language_Models_for_CVPR_2025_paper.html",
@@ -207,7 +207,7 @@ window.PAPERS = [
     "field": "Multimodal系",
     "motivation": "欠落補完型",
     "clarity": "",
-    "summary": "motivation: evaluation validity (hallucination)\n動画理解における時間的hallucinationが十分に評価されていないことを踏まえ、行動・時系列・場面転換の観点から検証するベンチマークを構築"
+    "abstractJa": "5,002組の動画で動作、順序、場面遷移に関する時間的幻覚を評価し、学習不要の視覚特徴再重み付けによる抑制法も示す。"
   },
   {
     "url": "https://aclanthology.org/2025.emnlp-main.695/",
@@ -218,7 +218,7 @@ window.PAPERS = [
     "field": "Multimodal系",
     "motivation": "欠落補完型",
     "clarity": "",
-    "summary": "motivation: safety-driven\nmisleading chartをMLLMが見抜けるかという観点の評価が欠けていたため、誤解を招く可視化に対する理解と推論能力を測るベンチマークを作成"
+    "abstractJa": "21種類の誤誘導を含む3,026のグラフ質問で24モデルを比較し、欺瞞的な可視化を見抜いて推論する能力を評価する。"
   },
   {
     "url": "https://openaccess.thecvf.com/content/CVPR2022/html/Zou_How_Good_Is_Aesthetic_Ability_of_a_Fashion_Model_CVPR_2022_paper.html",
@@ -229,7 +229,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "領域開拓型",
     "clarity": "図2および図6：データ設計時に除外した特殊な着こなし例（図2）や、各モデルが実際に間違えた色合わせの例（図6）など、文章では伝わりにくい「データの限界」と「手法の弱点」を実画像で直感的に示している．",
-    "summary": "motivation: aesthetic fashion evaluation ファッション推薦を検索精度ではなく、専門的な美的能力として評価するベンチマークを提案。"
+    "abstractJa": "ファッション画像に対する審美性を細粒度な専門観点から捉え、評価の完全性、信頼性、説明可能性を測るベンチマークを提案する。"
   },
   {
     "url": "https://www.ijcai.org/proceedings/2022/692",
@@ -240,7 +240,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "評価再設計型",
     "clarity": "図1: 従来手法の決定的な失敗例（主役である被写体が文字で隠れる等）と提案手法の出力をで比較して示すことで，結果として既存モデルの何が課題で、なぜ提案手法が有効なのかというモチベーションが汲み取れる。ただし初見の人には図だけだと課題感がわかりにくいので、イントロの文章もセットで必要。",
-    "summary": "motivation: content-aware poster layout 広告ポスターでは背景画像の構図がテキスト配置に影響することを踏まえ、60,548件の広告ポスターとデザイン指標を用いた評価を提案。"
+    "abstractJa": "広告ポスターの視覚・文章要素を背景に合わせて配置するGANと約6万件のデータを提案し、生成レイアウトの審美性を評価する。"
   },
   {
     "url": "https://arxiv.org/abs/2603.25732?utm_source=chatgpt.com",
@@ -251,7 +251,7 @@ window.PAPERS = [
     "field": "Multimodal系",
     "motivation": "欠落補完型",
     "clarity": "図1：20のタスク分類と評価対象（赤枠）、具体的な評価質問を1枚の図に凝縮し、ベンチマークの全体像と評価方法が直感的に伝わる。　表1・2：多数のモデル性能を定義した分類基準で評価し、「テキストには強いがレイアウトに弱い」といった手法ごとの一長一短が即座に読み取れる。モデル数は多いものの非常にみやすい。　図4・5：生成画像の成功（青枠）と失敗（赤枠）を視覚化し、数値だけでは伝わらない「具体的なエラー傾向やモデルの限界」を直感的に示している。",
-    "summary": "motivation: commercial multi-constraint generation 自然画像生成ベンチでは商用ビジュアルの文字・レイアウト・属性・知識整合性を測れないことを踏まえ、実務的なチェックリスト評価を構築。"
+    "abstractJa": "スライド、グラフ、Web、ポスター、科学図など20の実務タスクを8,000項目で採点し、26の視覚生成システムを比較する。"
   },
   {
     "url": "https://ojs.aaai.org/index.php/AAAI/article/view/25282",
@@ -262,7 +262,7 @@ window.PAPERS = [
     "field": "Multimodal系",
     "motivation": "領域開拓型",
     "clarity": "表1：従来データセットとの比較をチェックリスト形式で並べて示している　図1：「ユーザーの自然言語による指示」から「具体的な編集コマンドと対象座標（バウンディングボックス）」を出力するという新しいタスクの入出力関係を、実際のドキュメント画像を用いて視覚化している",
-    "summary": "motivation: language-guided document editing 専門的な文書編集ツールを自然言語で操作するには、文書内の視覚・テキスト・レイアウト文脈へのgroundingが必要であることを踏まえ、局所文書編集タスクを提案。"
+    "abstractJa": "PDFやデザイン上の約2.8万件の編集指示を収録し、自然言語から編集対象の位置と実行可能な命令を予測する能力を評価する。"
   },
   {
     "url": "https://papers.nips.cc/paper_files/paper/2025/hash/17337b1d5eeac8b59c80e025a552fa7a-Abstract-Datasets_and_Benchmarks_Track.html",
@@ -273,7 +273,7 @@ window.PAPERS = [
     "field": "Multimodal系",
     "motivation": "領域開拓型",
     "clarity": "タスク定義から評価、そして結果の解釈に至るまで、視覚的かつ構造的に非常に分かりやすく構成　図3：独自の評価指標「PaperQuiz」について、式や文章だけでなく、論文からクイズを自動生成し、様々な知識レベルの読者（学生や教授）を模したVLMエージェントに解かせるという「評価の仕組み（プロトコル）」をイラスト付きで図解している。どのような入力がどういう評価値になるのかが直感的にわかるよう示されており、新しい評価パラダイムの意図が即座に汲み取れる。　図4および第4章：論文からポスターを生成するパイプラインをフロー図で可視化し、対応するエージェントの役割ごとに節を分けて解説。入力から出力までの全体像が一目でわかる",
-    "summary": "motivation: purpose-based evaluation 学術ポスターを見た目だけでなく、論文内容が読者に伝わるかをPaperQuizで評価。"
+    "abstractJa": "科学論文から編集可能なポスターを生成するエージェントと、視覚・文章・全体品質および内容理解を測る評価体系を提案する。"
   },
   {
     "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/6841eed8bb6a2ec49e49235c8115efee-Abstract-Datasets_and_Benchmarks_Track.html",
@@ -284,7 +284,7 @@ window.PAPERS = [
     "field": "AI Agents系",
     "motivation": "欠落補完型",
     "clarity": "表１： 既存ベンチマークとの差分について、チェックリスト（特徴の有無）や数値（ファイル数、コード行数など）を用いて比較している。　図１： ベンチマーク生成から評価までの過程において、「人間」と「LLM」がどの段階でどのように関わってデータを作成・フィルタリング・テストしているのかという一連の流れを可視化している。これにより、データ品質の保証やアノテーションの流れの透明性が直感的に理解できる。　図２： 新たな評価指標である「ビジュアルの良さ（Appearance Score）」について、スコア1〜5ごとの具体的なWebサイトのスクリーンショット例を提示している。数値や文字による定義だけでなく視覚的な例があることで、どのようなデザインがどのスコアになるのかが直感的に分かり、読者に評価基準の妥当性と納得感を与えている",
-    "summary": "motivation: execution-based web generation Webサイト生成をスクリーンショットの類似度ではなく、647件の操作テストで本当に機能するかにより評価。"
+    "abstractJa": "要件から複数ファイルのWebサイトを生成する能力を647の実行可能な機能テストで測り、見た目だけでなく動作の正しさを評価する。"
   },
   {
     "url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/edac78c3e300629acfe6cbe9ca88fb84-Abstract-Conference.html",
@@ -295,7 +295,7 @@ window.PAPERS = [
     "field": "AI Agents系",
     "motivation": "更新・難化型",
     "clarity": "図1：GitHubのIssueとコードベースを入力とし、解決策となるPRを生成してユニットテストで検証するという、提案するベンチマークの全体像が1つの図に簡素かつ過不足なくまとまっている　2.3節および図3：2.3節で「複数のファイルにまたがる編集」や「長大な入力の処理」など、従来の自己完結型の単純なベンチマークにはなく本研究で測りたいモデルの能力を明確に言語化している。その上で図3の円グラフを用いることで、データセットにDjangoやsympyなど12種類の実用的なPythonパッケージがどの程度の割合で含まれているかを可視化しており、評価環境の多様性と現実性が一目で伝わる　表８：各モデルが生成したパッチと正解（Goldパッチ）の編集内容を、「追加行数」「削除行数」「編集した関数・ファイル数」といった具体的な項目別に定量比較しており、LLMが人間（正解）に比べて局所的で短いコードしか生成できていない（平均行数が半分以下など）という傾向が数値から即座に読み取れる",
-    "summary": "motivation: real-world software engineering コード生成を静的な正解比較ではなく、実GitHub issueを修正しテストを通せるかで評価。"
+    "abstractJa": "実際のGitHub Issueと修正PRから2,294課題を構築し、モデルがコードベースを理解して複数ファイルを正しく修正できるかを測る。"
   },
   {
     "url": "https://aclanthology.org/2025.acl-long.50/",
@@ -306,7 +306,7 @@ window.PAPERS = [
     "field": "NLP系",
     "motivation": "更新・難化型",
     "clarity": "学術的な体裁というよりは「大規模なベンチマーク構築と網羅的なモデル評価」を主眼に置いた企業発のテクニカルレポート（報告資料）としての色合いが強く、視覚的にも「どのモデルが優れているか」「どのような傾向があるか」を大量のデータで一気に見せる構成になっている。　図1: いきなり大量のモデルの性能比較（棒グラフ）を提示することで、結果としてどのモデルが最も優れているのか、が即座に汲み取れる．冒頭で聴衆の興味を惹きつけるキャッチーな見せ方として効果的であるが、タスク概要が書いてある方が良い気がする．　表1：提案ベンチマークと既存研究との比較において、単なるチェックリストだけでなく、「タスク難易度」や「多様性」を星の数で可視化し、アノテーション手法（HumanかSyntheticか）まで一覧化していて、「なぜこの新しいベンチマークが必要なのか」と「自分たちのデータの優位性」を直感的に理解させるのに非常にわかりやすい　図3：4つのデータセットにおけるエラー発生位置の分布をヒストグラムで示しており「プロセスエラーの大部分は推論の序盤（ステップ0〜5あたり）で発生している」という傾向を視覚的に示している",
-    "summary": "motivation: process-level reasoning 数学の最終答えではなく、解法過程の最初の誤りステップを特定できるかを評価。"
+    "abstractJa": "専門家が注釈した3,400の数学解答を用い、推論過程で最初に誤ったステップを特定する報酬・批評モデルの能力を評価する。"
   },
   {
     "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Ruan_VLRMBench_A_Comprehensive_and_Challenging_Benchmark_for_Vision-Language_Reward_Models_ICCV_2025_paper.html?utm_source=chatgpt.com",
@@ -317,7 +317,7 @@ window.PAPERS = [
     "field": "Multimodal系",
     "motivation": "欠落補完型",
     "clarity": "図1： データの収集から、小規模モデルを用いたフィルタリング、大規模モデルを用いた推論プロセス生成までのパイプラインが直感的なフローチャートで示されている。　表３： 26種類ものモデルをパラメーターの規模（Small, Middle, Large）やオープン/クローズドに分類し、12種類のタスクに対する結果を網羅的に一覧化している。モデルの規模を大きくしても性能が頭打ちになる傾向が見られる。",
-    "summary": "motivation: evaluator-model evaluation VLMそのものではなく、Vision-Language Reward Modelが過程・結果・批評を評価できるかを包括的に検証。"
+    "abstractJa": "数学、幻覚、複数画像を含む12タスク・12,634問で、視覚言語モデルの過程・結果・批評を採点する報酬モデルを比較する。"
   },
   {
     "url": "https://arxiv.org/abs/2106.08261?utm_source=chatgpt.com",
@@ -328,7 +328,7 @@ window.PAPERS = [
     "field": "Embodied AI系",
     "motivation": "評価再設計型",
     "clarity": "図1：文章ではイメージしにくい複雑な8つの物理シナリオ（ドミノ、衝突、落下など）をビジュアルで一覧化しており、対象とするタスクの多様性や空間的な位置関係が直感的に伝わる。ただし、単なるタスク紹介にとどまらず、ここに図4のような「多様なモデルを共通指標でどう評価するのか」という評価プロセスの要素も組み込めば、このベンチマークの最大の貢献（公平な比較基準の確立）が完結して伝わり、さらに分かりやすくなったと言える　図2：モデルに与えられる入力データ（RGB、深度、セグメンテーション、法線など）の種類と、最終的に解くべきタスク（「赤い物体が黄色い物体に触れるか？」というシンプルな二値分類）が視覚的に整理されており、モデルに何をさせて評価するのかが一目でわかる　図4：アーキテクチャ（TransformerやConvNet、グラフニューラルネットワークなど）や学習プロトコルが全く異なる複数のモデルを、どのように1つのタスクに落とし込み、人間との比較指標（AccuracyやCohen's κなど）で評価するのかという複雑なパイプラインをフローチャートで整理して示している",
-    "summary": "motivation: physical world prediction 画像認識モデルが物体を認識できても物理シーンの未来を理解しているとは限らないことを踏まえ、人間比較付きで物理予測能力を評価。"
+    "abstractJa": "物理シミュレーション動画から将来を予測する能力を人間と機械で比較し、視覚から物理状態を抽出する難しさを明らかにする。"
   },
   {
     "url": "https://doi.org/10.1007/978-3-319-10602-1_48",
@@ -339,7 +339,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "領域開拓型",
     "clarity": "",
-    "summary": "Fig.1〜5で「タスク定義→収集→annotation設計→品質分析→統計→baseline」を論証する黄金律を体現。benchmark論文の骨格の教科書。"
+    "abstractJa": "日常の複雑な場面にある物体へ領域とキャプションを付与し、検出、分割、画像説明を含む文脈的シーン理解の共通基盤を提供する。"
   },
   {
     "url": "https://doi.org/10.1109/CVPR.2016.350",
@@ -350,7 +350,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "欠落補完型",
     "clarity": "",
-    "summary": "「既存datasetは都市シーン複雑性が不足」という一言のgapを冒頭で確立し、全設計がそこへ収束する。Introductionのgap設定の手本。"
+    "abstractJa": "50都市の道路画像に5,000枚の精密注釈と20,000枚の粗い注釈を付け、自動運転向けの都市シーン意味理解を評価する。"
   },
   {
     "url": "https://doi.org/10.48550/arXiv.1811.00982",
@@ -361,7 +361,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "欠落補完型",
     "clarity": "",
-    "summary": "「unified annotations」で3タスク統合を主張し、スケーリング曲線で規模的価値を実験的に証明。「量ではなく設計の統一性」を論文の軸にする書き方の手本。"
+    "abstractJa": "約920万枚の画像に分類、物体境界箱、視覚関係の注釈を統合し、大規模な視覚認識課題を共通基盤で扱えるようにする。"
   },
   {
     "url": "https://doi.org/10.48550/arXiv.1801.00868",
@@ -372,7 +372,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "領域開拓型",
     "clarity": "",
-    "summary": "PQ = SQ × RQという乗法分解でinterpretabilityを担保。「タスク定義→指標設計動機→数式→実験検証」という指標提案論文の論証の手本。"
+    "abstractJa": "全画素に意味カテゴリと個体IDを付ける課題と統一指標PQを定義し、意味分割とインスタンス分割を一つの評価枠組みに統合する。"
   },
   {
     "url": "https://doi.org/10.48550/arXiv.1908.03195",
@@ -383,7 +383,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "欠落補完型",
     "clarity": "",
-    "summary": "Zipf的ロングテール分布を「問題設定」の主役に据え、federated evaluationで指標設計まで一気通貫。統計図を飾りではなく主張の証拠として機能させる手本。"
+    "abstractJa": "1,000超のカテゴリ、約200万の高品質マスク、16.4万枚の画像を収録し、自然な長尾分布下での大語彙インスタンス分割を評価する。"
   },
   {
     "url": "https://doi.org/10.48550/arXiv.2005.10356",
@@ -394,7 +394,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "欠落補完型",
     "clarity": "",
-    "summary": "既存benchmarkのカテゴリ偏りをバブルチャートで即証明し、「既存trackerが低精度」という結果を末尾で回収。benchmark論文は「新研究課題の証明」で完結させる書き方の体現。"
+    "abstractJa": "2,907本の動画と833カテゴリをボトムアップに注釈し、限定カテゴリを超えて任意の動く物体を追跡する能力を測る。"
   },
   {
     "url": "https://doi.org/10.48550/arXiv.2008.08115",
@@ -405,7 +405,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "評価再設計型",
     "clarity": "",
-    "summary": "mAPの「なぜ悪いのか」を6エラー型に分解・独立定量化。Fig.2でCOCO progressive evalの順序依存バイアスをbefore/afterで暴き、leaderboardを診断表に変換する手本。"
+    "abstractJa": "物体検出・インスタンス分割の誤りを6種類に分解し、各誤りが性能へ及ぼす影響をモデルやデータセットに依存せず診断する。"
   },
   {
     "url": "https://doi.org/10.48550/arXiv.2107.02314",
@@ -416,7 +416,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "更新・難化型",
     "clarity": "",
-    "summary": "2タスク統合の臨床的根拠・DSC+HD95の指標選択理由・dot-and-box plotによる分布提示を一論文にまとめる。MICCAIチャレンジ論文の標準的な型を学べる。"
+    "abstractJa": "2,040症例の多系列MRIを用い、脳腫瘍の部分領域分割とMGMTメチル化状態の予測を標準条件で評価する。"
   },
   {
     "url": "https://doi.org/10.1038/s41467-022-30695-9",
@@ -427,7 +427,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "評価再設計型",
     "clarity": "",
-    "summary": "development→mystery phaseの二段階設計で「汎用モデルが専用モデルを超えられるか」を実験的に検証。multi-task benchmarkの設計思想の転換点。"
+    "abstractJa": "複数の臓器、疾患、撮像方式を横断する医用画像分割課題により、個別最適化ではなく未知タスクへの汎化能力を競う。"
   },
   {
     "url": "https://doi.org/10.1038/s41592-020-01008-z",
@@ -438,7 +438,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "欠落補完型",
     "clarity": "",
-    "summary": "「アーキテクチャ革新よりpipeline設定が重要」という主張を23 datasets横断の比較表で一括証明。benchmark比較表のデザインと論証の流れの手本。"
+    "abstractJa": "データ特性から前処理、構造、学習、後処理を自動設定し、手作業の設計なしに多様な医用画像分割で強い基準性能を実現する。"
   },
   {
     "url": "https://doi.org/10.1038/s41592-023-02151-z",
@@ -449,7 +449,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "評価再設計型",
     "clarity": "",
-    "summary": "problem fingerprintから適切な指標を選ぶフレームワークをDelphiプロセスで構築。分類・検出・seg横断でpitfallを体系化した参考書的存在。"
+    "abstractJa": "課題特性を表すproblem fingerprintと専門家合意に基づき、分類・検出・分割で適切な評価指標を選ぶための指針を提供する。"
   },
   {
     "url": "https://doi.org/10.1109/TMI.2021.3090082",
@@ -460,7 +460,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "欠落補完型",
     "clarity": "",
-    "summary": "「単一施設・単一スキャナ」偏りをdataで明示しドメインシフトを主役に。vendor別boxplotで「平均では見えない弱点」を炙り出す分析設計の手本。"
+    "abstractJa": "異なる施設、MRI装置、心疾患を含む心臓MRI分割競技を整備し、未知の施設や装置に対するモデルの一般化能力を評価する。"
   },
   {
     "url": "https://doi.org/10.1038/s41467-024-44824-z",
@@ -471,7 +471,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "欠落補完型",
     "clarity": "",
-    "summary": "内部86+外部60タスクの2段階評価で学習済みタスクと未知タスクの汎化を分離。強みと弱みを因子別に正直に開示するscientific integrityの手本。"
+    "abstractJa": "10種類のモダリティと30超のがん種を含む157万組の画像・マスクでSAMを医療向けに適応させ、汎用的な分割能力を検証する。"
   },
   {
     "url": "https://doi.org/10.48550/arXiv.2304.09324",
@@ -482,7 +482,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "評価再設計型",
     "clarity": "",
-    "summary": "12 datasets横断で「SAMが苦手な条件プロファイル」を因子別boxplotで可視化。「平均精度で評価しない」設計思想がfoundation model benchmarkingの参考になる。"
+    "abstractJa": "SAMを12の医用画像データセット・7,451症例で比較し、難易度、次元、対象サイズ、モダリティなどが精度に与える影響を分析する。"
   },
   {
     "url": "https://doi.org/10.48550/arXiv.2205.12358",
@@ -493,7 +493,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "欠落補完型",
     "clarity": "",
-    "summary": "symmetric metricとasymmetric copy processのミスマッチを定量的に暴く。benchmark noveltyを「設計思想が間違っていた」として主張する書き方の実例。"
+    "abstractJa": "難しい負例を含む画像コピー検出ベンチマークを構築し、原画像から派生画像を探す方向性を考慮した非対称類似度学習を提案する。"
   },
   {
     "url": "https://doi.org/10.48550/arXiv.1901.05495",
@@ -504,7 +504,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "欠落補完型",
     "clarity": "",
-    "summary": "paired/challenging dataの二分割で客観・主観評価を両立。qualitative評価を本文Figureの中心に置く「domain interestに正直なbenchmark」の手本。"
+    "abstractJa": "実海中画像950枚から参照画像付きデータと難例を整備し、既存の水中画像強調法と提案するWater-Netを定量・主観評価する。"
   },
   {
     "url": "https://doi.org/10.48550/arXiv.1811.10862",
@@ -515,7 +515,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "評価再設計型",
     "clarity": "",
-    "summary": "大規模benchmarkのsparse negative label問題を診断しmethod設計に活かす。benchmarkを「批判的に分析する対象」として扱う研究視点の実例。"
+    "abstractJa": "Open Imagesの疎な注釈に対しカテゴリ階層の包含関係を利用し、未注釈物体を負例として学習する悪影響を軽減する。"
   },
   {
     "url": "https://doi.org/10.48550/arXiv.1911.10194",
@@ -526,7 +526,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "評価再設計型",
     "clarity": "",
-    "summary": "「Simple / Strong / Fast」の三軸を全実験に一貫させた baseline paper。失敗例を誠実に開示しつつ複数benchmark横断で結果を整理する訴求の仕方が参考になる。"
+    "abstractJa": "意味領域とインスタンス中心を別デコーダで予測する、単純で高速かつ高性能なボトムアップ型パノプティック分割手法を提案する。"
   },
   {
     "url": "https://openreview.net/forum?id=1yOnfDpkVe",
@@ -537,7 +537,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "評価再設計型",
     "clarity": "セクション1.1（イントロのサブセクション）：異端的ではあるが，イントロの最後にTLDRのセクションを設け，計測から得られる示唆を列挙している．手法の性質および，どのモデルを使えばよいかという結論をベンチマーク結果で求めているわけなので，良い意味で実務に最適化されているように思う．",
-    "summary": "motivation: backbone models；結局どのbackbone modelを，どういうケースで使えばいいんですか？への解"
+    "abstractJa": "1,500回超の学習実験で多様な事前学習済みバックボーンを複数の視覚課題へ適用し、公平な条件で性能と汎用性を比較する。"
   },
   {
     "url": "https://openreview.net/forum?id=L7KDMsqWl9",
@@ -548,7 +548,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "欠落補完型",
     "clarity": "（強いて言えばFig2）論文としての品質は高くないが，fig2で示されるように取り扱う問題の困難性を早期に示すことは評価できる",
-    "summary": "エチオピア文字の手書き文書ベンチ；逆説的に論文として読みにくい理由を汲み取れる"
+    "abstractJa": "18〜20世紀の写本1,700ページから約8万行を注釈し、エチオピア文字OCRの分布内・分布外性能と人間との差を評価する。"
   },
   {
     "url": "https://arxiv.org/abs/2412.07626",
@@ -559,7 +559,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "評価再設計型",
     "clarity": "１ページ目（イントロおよび図）：複数モデルのレーダーチャートを１Pに示すことで，結果としてどのモデルを使えばよいかという答えが即時に汲み取れる．",
-    "summary": "OCR性能の評価をより横断的に拡張"
+    "abstractJa": "9種の文書ソース、19のレイアウト要素、15の属性を用い、PDF解析をエンドツーエンド、個別タスク、属性別に評価する。"
   },
   {
     "url": "https://openreview.net/forum?id=Vb6i3Dp24N",
@@ -570,7 +570,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "更新・難化型",
     "clarity": "セクション１（イントロ）：問題提起「Do models perform well enough on text-oriented visual understanding tasks in the\nLMM era, or do existing benchmarks fail to capture the broader challenges in diverse environments?」とその解答へ向けた本研究の位置づけが，明瞭に対応しており，モチベーションおよび意義が理解しやすい",
-    "summary": "LMMが文書を「読める能力」だけではなく，「見つけて考える」能力を計測"
+    "abstractJa": "31場面・1万問の日英対応データで、視覚文字の読み取り、位置特定、推論を評価し、多くのモデルに残る弱点を明らかにする。"
   },
   {
     "url": "https://arxiv.org/abs/2407.01523",
@@ -581,7 +581,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "欠落補完型",
     "clarity": "Fig1: 扱うデータの内容およびモデルの評価結果と得られる考察をすべて包含しており，概要を掴みやすい",
-    "summary": "長いPDFだけではなく，レイアウトをまたいで根拠付きに理解できるか"
+    "abstractJa": "平均49.4ページのPDF 130件から1,062問を構築し、複数ページの文章と図表を横断して根拠を統合する能力を測る。"
   },
   {
     "url": "https://arxiv.org/abs/2501.07244",
@@ -592,7 +592,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "評価再設計型",
     "clarity": "セクション１（イントロ）：特段評価しうる点が難しいが，セクション１で問題点を示し，自分の研究の立ち位置を明らかにする点は評価できる．ただ，包括性について触れているが，これを文章で真に回収できいるかは微妙であるように思う．",
-    "summary": "手書き数学答案の採点を，正誤判定だけでなく「誤りの発見・位置特定・修正」まで測れる評価問題に引き上げ"
+    "abstractJa": "609問題・2,200の手書き解答に4種類の誤りを注釈し、推論誤りの検出、位置特定、修正能力と手書き入力の影響を評価する。"
   },
   {
     "url": "https://arxiv.org/abs/2505.16470",
@@ -603,7 +603,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "欠落補完型",
     "clarity": "Fig3: アノテーションパイプラインを図と合わせ示すことで，概要が掴みやすい．このパイプラインを文章で示されるとあまりわからないと思う．一方で，Fig1で概要をすべて織り込んでいるが，情報過多であまりよくわからない．",
-    "summary": "文書QAのRAGにおいて，テキスト検索だけでなく「図表を根拠として探し答えに組み込めるか」を評価"
+    "abstractJa": "複数ページの文章・図表を根拠とする4,055問で60モデルと14検索器を比較し、文書向けマルチモーダルRAGを評価する。"
   },
   {
     "url": "https://arxiv.org/abs/2411.17125",
@@ -614,7 +614,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "欠落補完型",
     "clarity": "全体的なヴィジュアライズとセクション４：Fig3(a)ではどのようにデータを構成したかがわかりやすい（一方でこれはベンチマーク特有のものではない気もする．）Fig4は記号的表現が理解のスムーズさを減らすが，ベンチマーク的な意味では，データと評価がどのように対応しているのかがわかりやすい",
-    "summary": "文書VQAにおいて，「どこを見て，指定箇所がなにを意味するか」まで扱えるようにした"
+    "abstractJa": "文書画像の解析・指示データを生成する仕組みと、グラフ、ポスター、PDFなど7タスクを用いて要素の指示・位置特定能力を評価する。"
   },
   {
     "url": "https://arxiv.org/abs/2512.20174",
@@ -625,7 +625,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "欠落補完型",
     "clarity": "セクション１および図１：現在の分野の動向を示したうえで，その問題点と提案モデル（本論文では合わせてモデルも提案した）を示しており，納得感を生みやすい構造になっている．",
-    "summary": "文書画像検索を，「似た画像を探す」から「自然文の細かな意味で探す」問題へ引き上げ．"
+    "abstractJa": "約4.1万の実文書に各5件の検証済み検索文を付け、自然言語から内容とレイアウトが合う文書画像を探す能力を比較する。"
   },
   {
     "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Yang_CC-OCR_A_Comprehensive_and_Challenging_OCR_Benchmark_for_Evaluating_Large_ICCV_2025_paper.html",
@@ -636,7 +636,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "欠落補完型",
     "clarity": "table1:既存ベンチマークと比較して，カバレッジが示せている．一方で，図表の情報量がすくなくもったいないところもある．",
-    "summary": "LMMのOCR能力を，場面・言語・文書解析・情報抽出まで含めた「総合的な読み書き能力」として測れるに設計"
+    "abstractJa": "多場面、多言語、文書解析、情報抽出の4トラック・39サブセットでOCR能力を測り、位置対応や反復幻覚などの弱点を示す。"
   },
   {
     "url": "https://doi.org/10.1007/s11263-014-0733-5",
@@ -647,7 +647,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "欠落補完型",
     "clarity": "図1：提案するベンチマークデータセットについて，どのようなタスクを解けるのか，図示されているため分かりやすい．また，各タスクのデータについて，どのようなアノテーションを採用しているのか，本文だけでは無くキャプションにも記述していることが尚良い．２章４節：データセットの説明の後に，すぐタスクごとの評価指標を提示しているため，全体像がつかみやすい．",
-    "summary": "当時(2015)のベンチマークから，データの分割方法や評価方法をより整備したもの．物体検出だけではなく，セグメンテーションや顔検出の精度も評価可能に．特に評価用サーバを設立して，評価の公平性を図ったものポイント．"
+    "abstractJa": "PASCAL VOC 2008〜2012を振り返り、統計的有意差や手法の相補性を再分析して、物体認識ベンチマーク設計の教訓を整理する。"
   },
   {
     "url": "https://doi.org/10.1109/ICCV.2015.303",
@@ -658,7 +658,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "領域開拓型",
     "clarity": "図1：概要で述べられていた貢献（文章内の単語ごとに画像にBBを付与）について，具体的に図示している点が分かりやすい．章構成：データのアノテーション→クオリティの担保→データの分類→タスク→評価指標という流れが，分かりやすい．読者が知りたいであろう情報を先に持ってきて，うまくいっていることが予想される実験を後回しで書いているのが良い．",
-    "summary": "文章とBBがセットになったベンチマークであり，文章中のどこにBBが出現するのかアノテーションされている点がポイント．また，同じ物体でも異なる言語的な表現がラベルとして登録されている．画像検索だけではなく，visual groundingも評価できるようになった．"
+    "abstractJa": "15.8万キャプションへ24.4万の共参照連鎖と27.6万の領域枠を加え、画像領域と自然言語の語句を細粒度に対応付ける。"
   },
   {
     "url": "https://doi.org/10.1109/CVPR.2018.00598",
@@ -669,7 +669,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "評価再設計型",
     "clarity": "図２：従来のベンチマークデータの問題点を冒頭で図示している点が分かりやすい．図３：ベンチマークについて，難易度分けした結果についても一目でわかるようになっている点",
-    "summary": "従来のOxford and Parisデータのアノテーションが間違っていたのでそれを修正し，データを難易度別に振り分けたベンチマーク．検索タスクが苦手とする，クエリ画像に対して非常に似た別の建物のデータを追加し，前処理あり手法の評価方法を整備した．"
+    "abstractJa": "Oxford・Parisのラベルを修正し、難易度設定、新規クエリ、100万の難しい妨害画像を追加して大規模画像検索を再評価する。"
   },
   {
     "url": "https://doi.org/10.48550/arXiv.2403.09227",
@@ -680,7 +680,7 @@ window.PAPERS = [
     "field": "ロボット系",
     "motivation": "更新・難化型",
     "clarity": "表１：従来ベンチマークとの，データ数及びタスク数の差をもってきて，提案するベンチマークのインパクトを伝えている点が良い．図２：評価時の初期環境及びタスクの達成条件をデータと共に例示しており，評価時の挙動を想像しやすい点が高評価",
-    "summary": "物を持つだけのような単純なタスクではなく，料理や掃除などの人間がおこなう複合タスクをシミュレーション上で評価できるベンチマーク．目視確認ではなく，あらかじめ定義された条件を満たしたのか否かでタスクをロボットが正常におこえたのかを評価できる．また，剛体だけではなく液体や柔らかい物体を扱うタスクも含まれている．"
+    "abstractJa": "1,000の日常活動、50場面、9,000超の物体と、変形物・液体も扱うシミュレータにより長期的なロボット操作を評価する。"
   },
   {
     "url": "https://doi.org/10.1109/LRA.2020.2974707",
@@ -691,7 +691,7 @@ window.PAPERS = [
     "field": "ロボット系",
     "motivation": "欠落補完型",
     "clarity": "図５＆図６：実験に関する学習パラメータや環境設定について，図示しており，文章中で列挙されるよりもわかりやすく，再現性の高い実験がしやすそうな点が良い．また公開されているコードと照らし合わせやすい．３章：アイテマイズ＋ボールドでベンチマークの良さを強調している点もわかりやすい．",
-    "summary": "ボードゲームや日常の家事，単純なピックアンドプレイスタスクを評価できるベンチマーク．震度情報やセグメンテーション情報が提供されており，強化学習や模倣学習モデルなども同じ環境で評価できる枠組みがある．また，学習データの自動生成や新タスクをシミュレーション上に追加可能．"
+    "abstractJa": "100種類のロボット操作、多視点センサー情報、プランナ実演を提供し、少数例学習を含む多様なロボット学習手法を比較する。"
   },
   {
     "url": "https://doi.org/10.18653/v1/D18-1166",
@@ -702,7 +702,7 @@ window.PAPERS = [
     "field": "動画像系",
     "motivation": "領域開拓型",
     "clarity": "３章：節の名前がそのままタスクになっている＋図５に対応するタスクのQAが提示されていて，各タスクがモデルに何をやらせたいのかがすぐに理解できる．図４：ワードクラウドが無駄にカラフルではないのが視認性が高い．",
-    "summary": "レシピに関する質問に対して，画像・時系列的な文章・料理名など複数の情報を利用して答えを出力できるのか評価できるベンチマーク．各手順ごとにそれに対応するデータがペアリングしており，時系列を理解しているのか評価できるのは新規性が高い．"
+    "abstractJa": "約2万件のレシピと3.6万超の質問応答対により、画像と文章を組み合わせて手順の時間的流れを理解する能力を評価する。"
   },
   {
     "url": "https://doi.org/10.1109/TPAMI.2020.2980824",
@@ -713,7 +713,7 @@ window.PAPERS = [
     "field": "動画像系",
     "motivation": "更新・難化型",
     "clarity": "図３：related workで従来ベンチマークをだらだら述べるのではなく，その内容を年表にしている点が初学者にも系譜分かりやすい．図１で，どのようなデータ（アノテーション込み）でどう評価するのかシンプルに図示している点が良い．",
-    "summary": "料理だけでなく，さまざまなタスク・ドメイン（12ドメイン/180タスク）を評価できるベンチマーク．動画検索だけではなく，ステップ検出やアクションセグメンテーションを評価することが可能．"
+    "abstractJa": "12分野・180タスクの11,827本の手順動画へ工程と時間区間を注釈し、工程認識や位置特定など5設定で動画理解を測る。"
   },
   {
     "url": "https://doi.org/10.1109/CVPR.2019.00982",
@@ -724,7 +724,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "領域開拓型",
     "clarity": "２章：図２でカテゴリ別の画像について説明してから，表２でデータのカテゴリ別の画像枚数などを説明しており，わかりやすい．３章で，データラベルや画像サイズ，４章で評価方法に入る流れもわかりやすい．",
-    "summary": "工業製品の欠陥について，学習・テスト・バリデーションデータが含まれており，画像または画素単位で異常なのか正常なのかを評価できるベンチマーク．また，その画像がオブジェクトカテゴリなのかテスクチャカテゴリなのか分類されているのもポイント．"
+    "abstractJa": "実製造現場に近い物体・テクスチャ画像へ複数種類の異常と画素単位マスクを付け、教師なし異常検知・位置特定を評価する。"
   },
   {
     "url": "https://doi.org/10.1007/s11263-022-01578-9",
@@ -735,7 +735,7 @@ window.PAPERS = [
     "field": "CV系",
     "motivation": "更新・難化型",
     "clarity": "図３：カテゴリ別に，従来ベンチマークに足りなかった点について可視化しているのが分かりやすい．図４：新たな評価指標について，グラフで数値的にどういう入力がどういう値になるのか直感的にわかるよう示している．式だけを見てもどういう評価なのか，理解に苦労する人にはありがたい．",
-    "summary": "論理的なルールから逸脱した欠陥（個数の違い・色の違い・位置の違い）について，画像or画素単位で異常か否か評価できることが可能"
+    "abstractJa": "傷などの構造異常に加え、部品の欠落や配置違いといった論理異常を収録し、局所・大域情報を用いる異常検知を評価する。"
   },
   {
     "url": "https://doi.org/10.48550/arXiv.1802.08802",
@@ -746,6 +746,6 @@ window.PAPERS = [
     "field": "Embodied AI系",
     "motivation": "欠落補完型",
     "clarity": "図２：画像データとHTMLベースのデータの対応付けや，HTMLが持つ子ノードについて，フローを書くことによって，評価時のイメージがしやすくなっている．この後に，すぐ既存手法を使った評価結果が示されており，このベンチマークが必要そうだなと印象付ける点もよい．",
-    "summary": "従来のWEBエージェントに関するベンチマークは，指示文から静的なHTMLを理解できるか否かが主であったが，それだけではなく，WEB内の画像・手順・UI要素などの理解を通してWEBタスク（クリックやキーボード入力など）を実行できるのか評価できるベンチマーク"
+    "abstractJa": "Web操作の実演から高水準ワークフローを抽出して強化学習の探索を制約し、複雑なWebタスクのサンプル効率を大幅に高める。"
   }
 ];

@@ -2,7 +2,7 @@
 """Extract the public paper catalogue from the survey workbook.
 
 Usage:
-    python3 scripts/extract_papers.py docs/<survey>.xlsx static/js/papers.js
+    python3 scripts/extract_papers.py static/data/<survey>.xlsx static/js/papers.js
 
 Only Python's standard library is required.
 """
@@ -20,6 +20,7 @@ from zipfile import ZipFile
 MAIN_NS = "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
 REL_NS = "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
 NS = {"m": MAIN_NS, "r": REL_NS}
+SURVEY_SHEET_NAME = "サーベイ論文リスト"
 
 
 def cell_column(reference: str) -> str:
@@ -42,8 +43,17 @@ def extract(source: Path) -> list[dict[str, str]]:
         relation_targets = {
             relation.attrib["Id"]: relation.attrib["Target"] for relation in relations
         }
-        first_sheet = next(iter(workbook.find("m:sheets", NS)))
-        sheet_target = relation_targets[first_sheet.attrib[f"{{{REL_NS}}}id"]]
+        sheets = workbook.find("m:sheets", NS)
+        survey_sheet = next(
+            (sheet for sheet in sheets if sheet.attrib.get("name") == SURVEY_SHEET_NAME),
+            None,
+        )
+        if survey_sheet is None:
+            available = ", ".join(sheet.attrib.get("name", "") for sheet in sheets)
+            raise ValueError(
+                f"sheet {SURVEY_SHEET_NAME!r} was not found (available: {available})"
+            )
+        sheet_target = relation_targets[survey_sheet.attrib[f"{{{REL_NS}}}id"]]
         sheet_path = (
             sheet_target if sheet_target.startswith("xl/") else "xl/" + sheet_target.lstrip("/")
         )
@@ -79,8 +89,8 @@ def extract(source: Path) -> list[dict[str, str]]:
                 "venue": row.get("F", ""),
                 "year": row.get("G", ""),
                 "field": row.get("H", "") or "その他",
-                "clarity": row.get("I", ""),
-                "summary": row.get("J", ""),
+                "motivation": row.get("I", ""),
+                "clarity": row.get("J", ""),
             }
             for row in rows
         ]
@@ -91,9 +101,30 @@ def main() -> None:
         raise SystemExit("usage: extract_papers.py INPUT.xlsx OUTPUT.js")
     source, destination = map(Path, sys.argv[1:])
     papers = extract(source)
+    abstracts_path = source.parent / "abstracts_ja.json"
+    if abstracts_path.exists():
+        abstracts = json.loads(abstracts_path.read_text(encoding="utf-8"))
+        for paper in papers:
+            paper["abstractJa"] = abstracts.get(paper["title"], "")
+        missing = [paper["title"] for paper in papers if not paper["abstractJa"]]
+        if missing:
+            print(
+                "Warning: Japanese abstracts are missing for: " + ", ".join(missing),
+                file=sys.stderr,
+            )
+        unused = sorted(set(abstracts) - {paper["title"] for paper in papers})
+        if unused:
+            print(
+                "Warning: Japanese abstracts have no matching paper: "
+                + ", ".join(unused),
+                file=sys.stderr,
+            )
+    else:
+        for paper in papers:
+            paper["abstractJa"] = ""
     destination.parent.mkdir(parents=True, exist_ok=True)
     destination.write_text(
-        "// Generated from the survey workbook. Do not edit by hand.\n"
+        "// Generated from the survey workbook and abstracts_ja.json. Do not edit by hand.\n"
         + "window.PAPERS = "
         + json.dumps(papers, ensure_ascii=False, indent=2)
         + ";\n",
