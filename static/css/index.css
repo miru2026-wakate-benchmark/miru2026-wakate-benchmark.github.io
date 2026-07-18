@@ -274,6 +274,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .paper-authors { max-width: 800px; margin: 8px 0 0; color: var(--muted); font-size: .68rem; line-height: 1.65; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .paper-meta { display: flex; flex-direction: column; gap: 4px; padding-top: 3px; font: 600 .67rem "DM Sans", "Noto Sans JP"; }
 .paper-meta span:last-child { color: var(--muted); font-weight: 500; }
+.paper-meta .paper-motivation { align-self: flex-start; margin-top: 3px; padding: 2px 8px; color: var(--card-accent); background: var(--card-bg); border: 1px solid var(--card-accent); border-radius: 99px; font-size: .58rem; font-weight: 700; white-space: nowrap; }
 .paper-toggle { display: grid; width: 34px; height: 34px; place-items: center; padding: 0; background: transparent; border: 1px solid var(--ink); border-radius: 50%; cursor: pointer; font-size: 1rem; transition: .2s ease; }
 .paper-toggle:hover { background: var(--lime); }
 .paper-item.is-open .paper-toggle { background: var(--ink); color: var(--white); transform: rotate(45deg); }
@@ -346,7 +347,8 @@ footer p, footer > a:last-child { font: 500 .66rem "DM Sans"; letter-spacing: .0
   .sort-box { min-height: 48px; justify-content: space-between; }
   .search-box kbd { display: none; }
   .paper-item { grid-template-columns: 34px minmax(0, 1fr) 34px; gap: 11px; }
-  .paper-meta { grid-column: 2; flex-direction: row; gap: 12px; }
+  .paper-meta { grid-column: 2; flex-flow: row wrap; gap: 8px 12px; align-items: center; }
+  .paper-meta .paper-motivation { margin-top: 0; }
   .paper-toggle { grid-column: 3; grid-row: 1; }
   .paper-details { grid-column: 2 / -1; grid-template-columns: 1fr; gap: 22px; }
   footer { flex-direction: column; gap: 24px; align-items: flex-start; }

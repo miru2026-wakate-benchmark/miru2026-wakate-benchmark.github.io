@@ -86,6 +86,7 @@
           paper.venue,
           paper.year,
           paper.field,
+          paper.motivation,
           paper.clarity,
           paper.summary,
         ].join(" "),
@@ -125,6 +126,21 @@
       el("span", "", [paper.venue, paper.year].filter(Boolean).join(" · ") || "掲載情報なし"),
       el("span", "", paper.field),
     );
+    const motivationClasses = {
+      "領域開拓型": "palette-red",
+      "欠落補完型": "palette-orange",
+      "更新・難化型": "palette-green",
+      "評価再設計型": "palette-blue",
+    };
+    if (paper.motivation) {
+      meta.append(
+        el(
+          "span",
+          `paper-motivation ${motivationClasses[paper.motivation] || ""}`.trim(),
+          paper.motivation,
+        ),
+      );
+    }
 
     const toggle = el("button", "paper-toggle", "+");
     toggle.type = "button";

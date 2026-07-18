@@ -7,6 +7,7 @@ window.PAPERS = [
     "venue": "CVPR",
     "year": "2024",
     "field": "Multimodal系",
+    "motivation": "領域開拓型",
     "clarity": "",
     "summary": "motivation: domain-establishing\n「LMMの専門知識を含む高度なマルチモーダル理解」という研究領域の立ち上げ"
   },
@@ -17,6 +18,7 @@ window.PAPERS = [
     "venue": "ICML",
     "year": "2025",
     "field": "AI Agents系",
+    "motivation": "領域開拓型",
     "clarity": "",
     "summary": "motivation: domain-establishing\n「AI Agentが既存AI研究を再現できるか (research replication) 」という研究領域の立ち上げ"
   },
@@ -27,6 +29,7 @@ window.PAPERS = [
     "venue": "ACL",
     "year": "2024",
     "field": "AI Agents系",
+    "motivation": "欠落補完型",
     "clarity": "",
     "summary": "motivation: gap-filling (modality)\nWebArenaという広く使われているweb agent benchmarkがtext-basedであることを踏まえ、視覚情報を必要とするタスクへ拡張"
   },
@@ -37,6 +40,7 @@ window.PAPERS = [
     "venue": "ICLR",
     "year": "2024",
     "field": "Multimodal系",
+    "motivation": "欠落補完型",
     "clarity": "",
     "summary": "motivation: gap-filling (skill)\nLMMにおける数学的推論が十分に理解されていないことを踏まえ、visual mathematical reasoningを測るbenchmarkを作成"
   },
@@ -47,6 +51,7 @@ window.PAPERS = [
     "venue": "NAACL",
     "year": "2025",
     "field": "Multimodal系",
+    "motivation": "欠落補完型",
     "clarity": "",
     "summary": "motivation: gap-filling (language / culture)\nMMMUを日本語・日本文化文脈へ拡張し、言語・文化依存の性能ギャップを検証"
   },
@@ -57,6 +62,7 @@ window.PAPERS = [
     "venue": "NeurIPS D&B",
     "year": "2024",
     "field": "NLP系",
+    "motivation": "更新・難化型",
     "clarity": "",
     "summary": "motivation: saturation-driven\nMMLUの性能飽和を踏まえ、reasoningをより必要とするような難易度の高いタスクへ拡張"
   },
@@ -67,6 +73,7 @@ window.PAPERS = [
     "venue": "Nature",
     "year": "2026",
     "field": "Multimodal系",
+    "motivation": "更新・難化型",
     "clarity": "",
     "summary": "motivation: saturation-driven\nMMLUなどの性能飽和を踏まえ、より高難易度な学術タスクを新規に作成"
   },
@@ -77,6 +84,7 @@ window.PAPERS = [
     "venue": "CVPR",
     "year": "2026",
     "field": "Embodied AI系",
+    "motivation": "評価再設計型",
     "clarity": "",
     "summary": "motivation: evaluation validity\nVLAで広く用いられるLIBEROというベンチマークについて、わずかなpurturbationによりその性能が大きく劣化することを示す (robustness validity)"
   },
@@ -87,6 +95,7 @@ window.PAPERS = [
     "venue": "NAACL",
     "year": "2025",
     "field": "NLP系",
+    "motivation": "評価再設計型",
     "clarity": "",
     "summary": "motivation: evaluation validity\nMMLUの正解ラベルや問題品質を検証し、benchmark annotationの曖昧さが性能比較を歪めることを示唆 (annotation validity)"
   },
@@ -97,6 +106,7 @@ window.PAPERS = [
     "venue": "NeurIPS D&B",
     "year": "2024",
     "field": "NLP系",
+    "motivation": "評価再設計型",
     "clarity": "",
     "summary": "motivation: standardization\njailbreak研究の問題設定・評価方法などがバラバラであることを踏まえ、標準化された評価プロトコルを提案"
   },
@@ -107,6 +117,7 @@ window.PAPERS = [
     "venue": "ICCV",
     "year": "2025",
     "field": "Multimodal系",
+    "motivation": "欠落補完型",
     "clarity": "",
     "summary": "motivation: gap-filling (temporal scale)\n既存の動画ベンチマークが短尺中心であることを踏まえ、数時間規模の長尺動画理解を測る評価基盤を作成"
   },
@@ -117,6 +128,7 @@ window.PAPERS = [
     "venue": "ICCV",
     "year": "2025",
     "field": "Multimodal系",
+    "motivation": "評価再設計型",
     "clarity": "",
     "summary": "motivation: evaluation validity (safety)\n既存のVLM jailbreak評価が手作業・低多様性の攻撃に依存していることを踏まえ、多様な攻撃生成と安全性評価ベンチマークを構築"
   },
@@ -127,6 +139,7 @@ window.PAPERS = [
     "venue": "",
     "year": "2025",
     "field": "AI Agents系",
+    "motivation": "更新・難化型",
     "clarity": "",
     "summary": "motivation: saturation-driven\n既存の情報検索系ベンチマークが飽和しつつあることを踏まえ、粘り強いweb browsing能力そのものを測る高難度ベンチマークを作成"
   },
@@ -137,6 +150,7 @@ window.PAPERS = [
     "venue": "ECCV",
     "year": "2024",
     "field": "Multimodal系",
+    "motivation": "欠落補完型",
     "clarity": "",
     "summary": "motivation: gap-filling (perception)\n既存のマルチモーダル評価が言語知識や推論に偏っていることを踏まえ、純粋な視覚知覚能力を測るベンチマークを構築"
   },
@@ -147,6 +161,7 @@ window.PAPERS = [
     "venue": "CVPR",
     "year": "2026",
     "field": "Multimodal系",
+    "motivation": "欠落補完型",
     "clarity": "",
     "summary": "motivation: gap-filling (structured output)\n実運用で重要なschema準拠の構造化出力について視覚入力ベースで体系的に評価する基盤が不足していたため、その評価ベンチマークを作成"
   },
@@ -157,6 +172,7 @@ window.PAPERS = [
     "venue": "NAACL",
     "year": "2025",
     "field": "Multimodal系",
+    "motivation": "欠落補完型",
     "clarity": "",
     "summary": "motivation: gap-filling (long context)\nMLLMの長文脈・多数画像文脈での検索能力が十分に検証されていないことを踏まえ、needle-in-a-haystack設定で長文脈性能を測定"
   },
@@ -167,6 +183,7 @@ window.PAPERS = [
     "venue": "ICLR",
     "year": "2026",
     "field": "CV系",
+    "motivation": "評価再設計型",
     "clarity": "",
     "summary": "motivation: generalization-driven\n既存のtext-to-motion研究が標準ベンチマーク上では強くても汎化性に限界があることを踏まえ、データ・モデル・評価を一体で拡張"
   },
@@ -177,6 +194,7 @@ window.PAPERS = [
     "venue": "CVPR",
     "year": "2025",
     "field": "CV系",
+    "motivation": "欠落補完型",
     "clarity": "",
     "summary": "motivation: gap-filling (species)\ntext-driven motion generationが人間中心で動物種ごとの差異を十分扱えていないことを踏まえ、種依存性を考慮した動物モーション生成モデルを提案"
   },
@@ -187,6 +205,7 @@ window.PAPERS = [
     "venue": "CVPR",
     "year": "2025",
     "field": "Multimodal系",
+    "motivation": "欠落補完型",
     "clarity": "",
     "summary": "motivation: evaluation validity (hallucination)\n動画理解における時間的hallucinationが十分に評価されていないことを踏まえ、行動・時系列・場面転換の観点から検証するベンチマークを構築"
   },
@@ -197,6 +216,7 @@ window.PAPERS = [
     "venue": "EMNLP",
     "year": "2025",
     "field": "Multimodal系",
+    "motivation": "欠落補完型",
     "clarity": "",
     "summary": "motivation: safety-driven\nmisleading chartをMLLMが見抜けるかという観点の評価が欠けていたため、誤解を招く可視化に対する理解と推論能力を測るベンチマークを作成"
   },
@@ -207,6 +227,7 @@ window.PAPERS = [
     "venue": "CVPR",
     "year": "2022-06",
     "field": "CV系",
+    "motivation": "領域開拓型",
     "clarity": "図2および図6：データ設計時に除外した特殊な着こなし例（図2）や、各モデルが実際に間違えた色合わせの例（図6）など、文章では伝わりにくい「データの限界」と「手法の弱点」を実画像で直感的に示している．",
     "summary": "motivation: aesthetic fashion evaluation ファッション推薦を検索精度ではなく、専門的な美的能力として評価するベンチマークを提案。"
   },
@@ -217,6 +238,7 @@ window.PAPERS = [
     "venue": "IJCAI",
     "year": "2022-07",
     "field": "CV系",
+    "motivation": "評価再設計型",
     "clarity": "図1: 従来手法の決定的な失敗例（主役である被写体が文字で隠れる等）と提案手法の出力をで比較して示すことで，結果として既存モデルの何が課題で、なぜ提案手法が有効なのかというモチベーションが汲み取れる。ただし初見の人には図だけだと課題感がわかりにくいので、イントロの文章もセットで必要。",
     "summary": "motivation: content-aware poster layout 広告ポスターでは背景画像の構図がテキスト配置に影響することを踏まえ、60,548件の広告ポスターとデザイン指標を用いた評価を提案。"
   },
@@ -227,6 +249,7 @@ window.PAPERS = [
     "venue": "arXiv / Microsoft Research",
     "year": "2026-03",
     "field": "Multimodal系",
+    "motivation": "欠落補完型",
     "clarity": "図1：20のタスク分類と評価対象（赤枠）、具体的な評価質問を1枚の図に凝縮し、ベンチマークの全体像と評価方法が直感的に伝わる。　表1・2：多数のモデル性能を定義した分類基準で評価し、「テキストには強いがレイアウトに弱い」といった手法ごとの一長一短が即座に読み取れる。モデル数は多いものの非常にみやすい。　図4・5：生成画像の成功（青枠）と失敗（赤枠）を視覚化し、数値だけでは伝わらない「具体的なエラー傾向やモデルの限界」を直感的に示している。",
     "summary": "motivation: commercial multi-constraint generation 自然画像生成ベンチでは商用ビジュアルの文字・レイアウト・属性・知識整合性を測れないことを踏まえ、実務的なチェックリスト評価を構築。"
   },
@@ -237,6 +260,7 @@ window.PAPERS = [
     "venue": "AAAI",
     "year": "2023-06-26",
     "field": "Multimodal系",
+    "motivation": "更新・難化型",
     "clarity": "表1：従来データセットとの比較をチェックリスト形式で並べて示している　図1：「ユーザーの自然言語による指示」から「具体的な編集コマンドと対象座標（バウンディングボックス）」を出力するという新しいタスクの入出力関係を、実際のドキュメント画像を用いて視覚化している",
     "summary": "motivation: language-guided document editing 専門的な文書編集ツールを自然言語で操作するには、文書内の視覚・テキスト・レイアウト文脈へのgroundingが必要であることを踏まえ、局所文書編集タスクを提案。"
   },
@@ -247,6 +271,7 @@ window.PAPERS = [
     "venue": "NeurIPS Datasets & Benchmarks Track",
     "year": "2025",
     "field": "Multimodal系",
+    "motivation": "領域開拓型",
     "clarity": "タスク定義から評価、そして結果の解釈に至るまで、視覚的かつ構造的に非常に分かりやすく構成　図3：独自の評価指標「PaperQuiz」について、式や文章だけでなく、論文からクイズを自動生成し、様々な知識レベルの読者（学生や教授）を模したVLMエージェントに解かせるという「評価の仕組み（プロトコル）」をイラスト付きで図解している。どのような入力がどういう評価値になるのかが直感的にわかるよう示されており、新しい評価パラダイムの意図が即座に汲み取れる。　図4および第4章：論文からポスターを生成するパイプラインをフロー図で可視化し、対応するエージェントの役割ごとに節を分けて解説。入力から出力までの全体像が一目でわかる",
     "summary": "motivation: purpose-based evaluation 学術ポスターを見た目だけでなく、論文内容が読者に伝わるかをPaperQuizで評価。"
   },
@@ -257,6 +282,7 @@ window.PAPERS = [
     "venue": "NeurIPS Datasets & Benchmarks Track",
     "year": "2025",
     "field": "AI Agents系",
+    "motivation": "欠落補完型",
     "clarity": "表１： 既存ベンチマークとの差分について、チェックリスト（特徴の有無）や数値（ファイル数、コード行数など）を用いて比較している。　図１： ベンチマーク生成から評価までの過程において、「人間」と「LLM」がどの段階でどのように関わってデータを作成・フィルタリング・テストしているのかという一連の流れを可視化している。これにより、データ品質の保証やアノテーションの流れの透明性が直感的に理解できる。　図２： 新たな評価指標である「ビジュアルの良さ（Appearance Score）」について、スコア1〜5ごとの具体的なWebサイトのスクリーンショット例を提示している。数値や文字による定義だけでなく視覚的な例があることで、どのようなデザインがどのスコアになるのかが直感的に分かり、読者に評価基準の妥当性と納得感を与えている",
     "summary": "motivation: execution-based web generation Webサイト生成をスクリーンショットの類似度ではなく、647件の操作テストで本当に機能するかにより評価。"
   },
@@ -267,6 +293,7 @@ window.PAPERS = [
     "venue": "ICLR",
     "year": "2024",
     "field": "AI Agents系",
+    "motivation": "更新・難化型",
     "clarity": "図1：GitHubのIssueとコードベースを入力とし、解決策となるPRを生成してユニットテストで検証するという、提案するベンチマークの全体像が1つの図に簡素かつ過不足なくまとまっている　2.3節および図3：2.3節で「複数のファイルにまたがる編集」や「長大な入力の処理」など、従来の自己完結型の単純なベンチマークにはなく本研究で測りたいモデルの能力を明確に言語化している。その上で図3の円グラフを用いることで、データセットにDjangoやsympyなど12種類の実用的なPythonパッケージがどの程度の割合で含まれているかを可視化しており、評価環境の多様性と現実性が一目で伝わる　表８：各モデルが生成したパッチと正解（Goldパッチ）の編集内容を、「追加行数」「削除行数」「編集した関数・ファイル数」といった具体的な項目別に定量比較しており、LLMが人間（正解）に比べて局所的で短いコードしか生成できていない（平均行数が半分以下など）という傾向が数値から即座に読み取れる",
     "summary": "motivation: real-world software engineering コード生成を静的な正解比較ではなく、実GitHub issueを修正しテストを通せるかで評価。"
   },
@@ -277,6 +304,7 @@ window.PAPERS = [
     "venue": "ACL",
     "year": "2025-07",
     "field": "NLP系",
+    "motivation": "更新・難化型",
     "clarity": "学術的な体裁というよりは「大規模なベンチマーク構築と網羅的なモデル評価」を主眼に置いた企業発のテクニカルレポート（報告資料）としての色合いが強く、視覚的にも「どのモデルが優れているか」「どのような傾向があるか」を大量のデータで一気に見せる構成になっている。　図1: いきなり大量のモデルの性能比較（棒グラフ）を提示することで、結果としてどのモデルが最も優れているのか、が即座に汲み取れる．冒頭で聴衆の興味を惹きつけるキャッチーな見せ方として効果的であるが、タスク概要が書いてある方が良い気がする．　表1：提案ベンチマークと既存研究との比較において、単なるチェックリストだけでなく、「タスク難易度」や「多様性」を星の数で可視化し、アノテーション手法（HumanかSyntheticか）まで一覧化していて、「なぜこの新しいベンチマークが必要なのか」と「自分たちのデータの優位性」を直感的に理解させるのに非常にわかりやすい　図3：4つのデータセットにおけるエラー発生位置の分布をヒストグラムで示しており「プロセスエラーの大部分は推論の序盤（ステップ0〜5あたり）で発生している」という傾向を視覚的に示している",
     "summary": "motivation: process-level reasoning 数学の最終答えではなく、解法過程の最初の誤りステップを特定できるかを評価。"
   },
@@ -287,6 +315,7 @@ window.PAPERS = [
     "venue": "ICCV",
     "year": "2025",
     "field": "Multimodal系",
+    "motivation": "欠落補完型",
     "clarity": "図1： データの収集から、小規模モデルを用いたフィルタリング、大規模モデルを用いた推論プロセス生成までのパイプラインが直感的なフローチャートで示されている。　表３： 26種類ものモデルをパラメーターの規模（Small, Middle, Large）やオープン/クローズドに分類し、12種類のタスクに対する結果を網羅的に一覧化している。モデルの規模を大きくしても性能が頭打ちになる傾向が見られる。",
     "summary": "motivation: evaluator-model evaluation VLMそのものではなく、Vision-Language Reward Modelが過程・結果・批評を評価できるかを包括的に検証。"
   },
@@ -297,6 +326,7 @@ window.PAPERS = [
     "venue": "NeurIPS Datasets & Benchmarks Track",
     "year": "2021",
     "field": "Embodied AI系",
+    "motivation": "評価再設計型",
     "clarity": "図1：文章ではイメージしにくい複雑な8つの物理シナリオ（ドミノ、衝突、落下など）をビジュアルで一覧化しており、対象とするタスクの多様性や空間的な位置関係が直感的に伝わる。ただし、単なるタスク紹介にとどまらず、ここに図4のような「多様なモデルを共通指標でどう評価するのか」という評価プロセスの要素も組み込めば、このベンチマークの最大の貢献（公平な比較基準の確立）が完結して伝わり、さらに分かりやすくなったと言える　図2：モデルに与えられる入力データ（RGB、深度、セグメンテーション、法線など）の種類と、最終的に解くべきタスク（「赤い物体が黄色い物体に触れるか？」というシンプルな二値分類）が視覚的に整理されており、モデルに何をさせて評価するのかが一目でわかる　図4：アーキテクチャ（TransformerやConvNet、グラフニューラルネットワークなど）や学習プロトコルが全く異なる複数のモデルを、どのように1つのタスクに落とし込み、人間との比較指標（AccuracyやCohen's κなど）で評価するのかという複雑なパイプラインをフローチャートで整理して示している",
     "summary": "motivation: physical world prediction 画像認識モデルが物体を認識できても物理シーンの未来を理解しているとは限らないことを踏まえ、人間比較付きで物理予測能力を評価。"
   },
@@ -307,6 +337,7 @@ window.PAPERS = [
     "venue": "ECCV 2014",
     "year": "2014-09-06",
     "field": "CV系",
+    "motivation": "領域開拓型",
     "clarity": "",
     "summary": "Fig.1〜5で「タスク定義→収集→annotation設計→品質分析→統計→baseline」を論証する黄金律を体現。benchmark論文の骨格の教科書。"
   },
@@ -317,6 +348,7 @@ window.PAPERS = [
     "venue": "CVPR 2016",
     "year": "2016-06-27",
     "field": "CV系",
+    "motivation": "欠落補完型",
     "clarity": "",
     "summary": "「既存datasetは都市シーン複雑性が不足」という一言のgapを冒頭で確立し、全設計がそこへ収束する。Introductionのgap設定の手本。"
   },
@@ -327,6 +359,7 @@ window.PAPERS = [
     "venue": "ECCV 2018",
     "year": "2018-11-02",
     "field": "CV系",
+    "motivation": "欠落補完型",
     "clarity": "",
     "summary": "「unified annotations」で3タスク統合を主張し、スケーリング曲線で規模的価値を実験的に証明。「量ではなく設計の統一性」を論文の軸にする書き方の手本。"
   },
@@ -337,6 +370,7 @@ window.PAPERS = [
     "venue": "CVPR 2019",
     "year": "2019-06-16",
     "field": "CV系",
+    "motivation": "領域開拓型",
     "clarity": "",
     "summary": "PQ = SQ × RQという乗法分解でinterpretabilityを担保。「タスク定義→指標設計動機→数式→実験検証」という指標提案論文の論証の手本。"
   },
@@ -347,6 +381,7 @@ window.PAPERS = [
     "venue": "CVPR 2019",
     "year": "2019-08-08",
     "field": "CV系",
+    "motivation": "欠落補完型",
     "clarity": "",
     "summary": "Zipf的ロングテール分布を「問題設定」の主役に据え、federated evaluationで指標設計まで一気通貫。統計図を飾りではなく主張の証拠として機能させる手本。"
   },
@@ -357,6 +392,7 @@ window.PAPERS = [
     "venue": "ECCV 2020",
     "year": "2020-05-20",
     "field": "CV系",
+    "motivation": "欠落補完型",
     "clarity": "",
     "summary": "既存benchmarkのカテゴリ偏りをバブルチャートで即証明し、「既存trackerが低精度」という結果を末尾で回収。benchmark論文は「新研究課題の証明」で完結させる書き方の体現。"
   },
@@ -367,6 +403,7 @@ window.PAPERS = [
     "venue": "ECCV 2020",
     "year": "2020-08-18",
     "field": "CV系",
+    "motivation": "評価再設計型",
     "clarity": "",
     "summary": "mAPの「なぜ悪いのか」を6エラー型に分解・独立定量化。Fig.2でCOCO progressive evalの順序依存バイアスをbefore/afterで暴き、leaderboardを診断表に変換する手本。"
   },
@@ -377,6 +414,7 @@ window.PAPERS = [
     "venue": "MICCAI 2021",
     "year": "2021-07-06",
     "field": "CV系",
+    "motivation": "更新・難化型",
     "clarity": "",
     "summary": "2タスク統合の臨床的根拠・DSC+HD95の指標選択理由・dot-and-box plotによる分布提示を一論文にまとめる。MICCAIチャレンジ論文の標準的な型を学べる。"
   },
@@ -387,6 +425,7 @@ window.PAPERS = [
     "venue": "Nature Communications 2022",
     "year": "2022-07-15",
     "field": "CV系",
+    "motivation": "評価再設計型",
     "clarity": "",
     "summary": "development→mystery phaseの二段階設計で「汎用モデルが専用モデルを超えられるか」を実験的に検証。multi-task benchmarkの設計思想の転換点。"
   },
@@ -397,6 +436,7 @@ window.PAPERS = [
     "venue": "Nature Methods 2021",
     "year": "2021-02-01",
     "field": "CV系",
+    "motivation": "欠落補完型",
     "clarity": "",
     "summary": "「アーキテクチャ革新よりpipeline設定が重要」という主張を23 datasets横断の比較表で一括証明。benchmark比較表のデザインと論証の流れの手本。"
   },
@@ -407,6 +447,7 @@ window.PAPERS = [
     "venue": "Nature Methods 2024",
     "year": "2024-02-01",
     "field": "CV系",
+    "motivation": "評価再設計型",
     "clarity": "",
     "summary": "problem fingerprintから適切な指標を選ぶフレームワークをDelphiプロセスで構築。分類・検出・seg横断でpitfallを体系化した参考書的存在。"
   },
@@ -417,6 +458,7 @@ window.PAPERS = [
     "venue": "IEEE TMI 2021",
     "year": "2021-06-18",
     "field": "CV系",
+    "motivation": "欠落補完型",
     "clarity": "",
     "summary": "「単一施設・単一スキャナ」偏りをdataで明示しドメインシフトを主役に。vendor別boxplotで「平均では見えない弱点」を炙り出す分析設計の手本。"
   },
@@ -427,6 +469,7 @@ window.PAPERS = [
     "venue": "Nature Communications 2024",
     "year": "2024-01-22",
     "field": "CV系",
+    "motivation": "欠落補完型",
     "clarity": "",
     "summary": "内部86+外部60タスクの2段階評価で学習済みタスクと未知タスクの汎化を分離。強みと弱みを因子別に正直に開示するscientific integrityの手本。"
   },
@@ -437,6 +480,7 @@ window.PAPERS = [
     "venue": "arXiv 2023",
     "year": "2023-04-18",
     "field": "CV系",
+    "motivation": "評価再設計型",
     "clarity": "",
     "summary": "12 datasets横断で「SAMが苦手な条件プロファイル」を因子別boxplotで可視化。「平均精度で評価しない」設計思想がfoundation model benchmarkingの参考になる。"
   },
@@ -447,6 +491,7 @@ window.PAPERS = [
     "venue": "AAAI 2023",
     "year": "2022-05-24",
     "field": "CV系",
+    "motivation": "欠落補完型",
     "clarity": "",
     "summary": "symmetric metricとasymmetric copy processのミスマッチを定量的に暴く。benchmark noveltyを「設計思想が間違っていた」として主張する書き方の実例。"
   },
@@ -457,6 +502,7 @@ window.PAPERS = [
     "venue": "IEEE 2019",
     "year": "2019-01-11",
     "field": "CV系",
+    "motivation": "欠落補完型",
     "clarity": "",
     "summary": "paired/challenging dataの二分割で客観・主観評価を両立。qualitative評価を本文Figureの中心に置く「domain interestに正直なbenchmark」の手本。"
   },
@@ -467,6 +513,7 @@ window.PAPERS = [
     "venue": "CVPR 2019",
     "year": "2018-11-27",
     "field": "CV系",
+    "motivation": "評価再設計型",
     "clarity": "",
     "summary": "大規模benchmarkのsparse negative label問題を診断しmethod設計に活かす。benchmarkを「批判的に分析する対象」として扱う研究視点の実例。"
   },
@@ -477,6 +524,7 @@ window.PAPERS = [
     "venue": "CVPR 2020",
     "year": "2020-06-14",
     "field": "CV系",
+    "motivation": "評価再設計型",
     "clarity": "",
     "summary": "「Simple / Strong / Fast」の三軸を全実験に一貫させた baseline paper。失敗例を誠実に開示しつつ複数benchmark横断で結果を整理する訴求の仕方が参考になる。"
   },
@@ -487,6 +535,7 @@ window.PAPERS = [
     "venue": "NeurIPS DB",
     "year": "2023",
     "field": "CV系",
+    "motivation": "領域開拓型",
     "clarity": "セクション1.1（イントロのサブセクション）：異端的ではあるが，イントロの最後にTLDRのセクションを設け，計測から得られる示唆を列挙している．手法の性質および，どのモデルを使えばよいかという結論をベンチマーク結果で求めているわけなので，良い意味で実務に最適化されているように思う．",
     "summary": "motivation: backbone models；結局どのbackbone modelを，どういうケースで使えばいいんですか？への解"
   },
@@ -497,6 +546,7 @@ window.PAPERS = [
     "venue": "ICLR (Reject)",
     "year": "2023",
     "field": "CV系",
+    "motivation": "領域開拓型",
     "clarity": "（強いて言えばFig2）論文としての品質は高くないが，fig2で示されるように取り扱う問題の困難性を早期に示すことは評価できる",
     "summary": "エチオピア文字の手書き文書ベンチ；逆説的に論文として読みにくい理由を汲み取れる"
   },
@@ -507,6 +557,7 @@ window.PAPERS = [
     "venue": "CVPR",
     "year": "2025",
     "field": "CV系",
+    "motivation": "領域開拓型",
     "clarity": "１ページ目（イントロおよび図）：複数モデルのレーダーチャートを１Pに示すことで，結果としてどのモデルを使えばよいかという答えが即時に汲み取れる．",
     "summary": "OCR性能の評価をより横断的に拡張"
   },
@@ -517,6 +568,7 @@ window.PAPERS = [
     "venue": "NeruIPS DB",
     "year": "2025",
     "field": "CV系",
+    "motivation": "領域開拓型",
     "clarity": "セクション１（イントロ）：問題提起「Do models perform well enough on text-oriented visual understanding tasks in the\nLMM era, or do existing benchmarks fail to capture the broader challenges in diverse environments?」とその解答へ向けた本研究の位置づけが，明瞭に対応しており，モチベーションおよび意義が理解しやすい",
     "summary": "LMMが文書を「読める能力」だけではなく，「見つけて考える」能力を計測"
   },
@@ -527,6 +579,7 @@ window.PAPERS = [
     "venue": "NeurIPS DB",
     "year": "2024",
     "field": "CV系",
+    "motivation": "領域開拓型",
     "clarity": "Fig1: 扱うデータの内容およびモデルの評価結果と得られる考察をすべて包含しており，概要を掴みやすい",
     "summary": "長いPDFだけではなく，レイアウトをまたいで根拠付きに理解できるか"
   },
@@ -537,6 +590,7 @@ window.PAPERS = [
     "venue": "ACL",
     "year": "2025",
     "field": "CV系",
+    "motivation": "領域開拓型",
     "clarity": "セクション１（イントロ）：特段評価しうる点が難しいが，セクション１で問題点を示し，自分の研究の立ち位置を明らかにする点は評価できる．ただ，包括性について触れているが，これを文章で真に回収できいるかは微妙であるように思う．",
     "summary": "手書き数学答案の採点を，正誤判定だけでなく「誤りの発見・位置特定・修正」まで測れる評価問題に引き上げ"
   },
@@ -547,6 +601,7 @@ window.PAPERS = [
     "venue": "NeurIPS DB",
     "year": "2025",
     "field": "CV系",
+    "motivation": "領域開拓型",
     "clarity": "Fig3: アノテーションパイプラインを図と合わせ示すことで，概要が掴みやすい．このパイプラインを文章で示されるとあまりわからないと思う．一方で，Fig1で概要をすべて織り込んでいるが，情報過多であまりよくわからない．",
     "summary": "文書QAのRAGにおいて，テキスト検索だけでなく「図表を根拠として探し答えに組み込めるか」を評価"
   },
@@ -557,6 +612,7 @@ window.PAPERS = [
     "venue": "ICCV",
     "year": "2025",
     "field": "CV系",
+    "motivation": "領域開拓型",
     "clarity": "全体的なヴィジュアライズとセクション４：Fig3(a)ではどのようにデータを構成したかがわかりやすい（一方でこれはベンチマーク特有のものではない気もする．）Fig4は記号的表現が理解のスムーズさを減らすが，ベンチマーク的な意味では，データと評価がどのように対応しているのかがわかりやすい",
     "summary": "文書VQAにおいて，「どこを見て，指定箇所がなにを意味するか」まで扱えるようにした"
   },
@@ -567,6 +623,7 @@ window.PAPERS = [
     "venue": "CVPR",
     "year": "2025",
     "field": "CV系",
+    "motivation": "領域開拓型",
     "clarity": "セクション１および図１：現在の分野の動向を示したうえで，その問題点と提案モデル（本論文では合わせてモデルも提案した）を示しており，納得感を生みやすい構造になっている．",
     "summary": "文書画像検索を，「似た画像を探す」から「自然文の細かな意味で探す」問題へ引き上げ．"
   },
@@ -577,6 +634,7 @@ window.PAPERS = [
     "venue": "ICCV",
     "year": "2025",
     "field": "CV系",
+    "motivation": "領域開拓型",
     "clarity": "table1:既存ベンチマークと比較して，カバレッジが示せている．一方で，図表の情報量がすくなくもったいないところもある．",
     "summary": "LMMのOCR能力を，場面・言語・文書解析・情報抽出まで含めた「総合的な読み書き能力」として測れるに設計"
   },
@@ -587,6 +645,7 @@ window.PAPERS = [
     "venue": "IJCV",
     "year": "2015",
     "field": "CV系",
+    "motivation": "欠落補完型",
     "clarity": "図1：提案するベンチマークデータセットについて，どのようなタスクを解けるのか，図示されているため分かりやすい．また，各タスクのデータについて，どのようなアノテーションを採用しているのか，本文だけでは無くキャプションにも記述していることが尚良い．２章４節：データセットの説明の後に，すぐタスクごとの評価指標を提示しているため，全体像がつかみやすい．",
     "summary": "当時(2015)のベンチマークから，データの分割方法や評価方法をより整備したもの．物体検出だけではなく，セグメンテーションや顔検出の精度も評価可能に．特に評価用サーバを設立して，評価の公平性を図ったものポイント．"
   },
@@ -597,6 +656,7 @@ window.PAPERS = [
     "venue": "ICCV",
     "year": "2015",
     "field": "CV系",
+    "motivation": "領域開拓型",
     "clarity": "図1：概要で述べられていた貢献（文章内の単語ごとに画像にBBを付与）について，具体的に図示している点が分かりやすい．章構成：データのアノテーション→クオリティの担保→データの分類→タスク→評価指標という流れが，分かりやすい．読者が知りたいであろう情報を先に持ってきて，うまくいっていることが予想される実験を後回しで書いているのが良い．",
     "summary": "文章とBBがセットになったベンチマークであり，文章中のどこにBBが出現するのかアノテーションされている点がポイント．また，同じ物体でも異なる言語的な表現がラベルとして登録されている．画像検索だけではなく，visual groundingも評価できるようになった．"
   },
@@ -607,6 +667,7 @@ window.PAPERS = [
     "venue": "CVPR",
     "year": "2018",
     "field": "CV系",
+    "motivation": "評価再設計型",
     "clarity": "図２：従来のベンチマークデータの問題点を冒頭で図示している点が分かりやすい．図３：ベンチマークについて，難易度分けした結果についても一目でわかるようになっている点",
     "summary": "従来のOxford and Parisデータのアノテーションが間違っていたのでそれを修正し，データを難易度別に振り分けたベンチマーク．検索タスクが苦手とする，クエリ画像に対して非常に似た別の建物のデータを追加し，前処理あり手法の評価方法を整備した．"
   },
@@ -617,6 +678,7 @@ window.PAPERS = [
     "venue": "Robot Learning",
     "year": "2023",
     "field": "ロボット系",
+    "motivation": "更新・難化型",
     "clarity": "表１：従来ベンチマークとの，データ数及びタスク数の差をもってきて，提案するベンチマークのインパクトを伝えている点が良い．図２：評価時の初期環境及びタスクの達成条件をデータと共に例示しており，評価時の挙動を想像しやすい点が高評価",
     "summary": "物を持つだけのような単純なタスクではなく，料理や掃除などの人間がおこなう複合タスクをシミュレーション上で評価できるベンチマーク．目視確認ではなく，あらかじめ定義された条件を満たしたのか否かでタスクをロボットが正常におこえたのかを評価できる．また，剛体だけではなく液体や柔らかい物体を扱うタスクも含まれている．"
   },
@@ -627,6 +689,7 @@ window.PAPERS = [
     "venue": "IEEE Robotics and Automation",
     "year": "2020",
     "field": "ロボット系",
+    "motivation": "欠落補完型",
     "clarity": "図５＆図６：実験に関する学習パラメータや環境設定について，図示しており，文章中で列挙されるよりもわかりやすく，再現性の高い実験がしやすそうな点が良い．また公開されているコードと照らし合わせやすい．３章：アイテマイズ＋ボールドでベンチマークの良さを強調している点もわかりやすい．",
     "summary": "ボードゲームや日常の家事，単純なピックアンドプレイスタスクを評価できるベンチマーク．震度情報やセグメンテーション情報が提供されており，強化学習や模倣学習モデルなども同じ環境で評価できる枠組みがある．また，学習データの自動生成や新タスクをシミュレーション上に追加可能．"
   },
@@ -637,6 +700,7 @@ window.PAPERS = [
     "venue": "EMNLP",
     "year": "2018",
     "field": "動画像系",
+    "motivation": "領域開拓型",
     "clarity": "３章：節の名前がそのままタスクになっている＋図５に対応するタスクのQAが提示されていて，各タスクがモデルに何をやらせたいのかがすぐに理解できる．図４：ワードクラウドが無駄にカラフルではないのが視認性が高い．",
     "summary": "レシピに関する質問に対して，画像・時系列的な文章・料理名など複数の情報を利用して答えを出力できるのか評価できるベンチマーク．各手順ごとにそれに対応するデータがペアリングしており，時系列を理解しているのか評価できるのは新規性が高い．"
   },
@@ -647,6 +711,7 @@ window.PAPERS = [
     "venue": "TPAMI",
     "year": "2020",
     "field": "動画像系",
+    "motivation": "更新・難化型",
     "clarity": "図３：related workで従来ベンチマークをだらだら述べるのではなく，その内容を年表にしている点が初学者にも系譜分かりやすい．図１で，どのようなデータ（アノテーション込み）でどう評価するのかシンプルに図示している点が良い．",
     "summary": "料理だけでなく，さまざまなタスク・ドメイン（12ドメイン/180タスク）を評価できるベンチマーク．動画検索だけではなく，ステップ検出やアクションセグメンテーションを評価することが可能．"
   },
@@ -657,6 +722,7 @@ window.PAPERS = [
     "venue": "CVPR",
     "year": "2019",
     "field": "CV系",
+    "motivation": "領域開拓型",
     "clarity": "２章：図２でカテゴリ別の画像について説明してから，表２でデータのカテゴリ別の画像枚数などを説明しており，わかりやすい．３章で，データラベルや画像サイズ，４章で評価方法に入る流れもわかりやすい．",
     "summary": "工業製品の欠陥について，学習・テスト・バリデーションデータが含まれており，画像または画素単位で異常なのか正常なのかを評価できるベンチマーク．また，その画像がオブジェクトカテゴリなのかテスクチャカテゴリなのか分類されているのもポイント．"
   },
@@ -667,6 +733,7 @@ window.PAPERS = [
     "venue": "IJCV",
     "year": "2022",
     "field": "CV系",
+    "motivation": "更新・難化型",
     "clarity": "図３：カテゴリ別に，従来ベンチマークに足りなかった点について可視化しているのが分かりやすい．図４：新たな評価指標について，グラフで数値的にどういう入力がどういう値になるのか直感的にわかるよう示している．式だけを見てもどういう評価なのか，理解に苦労する人にはありがたい．",
     "summary": "論理的なルールから逸脱した欠陥（個数の違い・色の違い・位置の違い）について，画像or画素単位で異常か否か評価できることが可能"
   },
@@ -677,6 +744,7 @@ window.PAPERS = [
     "venue": "ICRA",
     "year": "2018",
     "field": "Embodied AI系",
+    "motivation": "欠落補完型",
     "clarity": "図２：画像データとHTMLベースのデータの対応付けや，HTMLが持つ子ノードについて，フローを書くことによって，評価時のイメージがしやすくなっている．この後に，すぐ既存手法を使った評価結果が示されており，このベンチマークが必要そうだなと印象付ける点もよい．",
     "summary": "従来のWEBエージェントに関するベンチマークは，指示文から静的なHTMLを理解できるか否かが主であったが，それだけではなく，WEB内の画像・手順・UI要素などの理解を通してWEBタスク（クリックやキーボード入力など）を実行できるのか評価できるベンチマーク"
   }
