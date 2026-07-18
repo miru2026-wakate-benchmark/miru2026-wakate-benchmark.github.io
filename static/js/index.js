@@ -193,24 +193,46 @@
     updateToggle(false);
 
     const details = el("div", "paper-details");
-    details.append(
-      detailBlock("ABSTRACT（日本語要約）", paper.abstractJa, "日本語要約は準備中です。"),
-      detailBlock("CLARITY NOTE", paper.clarity, "わかりやすさに関するコメントは整理中です。"),
+    const abstractBlock = detailBlock(
+      "ABSTRACT（日本語要約）",
+      paper.abstractJa,
+      "日本語要約は準備中です。",
     );
+    const clarityBlock = detailBlock(
+      "CLARITY NOTE",
+      paper.clarity,
+      "わかりやすさに関するコメントは整理中です。",
+    );
+    clarityBlock.classList.add("clarity-note");
+    details.append(abstractBlock, clarityBlock);
     const url = safeUrl(paper.url);
     if (url) {
       const link = el("a", "paper-external", "論文ページを開く ↗");
       link.href = url;
       link.target = "_blank";
       link.rel = "noopener noreferrer";
-      details.lastElementChild.append(link);
+      abstractBlock.append(link);
     }
 
     toggle.addEventListener("click", () => {
-      const open = article.classList.toggle("is-open");
+      if (article.classList.contains("is-closing")) return;
+      const open = !article.classList.contains("is-open");
       updateToggle(open);
       toggle.setAttribute("aria-expanded", String(open));
       toggle.setAttribute("aria-label", `${paper.title} の詳細を${open ? "閉じる" : "表示"}`);
+
+      if (open) {
+        article.classList.add("is-open");
+        return;
+      }
+
+      const finishClosing = () => article.classList.remove("is-open", "is-closing");
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        finishClosing();
+      } else {
+        article.classList.add("is-closing");
+        details.addEventListener("animationend", finishClosing, { once: true });
+      }
     });
 
     article.append(number, main, meta, toggle, details);

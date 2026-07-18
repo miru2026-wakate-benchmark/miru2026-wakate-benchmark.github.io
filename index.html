@@ -105,92 +105,99 @@
         </div>
 
         <div class="principle-list">
-          <article class="principle-row">
-            <div class="principle-index">01</div>
-            <div class="principle-name"><span>INTRODUCTION</span><h3>新しいタスク・評価対象</h3></div>
-            <div class="principle-copy">
-              <ul>
-                <li>図1で多くを語り、読者が概要を早期につかめるようにする</li>
-                <li>既存ベンチマークのタスクとの違いを記述・図示する</li>
-                <li>既存ベンチマークでは出せないSOTA手法の失敗例を示す</li>
-                <li>評価時の入出力を詳細に記述・図示する</li>
-              </ul>
+          <section class="principle-group group-introduction">
+            <div class="principle-group-heading"><span>01—03</span><h3>INTRODUCTION</h3></div>
+            <div class="principle-group-cards">
+              <article class="principle-row">
+                <div class="principle-index">01</div>
+                <div class="principle-name"><h4>新しいタスク・評価対象</h4></div>
+                <div class="principle-copy"><ul>
+                  <li>図1で多くを語り、読者が概要を早期につかめるようにする</li>
+                  <li>既存ベンチマークのタスクとの違いを記述・図示する</li>
+                  <li>既存ベンチマークでは出せないSOTA手法の失敗例を示す</li>
+                  <li>評価時の入出力を詳細に記述・図示する</li>
+                </ul></div>
+              </article>
+              <article class="principle-row">
+                <div class="principle-index">02</div>
+                <div class="principle-name"><h4>既存ベンチマークとの差分</h4></div>
+                <div class="principle-copy"><ul>
+                  <li>データ数・カテゴリ数や、提案ベンチマークによってSOTA手法ができなくなったタスクを一目で示す</li>
+                  <li>カバレッジ表などを用いて、多数の従来ベンチマークよりも網羅性があることを示す</li>
+                </ul></div>
+              </article>
+              <article class="principle-row">
+                <div class="principle-index">03</div>
+                <div class="principle-name"><h4>結果等の要約</h4></div>
+                <div class="principle-copy"><ul>
+                  <li>シンプルなグラフで既存ベンチマークとの比較結果を示す</li>
+                  <li>Key Findingsで、SOTA手法の改善余地、手法間の性能差、新たな知見を端的に述べる</li>
+                </ul></div>
+              </article>
             </div>
-          </article>
-          <article class="principle-row">
-            <div class="principle-index">02</div>
-            <div class="principle-name"><span>INTRODUCTION</span><h3>既存ベンチマークとの差分</h3></div>
-            <div class="principle-copy">
-              <ul>
-                <li>データ数・カテゴリ数や、提案ベンチマークによってSOTA手法ができなくなったタスクを一目で示す</li>
-                <li>カバレッジ表などを用いて、多数の従来ベンチマークよりも網羅性があることを示す</li>
-              </ul>
+          </section>
+
+          <section class="principle-group group-method">
+            <div class="principle-group-heading"><span>04—06</span><h3>METHOD / BENCHMARK CURATION</h3></div>
+            <div class="principle-group-cards">
+              <article class="principle-row">
+                <div class="principle-index">04</div>
+                <div class="principle-name"><h4>データの設計</h4></div>
+                <div class="principle-copy"><ul>
+                  <li>評価したい能力に対応するタスク・カテゴリを設計する</li>
+                  <li>カテゴリ・ドメイン・難易度の分類を可視化し、測定する能力範囲を明確にする</li>
+                  <li>何を含め、何を含めないかという設計判断を説明する</li>
+                </ul></div>
+              </article>
+              <article class="principle-row">
+                <div class="principle-index">05</div>
+                <div class="principle-name"><h4>品質の保証</h4></div>
+                <div class="principle-copy"><ul>
+                  <li>データ作成・アノテーション・フィルタリングの流れを透明化する</li>
+                  <li>人間や専門家が、どの段階で何を確認したかを明示する</li>
+                  <li>エラー分類や除外基準を明確にし、評価結果がデータ品質に左右されないことを保証する</li>
+                </ul></div>
+              </article>
+              <article class="principle-row">
+                <div class="principle-index">06</div>
+                <div class="principle-name"><h4>評価指標とその妥当性</h4></div>
+                <div class="principle-copy"><ul>
+                  <li>入力形式・出力形式・評価方法を含む評価プロトコルを明瞭に示す</li>
+                  <li>評価指標の設計と計算方法を詳述する</li>
+                  <li>人間との整合性、カバレッジ、頑健性などから指標の妥当性と測定結果を示す</li>
+                </ul></div>
+              </article>
             </div>
-          </article>
-          <article class="principle-row">
-            <div class="principle-index">03</div>
-            <div class="principle-name"><span>INTRODUCTION</span><h3>結果等の要約</h3></div>
-            <div class="principle-copy">
-              <ul>
-                <li>シンプルなグラフで既存ベンチマークとの比較結果を示す</li>
-                <li>Key Findingsで、SOTA手法の改善余地、手法間の性能差、新たな知見を端的に述べる</li>
-              </ul>
+          </section>
+
+          <section class="principle-group group-experiments">
+            <div class="principle-group-heading"><span>07</span><h3>EXPERIMENTS</h3></div>
+            <div class="principle-group-cards">
+              <article class="principle-row">
+                <div class="principle-index">07</div>
+                <div class="principle-name"><h4>評価結果の解釈</h4></div>
+                <div class="principle-copy"><ul>
+                  <li>カテゴリ・ドメイン・難易度ごとの性能差から、手法の得意・不得意を明らかにする</li>
+                  <li>高スコアの要因を検証し、見かけの性能と真の能力を切り分ける</li>
+                  <li>Failure Caseを分類し、手法の限界や失敗傾向を明らかにする</li>
+                </ul></div>
+              </article>
             </div>
-          </article>
-          <article class="principle-row">
-            <div class="principle-index">04</div>
-            <div class="principle-name"><span>METHOD / BENCHMARK CURATION</span><h3>データの設計</h3></div>
-            <div class="principle-copy">
-              <ul>
-                <li>評価したい能力に対応するタスク・カテゴリを設計する</li>
-                <li>カテゴリ・ドメイン・難易度の分類を可視化し、測定する能力範囲を明確にする</li>
-                <li>何を含め、何を含めないかという設計判断を説明する</li>
-              </ul>
+          </section>
+
+          <section class="principle-group group-discussion">
+            <div class="principle-group-heading"><span>08</span><h3>DISCUSSION</h3></div>
+            <div class="principle-group-cards">
+              <article class="principle-row">
+                <div class="principle-index">08</div>
+                <div class="principle-name"><h4>再利用性・発展性</h4></div>
+                <div class="principle-copy"><ul>
+                  <li>リーダーボードや評価コードを公開し、同一条件で手法間の性能を比較可能にする</li>
+                  <li>評価設計の改善点や未評価の能力を整理し、後続研究への指針を示す</li>
+                </ul></div>
+              </article>
             </div>
-          </article>
-          <article class="principle-row">
-            <div class="principle-index">05</div>
-            <div class="principle-name"><span>METHOD / BENCHMARK CURATION</span><h3>品質の保証</h3></div>
-            <div class="principle-copy">
-              <ul>
-                <li>データ作成・アノテーション・フィルタリングの流れを透明化する</li>
-                <li>人間や専門家が、どの段階で何を確認したかを明示する</li>
-                <li>エラー分類や除外基準を明確にし、評価結果がデータ品質に左右されないことを保証する</li>
-              </ul>
-            </div>
-          </article>
-          <article class="principle-row">
-            <div class="principle-index">06</div>
-            <div class="principle-name"><span>METHOD / BENCHMARK CURATION</span><h3>評価指標とその妥当性</h3></div>
-            <div class="principle-copy">
-              <ul>
-                <li>入力形式・出力形式・評価方法を含む評価プロトコルを明瞭に示す</li>
-                <li>評価指標の設計と計算方法を詳述する</li>
-                <li>人間との整合性、カバレッジ、頑健性などから指標の妥当性と測定結果を示す</li>
-              </ul>
-            </div>
-          </article>
-          <article class="principle-row">
-            <div class="principle-index">07</div>
-            <div class="principle-name"><span>EXPERIMENTS</span><h3>評価結果の解釈</h3></div>
-            <div class="principle-copy">
-              <ul>
-                <li>カテゴリ・ドメイン・難易度ごとの性能差から、手法の得意・不得意を明らかにする</li>
-                <li>高スコアの要因を検証し、見かけの性能と真の能力を切り分ける</li>
-                <li>Failure Caseを分類し、手法の限界や失敗傾向を明らかにする</li>
-              </ul>
-            </div>
-          </article>
-          <article class="principle-row">
-            <div class="principle-index">08</div>
-            <div class="principle-name"><span>DISCUSSION</span><h3>再利用性・発展性</h3></div>
-            <div class="principle-copy">
-              <ul>
-                <li>リーダーボードや評価コードを公開し、同一条件で手法間の性能を比較可能にする</li>
-                <li>評価設計の改善点や未評価の能力を整理し、後続研究への指針を示す</li>
-              </ul>
-            </div>
-          </article>
+          </section>
         </div>
       </section>
 
@@ -204,30 +211,32 @@
           <p>ベンチマークの動機と、わかりやすさにつながる工夫を記録したリストです。タイトル・著者・コメント・タグを横断して検索できます。</p>
         </div>
 
-        <div class="paper-controls" aria-label="論文の検索と絞り込み">
-          <label class="search-box">
-            <span class="sr-only">論文を検索</span>
-            <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
-            <input id="paper-search" type="search" placeholder="タイトル・著者・タグ・キーワードで検索" autocomplete="off">
-            <kbd>⌘ K</kbd>
-          </label>
-          <label class="sort-box">並び順
-            <select id="paper-sort">
-              <option value="source">リスト掲載順</option>
-              <option value="newest">新しい順</option>
-              <option value="oldest">古い順</option>
-              <option value="title">タイトル順</option>
-            </select>
-          </label>
-        </div>
-        <div class="filter-groups">
-          <div class="filter-group">
-            <span class="filter-label">分野</span>
-            <div class="field-filters" id="field-filters" aria-label="分野で絞り込み"></div>
+        <div class="paper-toolbar">
+          <div class="paper-controls" aria-label="論文の検索と絞り込み">
+            <label class="search-box">
+              <span class="sr-only">論文を検索</span>
+              <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
+              <input id="paper-search" type="search" placeholder="タイトル・著者・タグ・キーワードで検索" autocomplete="off">
+              <kbd>⌘ K</kbd>
+            </label>
+            <label class="sort-box">並び順
+              <select id="paper-sort">
+                <option value="source">リスト掲載順</option>
+                <option value="newest">新しい順</option>
+                <option value="oldest">古い順</option>
+                <option value="title">タイトル順</option>
+              </select>
+            </label>
           </div>
-          <div class="filter-group">
-            <span class="filter-label">モチベーション</span>
-            <div class="motivation-filters" id="motivation-filters" aria-label="モチベーションで絞り込み"></div>
+          <div class="filter-groups">
+            <div class="filter-group">
+              <span class="filter-label">分野</span>
+              <div class="field-filters" id="field-filters" aria-label="分野で絞り込み"></div>
+            </div>
+            <div class="filter-group">
+              <span class="filter-label">モチベーション</span>
+              <div class="motivation-filters" id="motivation-filters" aria-label="モチベーションで絞り込み"></div>
+            </div>
           </div>
         </div>
 
