@@ -181,11 +181,12 @@
     toggle.setAttribute("aria-label", `${paper.title} の詳細を表示`);
 
     const updateToggle = (open) => {
-      const copy = el(
-        "span",
-        "paper-toggle-copy",
-        open ? "詳細表示を閉じる" : "概要・わかりやすいポイントを見る",
-      );
+      const copy = el("span", "paper-toggle-copy");
+      if (open) {
+        copy.textContent = "詳細表示を閉じる";
+      } else {
+        copy.textContent = "概要・わかりやすいポイントを見る";
+      }
       const icon = el("span", "paper-toggle-icon", open ? "−" : "＋");
       icon.setAttribute("aria-hidden", "true");
       toggle.replaceChildren(copy, icon);

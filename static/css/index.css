@@ -297,15 +297,15 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .paper-result-bar p { margin: 0; font: 600 .72rem "DM Sans"; letter-spacing: .06em; text-transform: uppercase; }
 .paper-result-bar strong { font-size: 1.05rem; }
 .paper-result-bar button { padding: 0; color: var(--muted); background: none; border: 0; cursor: pointer; font-size: var(--text-xs); text-decoration: underline; text-underline-offset: 4px; }
-.paper-item { display: grid; grid-template-columns: 54px minmax(0, 1fr) 150px 190px; gap: var(--space-3); align-items: start; padding: var(--space-4) 0; border-bottom: 1px solid var(--line); }
+.paper-item { display: grid; grid-template-columns: 54px minmax(0, 1fr) 150px 250px; gap: var(--space-3); align-items: start; padding: var(--space-4) 0; border-bottom: 1px solid var(--line); }
 .paper-number { padding-top: 5px; color: var(--muted); font: 600 var(--text-xs) "DM Sans"; }
 .paper-title { margin: 0; font: 600 clamp(.94rem, 1.5vw, 1.12rem)/1.55 "DM Sans", "Noto Sans JP", sans-serif; letter-spacing: -.015em; }
 .paper-authors { max-width: 800px; margin: var(--space-1) 0 0; color: var(--muted); font-size: .75rem; line-height: 1.65; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .paper-meta { display: flex; flex-direction: column; gap: 4px; padding-top: 3px; font: 600 .74rem "DM Sans", "Noto Sans JP"; }
 .paper-meta span:last-child { color: var(--muted); font-weight: 500; }
 .paper-meta .paper-motivation { align-self: flex-start; margin-top: 3px; padding: 3px var(--space-1); color: var(--card-accent); background: var(--card-bg); border: 1px solid var(--card-accent); border-radius: var(--radius-pill); font-size: var(--text-xs); font-weight: 700; white-space: nowrap; }
-.paper-toggle { display: flex; gap: var(--space-1); align-items: center; justify-content: space-between; min-width: 190px; min-height: 46px; padding: var(--space-1) var(--space-2); color: var(--primary); background: #f3f7ff; border: 1px solid #9ab0dc; border-radius: var(--radius-control); cursor: pointer; transition: transform .2s ease, box-shadow .2s ease, color .2s ease, background .2s ease; }
-.paper-toggle-copy { text-align: left; font-size: var(--text-xs); font-weight: 700; line-height: 1.45; }
+.paper-toggle { display: flex; gap: var(--space-1); align-items: center; justify-content: space-between; min-width: 250px; min-height: 46px; padding: var(--space-1) var(--space-2); color: var(--primary); background: #f3f7ff; border: 1px solid #9ab0dc; border-radius: var(--radius-control); cursor: pointer; transition: transform .2s ease, box-shadow .2s ease, color .2s ease, background .2s ease; }
+.paper-toggle-copy { text-align: left; font-size: var(--text-xs); font-weight: 700; line-height: 1.45; white-space: nowrap; }
 .paper-toggle-icon { display: grid; flex: 0 0 26px; width: 26px; height: 26px; place-items: center; color: var(--white); background: var(--primary); border-radius: 50%; font-size: .9rem; line-height: 1; }
 .paper-toggle:hover { background: #f3f7ff; box-shadow: var(--shadow-action); transform: translate(-2px, -2px); }
 .paper-item.is-open .paper-toggle { color: var(--white); background: var(--primary); box-shadow: none; }
@@ -413,9 +413,9 @@ footer p, footer > a:last-child { font: 500 var(--text-xs) "DM Sans"; letter-spa
   .paper-item { grid-template-columns: 34px minmax(0, 1fr); gap: var(--space-2); }
   .paper-meta { grid-column: 2; flex-flow: row wrap; gap: 8px 12px; align-items: center; }
   .paper-meta .paper-motivation { margin-top: 0; }
-  .paper-toggle { grid-column: 2; grid-row: 3; justify-self: start; min-width: 230px; max-width: 100%; min-height: 46px; gap: var(--space-1); padding: var(--space-1) var(--space-2); }
+  .paper-toggle { grid-column: 2; grid-row: 3; justify-self: start; width: 100%; min-width: 0; max-width: 250px; min-height: 46px; gap: 6px; padding: var(--space-1); }
   .paper-toggle-copy { font-size: var(--text-xs); line-height: 1.4; }
-  .paper-toggle-icon { flex-basis: 22px; width: 22px; height: 22px; font-size: .78rem; }
+  .paper-toggle-icon { flex-basis: 20px; width: 20px; height: 20px; font-size: .78rem; }
   .paper-details { grid-column: 2 / -1; grid-template-columns: 1fr; gap: 22px; }
   footer { flex-direction: column; gap: 24px; align-items: flex-start; }
 }
