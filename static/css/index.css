@@ -223,16 +223,17 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .intro-heading h2, .papers-heading h2 { color: var(--primary); }
 .intro-heading p { max-width: 710px; margin: 0 0 16px; color: #3f403c; }
 .motivation-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 42px; }
-.motivation-card { position: relative; min-height: 175px; padding: 18px; color: var(--card-accent); background: var(--card-bg); border: 1px solid var(--card-accent); transition: transform .2s ease; }
+.motivation-card { position: relative; display: grid; grid-template-columns: 52px minmax(0, 1fr); grid-template-rows: auto auto; gap: 3px 15px; align-content: center; min-height: 145px; padding: 22px 18px; color: var(--card-accent); background: var(--card-bg); border: 1px solid var(--card-accent); transition: transform .2s ease; }
 .motivation-card:hover { transform: translateY(-6px) rotate(-.5deg); }
 .palette-red { --card-bg: #fef1f0; --card-accent: #c82e40; }
 .palette-orange { --card-bg: #fef5e6; --card-accent: #d56f03; }
 .palette-green { --card-bg: #f2fff5; --card-accent: #17803b; }
 .palette-blue { --card-bg: #f3f7ff; --card-accent: #3267ba; }
-.motivation-no { font: 700 .7rem "DM Sans"; }
-.motivation-icon { display: grid; width: 38px; height: 38px; margin: 15px 0 12px; place-items: center; border: 1px solid currentColor; border-radius: 50%; font: 400 1.2rem "DM Sans"; }
-.motivation-card h3 { margin: 0 0 5px; font-size: 1rem; }
-.motivation-card p { margin: 0; font-size: .82rem; line-height: 1.7; }
+.motivation-no { position: absolute; top: 10px; right: 12px; font: 700 .7rem "DM Sans"; }
+.motivation-icon { display: grid; grid-row: 1 / 3; width: 52px; height: 52px; place-items: center; align-self: center; background: rgba(255, 255, 255, .7); border: 1px solid currentColor; border-radius: 12px; }
+.motivation-icon img { display: block; width: 38px; height: 38px; object-fit: contain; }
+.motivation-card h3 { grid-column: 2; align-self: end; margin: 0; font-size: 1rem; }
+.motivation-card p { grid-column: 2; align-self: start; margin: 0; font-size: .82rem; line-height: 1.6; }
 
 .principles-section { max-width: none; padding: 68px max(48px, calc((100vw - var(--max)) / 2 + 48px)); color: var(--white); background: var(--primary); }
 .section-label-light { color: var(--white); }
@@ -386,7 +387,7 @@ footer p, footer > a:last-child { font: 500 .66rem "DM Sans"; letter-spacing: .0
   .intro-heading, .principles-heading, .papers-heading, .team-grid { grid-template-columns: 1fr; gap: 40px; }
   .display-small { font-size: 2.7rem; }
   .motivation-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 36px; }
-  .motivation-card { min-height: 160px; }
+  .motivation-card { min-height: 140px; padding: 20px 16px; }
   .principles-heading { margin-bottom: 45px; }
   .principle-row { grid-template-columns: 38px 1fr; gap: 16px; }
   .principle-copy { grid-column: 2; }
