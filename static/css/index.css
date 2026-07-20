@@ -78,19 +78,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
   font-weight: 600;
   letter-spacing: .11em;
 }
-.brand b { font-weight: 700; }
-.brand-mark {
-  display: grid;
-  width: 35px;
-  height: 35px;
-  place-items: center;
-  color: var(--primary);
-  border: 2px solid var(--primary);
-  border-radius: 50%;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0;
-}
+.brand-logo { display: block; width: 72px; height: 54px; object-fit: contain; }
+.brand-logo-link { display: block; flex: 0 0 auto; }
+.brand-program { font-family: "Noto Sans JP", sans-serif; font-weight: 700; letter-spacing: .02em; }
 .site-nav { display: flex; gap: 30px; align-items: center; }
 .site-nav a {
   font-size: .78rem;
@@ -362,7 +352,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 footer { display: flex; align-items: center; justify-content: space-between; padding: 45px max(28px, calc((100vw - var(--max)) / 2 + 28px)); background: #041d5d; color: var(--white); }
 footer p, footer > a:last-child { font: 500 .66rem "DM Sans"; letter-spacing: .07em; }
-.brand-footer .brand-mark { border-color: var(--white); }
+.brand-footer .brand-logo { background: var(--white); border-radius: 5px; }
 
 @media (max-width: 960px) {
   .hero { grid-template-columns: 1fr; gap: 55px; padding-top: 65px; }
@@ -418,7 +408,7 @@ footer p, footer > a:last-child { font: 500 .66rem "DM Sans"; letter-spacing: .0
 
 @media (max-width: 420px) {
   .brand { font-size: .7rem; }
-  .brand-mark { width: 31px; height: 31px; }
+  .brand-logo { width: 62px; height: 47px; }
   .hero { padding-right: 18px; padding-left: 18px; }
   .hero h1 { letter-spacing: -.08em; }
   .score-row strong { font-size: 1.4rem; }
