@@ -254,14 +254,14 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .principles-heading h2 { margin: 0; font-size: clamp(2rem, 3.6vw, 3.5rem); line-height: 1.25; letter-spacing: -.06em; }
 .principles-heading p { margin: 0; color: #d5dfff; font-size: .88rem; }
 .principle-list { display: grid; grid-template-columns: 1fr; gap: var(--space-4); }
-.principle-group { --group-surface: rgba(255, 255, 255, .06); --group-accent: #9cb9ff; display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: var(--space-3); min-width: 0; }
-.group-method { --group-surface: rgba(255, 255, 255, .085); --group-accent: #b5caff; }
-.group-experiments { --group-surface: rgba(255, 255, 255, .11); --group-accent: #ccdaff; }
-.group-discussion { --group-surface: rgba(255, 255, 255, .14); --group-accent: #e0e8ff; }
+.principle-group { --card-count: 3; --group-surface: rgba(255, 255, 255, .06); --group-accent: #9cb9ff; display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: var(--space-3); min-width: 0; }
+.group-method { --card-count: 2; --group-surface: rgba(255, 255, 255, .085); --group-accent: #b5caff; }
+.group-experiments { --card-count: 1; --group-surface: rgba(255, 255, 255, .11); --group-accent: #ccdaff; }
+.group-discussion { --card-count: 2; --group-surface: rgba(255, 255, 255, .14); --group-accent: #e0e8ff; }
 .principle-group-heading { display: flex; flex-direction: column; gap: var(--space-2); align-items: flex-start; min-height: 100%; padding: var(--space-3); background: var(--group-surface); border-left: 4px solid var(--group-accent); }
 .principle-group-heading span { color: var(--group-accent); font: 700 var(--text-xs) "DM Sans"; letter-spacing: .08em; }
 .principle-group-heading h3 { margin: 0; font: 700 .78rem/1.5 "DM Sans"; letter-spacing: .09em; }
-.principle-group-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); }
+.principle-group-cards { display: grid; grid-template-columns: repeat(var(--card-count), minmax(0, 1fr)); gap: var(--space-3); }
 .principle-row { display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: var(--space-3); align-self: stretch; padding: var(--space-4); border: 1px solid rgba(255, 255, 255, .28); background: rgba(255, 255, 255, .055); }
 .principle-row:last-child { border-bottom: 1px solid rgba(255, 255, 255, .28); }
 .principle-index { color: #b9ceff; font: 600 var(--text-sm) "DM Sans"; }
@@ -271,6 +271,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .principle-copy ul { margin: 0; padding-left: 1.15rem; color: #e8edff; font-size: .84rem; line-height: 1.75; }
 .principle-copy li + li { margin-top: .45rem; }
 .principle-copy li::marker { color: #b9ceff; }
+.group-experiments .principle-copy { max-width: 75ch; }
 
 .papers-section { border-top: 0; }
 .papers-heading { display: grid; grid-template-columns: 1.3fr .7fr; gap: 80px; align-items: end; }
