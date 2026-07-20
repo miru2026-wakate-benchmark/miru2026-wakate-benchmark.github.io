@@ -266,7 +266,7 @@
   });
   clearFilters.addEventListener("click", () => {
     search.value = "";
-    sort.value = "source";
+    sort.value = "newest";
     activeField = "すべて";
     activeMotivation = "すべて";
     visibleCount = pageSize;
