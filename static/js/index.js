@@ -184,7 +184,7 @@
       const copy = el(
         "span",
         "paper-toggle-copy",
-        open ? "詳細表示を閉じる" : "概要＆わかりやすいポイントを見る",
+        open ? "詳細表示を閉じる" : "概要・わかりやすいポイントを見る",
       );
       const icon = el("span", "paper-toggle-icon", open ? "−" : "＋");
       icon.setAttribute("aria-hidden", "true");
@@ -194,12 +194,12 @@
 
     const details = el("div", "paper-details");
     const abstractBlock = detailBlock(
-      "ABSTRACT（日本語要約）",
+      "ABSTRACT / 日本語要約",
       paper.abstractJa,
       "日本語要約は準備中です。",
     );
     const clarityBlock = detailBlock(
-      "CLARITY NOTE",
+      "CLARITY NOTE / わかりやすいポイント",
       paper.clarity,
       "わかりやすさに関するコメントは整理中です。",
     );

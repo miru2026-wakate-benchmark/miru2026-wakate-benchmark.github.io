@@ -1,0 +1,12 @@
+<svg width="56" height="56" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+  <title>更新・難化</title>
+  <desc>Clockwise refresh arrow surrounding ascending steps, representing update and increased difficulty.</desc>
+  <g fill="#17803B">
+    <!-- ascending steps -->
+    <path d="M15 44H44V20H35V30H28V37H21V44H15Z"/>
+    <!-- circular refresh arc -->
+    <path d="M18.2 40.5C15.5 37.4 13.8 33.4 13.3 29.2C12.7 24 14.0 18.6 16.9 14.3C19.8 10.1 24.2 7.0 29.2 5.8C34.1 4.6 39.4 5.3 43.8 7.7C47.5 9.8 50.5 13.2 52.2 17.1L46.3 19.8C45.1 17.0 42.9 14.6 40.3 13.1C37.4 11.5 34.0 11.0 30.8 11.8C27.5 12.6 24.7 14.6 22.8 17.4C20.8 20.2 19.9 23.8 20.3 27.3C20.6 30.2 21.8 33.0 23.7 35.2L18.2 40.5Z"/>
+    <!-- arrow head -->
+    <path d="M52.6 12.2L53.5 23.2L42.9 20.0Z"/>
+  </g>
+</svg>
