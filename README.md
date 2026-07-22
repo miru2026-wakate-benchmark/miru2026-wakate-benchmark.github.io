@@ -61,7 +61,7 @@ MIRU2026若手プログラム「わかりやすい、読みやすいを深掘る
     │   └── index.css
     ├── data/
     │   ├── abstracts_ja.json
-    │   ├── miru2026wakte_benchmark_0629.pdf
+    │   ├── miru2026wakte_benchmark_0722.pdf
     │   └── サーベイ論文（ベンチマークグループ）.xlsx
     └── js/
         ├── index.js
