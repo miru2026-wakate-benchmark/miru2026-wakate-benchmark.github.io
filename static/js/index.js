@@ -20,6 +20,17 @@
   const clearFilters = document.querySelector("#clear-filters");
   const menuButton = document.querySelector(".menu-button");
   const nav = document.querySelector("#site-nav");
+  const vlmSection = document.querySelector("#vlm-experiment");
+  const papersSection = document.querySelector("#papers");
+  const vlmOutputCards = [...document.querySelectorAll(".vlm-result-card")];
+  const vlmOutputDetail = document.querySelector("#vlm-output-detail");
+  const vlmDetailTitle = document.querySelector("#vlm-detail-title");
+  const vlmDetailMeta = document.querySelector("#vlm-detail-meta");
+  const vlmDetailBody = document.querySelector("#vlm-detail-body");
+  const vlmDetailClose = document.querySelector(".vlm-detail-close");
+  let activeVlmTrigger = null;
+
+  if (vlmSection && papersSection) papersSection.after(vlmSection);
 
   document.querySelectorAll("[data-paper-count]").forEach((node) => {
     node.textContent = String(papers.length);
@@ -284,7 +295,79 @@
     render();
   });
 
+  document.querySelectorAll("[data-copy-target]").forEach((button) => {
+    const target = document.getElementById(button.dataset.copyTarget);
+    const label = button.querySelector("span");
+    const status = document.querySelector("#copy-status");
+    let resetTimer;
+
+    button.addEventListener("click", async () => {
+      if (!target) return;
+      try {
+        await navigator.clipboard.writeText(target.textContent);
+        window.clearTimeout(resetTimer);
+        label.textContent = "コピー済み ✓";
+        button.classList.add("is-copied");
+        if (status) status.textContent = "プロンプトをクリップボードにコピーしました。";
+        resetTimer = window.setTimeout(() => {
+          label.textContent = "コピー";
+          button.classList.remove("is-copied");
+          if (status) status.textContent = "";
+        }, 2000);
+      } catch {
+        label.textContent = "コピー失敗";
+        if (status) status.textContent = "プロンプトをコピーできませんでした。";
+      }
+    });
+  });
+
+  function closeVlmOutput({ restoreFocus = false } = {}) {
+    vlmOutputCards.forEach((card) => {
+      card.classList.remove("is-active");
+      card.querySelector(".vlm-result-trigger").setAttribute("aria-expanded", "false");
+    });
+    if (vlmOutputDetail) vlmOutputDetail.hidden = true;
+    if (vlmDetailBody) vlmDetailBody.replaceChildren();
+    if (restoreFocus && activeVlmTrigger) activeVlmTrigger.focus();
+    activeVlmTrigger = null;
+  }
+
+  vlmOutputCards.forEach((card) => {
+    const trigger = card.querySelector(".vlm-result-trigger");
+    trigger.addEventListener("click", () => {
+      const wasActive = card.classList.contains("is-active");
+      closeVlmOutput();
+      if (wasActive || !vlmOutputDetail) return;
+
+      const source = card.querySelector(".vlm-findings");
+      const title = card.querySelector(".vlm-result-title").textContent;
+      const section = card.querySelector(".vlm-section-tag").textContent;
+      const score = card.querySelector(".vlm-score strong").textContent;
+      const findings = source.cloneNode(true);
+      findings.hidden = false;
+      findings.classList.add("vlm-shared-findings");
+      findings.querySelectorAll("details").forEach((item) => {
+        item.open = true;
+      });
+
+      card.classList.add("is-active");
+      trigger.setAttribute("aria-expanded", "true");
+      vlmDetailTitle.textContent = title;
+      vlmDetailMeta.textContent = `${section} · ${score} / 5.0`;
+      vlmDetailBody.replaceChildren(findings);
+      vlmOutputDetail.hidden = false;
+      activeVlmTrigger = trigger;
+    });
+  });
+  if (vlmDetailClose) {
+    vlmDetailClose.addEventListener("click", () => closeVlmOutput({ restoreFocus: true }));
+  }
+
   document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && vlmOutputDetail && !vlmOutputDetail.hidden) {
+      closeVlmOutput({ restoreFocus: true });
+      return;
+    }
     if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
       event.preventDefault();
       search.focus();

@@ -50,7 +50,7 @@
             <span>0</span><i></i><i></i><i></i><i></i><span>5</span>
           </div>
           <p class="card-kicker">OUR QUESTION</p>
-          <p class="question">「わかりやすい、読みやすい」は、<br>どこから生まれる？</p>
+          <p class="question"><span>「わかりやすい、読みやすい」は、</span><br>どこから生まれる？</p>
           <div class="score-row">
             <div><strong data-paper-count>68</strong><span>papers</span></div>
             <div><strong>8</strong><span>viewpoints</span></div>
@@ -209,6 +209,161 @@
         </div>
       </section>
 
+      <section class="section vlm-section" id="vlm-experiment">
+        <div class="section-label"><span>A</span> APPENDIX</div>
+        <div class="vlm-heading">
+          <div>
+            <p class="eyebrow">ADDITIONAL EXPERIMENT · VLM EVALUATION</p>
+            <h2>VLMによるセクション単位のわかりやすさ評価。</h2>
+          </div>
+          <p>論文をセクションごとに画像化してVLMへ入力し、画像から読み取れる内容だけをもとに、初見の読者にとってのわかりやすさを評価しました。</p>
+        </div>
+
+        <div class="vlm-method-grid">
+          <div class="vlm-conditions" aria-label="実験条件">
+            <p class="vlm-block-label">EXPERIMENT SETUP</p>
+            <dl>
+              <div><dt>MODEL</dt><dd>評価モデルとしてGPT-5.5を使用</dd></div>
+              <div><dt>EVALUATION UNIT</dt><dd>論文全体ではなく、各セクションを独立した評価単位として設定</dd></div>
+              <div><dt>INPUT</dt><dd>評価対象セクションに対応する全キャプチャ画像</dd></div>
+              <div><dt>PROCEDURE</dt><dd>全セクションへの同一プロンプト適用、および画像内情報のみに基づく評価</dd></div>
+            </dl>
+          </div>
+
+          <div class="prompt-panel">
+            <div class="prompt-toolbar">
+              <span class="prompt-title"><span>EVALUATION PROMPT</span><small>Japanese</small></span>
+              <button class="copy-prompt" type="button" data-copy-target="vlm-prompt" aria-describedby="copy-status">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="8" y="8" width="11" height="11" rx="2"></rect><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path></svg>
+                <span>コピー</span>
+              </button>
+            </div>
+            <pre id="vlm-prompt">あなたは研究論文を評価する評価者です。
+与えられた論文を見て、初見の読者にとってどれくらい分かりやすいかを評価してください。
+出力形式:
+- スコア: x/5.0
+- わかりやすさに繋がる要素:
+- 簡潔な理由:
+注意: 画像から読み取れる内容だけに基づいて評価してください。 本文知識や外部知識で補完しないでください。
+
+入力:
+&lt;論文の図&gt;
+出力:</pre>
+            <span class="sr-only" id="copy-status" aria-live="polite"></span>
+          </div>
+
+          <section class="vlm-output-panel" aria-labelledby="vlm-output-label">
+            <p class="vlm-block-label" id="vlm-output-label">OUTPUT EXAMPLE</p>
+            <div class="vlm-result-list">
+          <article class="vlm-result-card result-introduction">
+            <button class="vlm-result-trigger" type="button" aria-expanded="false" aria-controls="vlm-output-detail">
+              <span class="vlm-result-meta">
+                <span class="vlm-section-tag">INTRODUCTION</span>
+                <strong class="vlm-result-title">BLINK</strong>
+                <span class="vlm-result-count"><b>4項目</b></span>
+              </span>
+              <span class="vlm-score" aria-label="スコア 4.2 / 5.0"><strong>4.2</strong><span>/ 5.0</span></span>
+              <span class="vlm-result-toggle"><span class="toggle-closed">出力例<span class="toggle-wide">を見る</span></span><span class="toggle-open">閉じる</span><b aria-hidden="true"></b></span>
+            </button>
+            <div class="vlm-findings" hidden>
+              <details class="vlm-finding">
+                <summary><span>01</span>既存ベンチマークの問題点が明確に説明されている</summary>
+                <p>イントロでは、既存のMLLMベンチマークが視覚知覚そのものではなく、物体認識、言語知識、常識推論に依存してしまう例を示している。そのため、BLINKが「本当に画像を細かく見ているか」を評価しようとしていることが理解しやすい。</p>
+              </details>
+              <details class="vlm-finding">
+                <summary><span>02</span>Figure 1だけでベンチマークの評価対象を大まかに把握できる</summary>
+                <p>Figure 1から、読者は本文で定義を読む前に、「画像中の細かな位置・形状・対応関係を直接判断させるベンチマークなのだ」と大まかに理解できる。特に、各タスクを実際の選択問題として示している点が有効である。</p>
+              </details>
+              <details class="vlm-finding">
+                <summary><span>03</span>古典的CVタスクをMLLM評価に変換するという設計意図が伝わる</summary>
+                <p>relative depth、visual correspondence、reflectance、multi-view reasoningなどの古典的な視覚知覚タスクを、現代のMLLMが回答可能なmultiple-choice形式に変換していることが説明されている。これにより、単なる新しいVQAデータセットではなく、従来のCV的な知覚能力を再評価するベンチマークであることが分かる。</p>
+              </details>
+              <details class="vlm-finding">
+                <summary><span>04</span>既存ベンチマークとの差分が視覚的に整理されている</summary>
+                <p>Figure 2では、既存ベンチマークがtext prompt中心・recognition-based VQA中心・domain knowledge寄りであるのに対し、BLINKはvisual prompting、beyond recognition、visual commonsenseを重視することが対比されている。そのため、BLINKの新規性が比較によって理解しやすい。</p>
+              </details>
+            </div>
+          </article>
+
+          <article class="vlm-result-card result-method">
+            <button class="vlm-result-trigger" type="button" aria-expanded="false" aria-controls="vlm-output-detail">
+              <span class="vlm-result-meta">
+                <span class="vlm-section-tag">METHOD / BENCHMARK CURATION</span>
+                <strong class="vlm-result-title">JMMU</strong>
+                <span class="vlm-result-count"><b>4項目</b></span>
+              </span>
+              <span class="vlm-score" aria-label="スコア 4.2 / 5.0"><strong>4.2</strong><span>/ 5.0</span></span>
+              <span class="vlm-result-toggle"><span class="toggle-closed">出力例<span class="toggle-wide">を見る</span></span><span class="toggle-open">閉じる</span><b aria-hidden="true"></b></span>
+            </button>
+            <div class="vlm-findings" hidden>
+              <details class="vlm-finding">
+                <summary><span>01</span>ベンチマーク構築における「継承」と「置換」の判断基準が明確である</summary>
+                <p>著者らはMMMUの30科目を文化依存性で分類し、BiologyやChemistryなどは翻訳して継承する一方、ArtやHistoryなどは日本向けの科目に置き換えている。これにより、言語の翻訳だけで対応できる部分と、内容自体を再設計すべき部分を区別した判断が明確に伝わる。</p>
+              </details>
+              <details class="vlm-finding">
+                <summary><span>02</span>既存ベンチマークを単純翻訳しない理由が伝わりやすい</summary>
+                <p>説明から、日本語化においては言語だけでなく、文化的背景や教育内容の違いも考慮する必要があることが分かる。そのため、JMMUが単なるMMMUの翻訳版ではなく、日本向けに再設計されたベンチマークであることが理解しやすい。</p>
+              </details>
+              <details class="vlm-finding">
+                <summary><span>03</span>科目ごとの処理方針が具体例によって説明されている</summary>
+                <p>BiologyやChemistryのように継承される科目と、ArtやHistoryのように置き換えられる科目が例示されているため、読者は抽象的な方針だけでなく、実際にどのような基準でデータを構成しているのかを把握できる。</p>
+              </details>
+              <details class="vlm-finding">
+                <summary><span>04</span>Benchmark Curationの工程が研究の妥当性と結びついている</summary>
+                <p>データセット構築の手順が、単なる収集作業ではなく、日本語・日本文化における評価として妥当な問題集合を作るための設計判断として説明されている。そのため、ベンチマークの信頼性を支える要素としてMethodを読み取りやすい。</p>
+              </details>
+            </div>
+          </article>
+
+          <article class="vlm-result-card result-experiments">
+            <button class="vlm-result-trigger" type="button" aria-expanded="false" aria-controls="vlm-output-detail">
+              <span class="vlm-result-meta">
+                <span class="vlm-section-tag">EXPERIMENTS</span>
+                <strong class="vlm-result-title">Paper2Poster</strong>
+                <span class="vlm-result-count"><b>4項目</b></span>
+              </span>
+              <span class="vlm-score" aria-label="スコア 4.3 / 5.0"><strong>4.3</strong><span>/ 5.0</span></span>
+              <span class="vlm-result-toggle"><span class="toggle-closed">出力例<span class="toggle-wide">を見る</span></span><span class="toggle-open">閉じる</span><b aria-hidden="true"></b></span>
+            </button>
+            <div class="vlm-findings" hidden>
+              <details class="vlm-finding">
+                <summary><span>01</span>評価観点が複数に分解されており、何を測っているかが分かりやすい</summary>
+                <p>見た目・文章品質・情報理解を複数の観点から評価している。さらに、評価モデルを変えても傾向が保たれるか、人間判断と整合するかを確認することで、評価指標の妥当性を示している。</p>
+              </details>
+              <details class="vlm-finding">
+                <summary><span>02</span>Paper-to-Poster変換というタスクの目的が直感的に理解しやすい</summary>
+                <p>論文をポスターへ変換するという入出力関係が明確であり、読者は提案タスクが「論文内容を視覚的・構造的に再構成する問題」であることを早い段階で把握できる。</p>
+              </details>
+              <details class="vlm-finding">
+                <summary><span>03</span>生成結果の品質を単一スコアではなく、多面的に評価している</summary>
+                <p>ポスター生成では、見た目の整い方だけでなく、文章の自然さや、論文内容が正しく伝わるかも重要である。複数の評価軸を設けているため、タスクの難しさと評価設計の意図が伝わりやすくなっている。</p>
+              </details>
+              <details class="vlm-finding">
+                <summary><span>04</span>評価結果がモデル間比較として解釈しやすい</summary>
+                <p>複数の生成手法や評価モデルを比較する形で結果が示されているため、どの手法がどの観点で優れているのかを把握しやすい。単に総合スコアを提示するだけでなく、見た目、文章品質、情報理解といった観点ごとの差分が見えるため、評価結果の意味を読み取りやすくなっている。</p>
+              </details>
+            </div>
+          </article>
+            </div>
+          </section>
+        </div>
+        <section class="vlm-output-detail" id="vlm-output-detail" aria-labelledby="vlm-detail-title" tabindex="-1" hidden>
+          <header>
+            <div>
+              <span>SELECTED OUTPUT</span>
+              <h3 id="vlm-detail-title"></h3>
+            </div>
+            <p id="vlm-detail-meta"></p>
+            <button class="vlm-detail-close" type="button">閉じる <span aria-hidden="true">×</span></button>
+          </header>
+          <div id="vlm-detail-body"></div>
+        </section>
+        <aside class="vlm-results-note" aria-label="評価結果に関する注記">
+          <strong>注：</strong>評価結果は、入力セクション、ページ範囲、文字の可読性、画像解像度、使用VLMに依存する。論文全体の品質および科学的妥当性は評価対象外。
+        </aside>
+
+      </section>
+
       <section class="section papers-section" id="papers">
         <div class="section-label"><span>03</span> PAPER LIBRARY</div>
         <div class="papers-heading">
@@ -264,7 +419,7 @@
         <div class="team-grid">
           <div>
             <p class="eyebrow">MIRU2026 若手プログラム</p>
-            <h2>「わかりやすい、読みやすい」<br>を深掘る。</h2>
+            <h2>「わかりやすい、<br>読みやすい」を深掘る。</h2>
           </div>
           <div class="team-copy">
             <p>各自がわかりやすいと感じる論文を持ち寄り、どの要素が理解を助けるのかを分析しました。具体例から一般的な指針を抽出し、自分の論文へ落とし込めるリソースを目指しています。</p>
