@@ -344,6 +344,32 @@
               </details>
             </div>
           </article>
+
+          <article class="vlm-result-card result-discussion" data-detail-title="LIBERO-Plus: A Progressive Robustness Benchmark for Visual-Language-Action Models">
+            <button class="vlm-result-trigger" type="button" aria-expanded="false" aria-controls="vlm-output-detail">
+              <span class="vlm-result-meta">
+                <span class="vlm-section-tag">DISCUSSION</span>
+                <strong class="vlm-result-title">LIBERO-Plus</strong>
+                <span class="vlm-result-count"><b>3項目</b></span>
+              </span>
+              <span class="vlm-score" aria-label="スコア 4.5 / 5.0"><strong>4.5</strong><span>/ 5.0</span></span>
+              <span class="vlm-result-toggle"><span class="toggle-closed">出力例<span class="toggle-wide">を見る</span></span><span class="toggle-open">閉じる</span><b aria-hidden="true"></b></span>
+            </button>
+            <div class="vlm-findings" hidden>
+              <details class="vlm-finding">
+                <summary><span>01</span>Finding 1〜9として主要な発見が明示的に整理されている</summary>
+                <p>総合的な脆弱性、摂動タイプ別の差、言語軽視、位置バイアス、多次元摂動での一般化ギャップが順に整理されている。単一スコアだけでは見えないVLAモデルの弱点と、その背景にある視覚位置手がかりや固定的な行動写像への依存を把握しやすい。</p>
+              </details>
+              <details class="vlm-finding">
+                <summary><span>02</span>Table 2でモデル間・摂動間の比較がしやすい</summary>
+                <p>各モデルについてOriginal性能とCamera、Robot、Language、Light、Background、Noise、Layout、Totalの成功率および低下量が並べられている。CameraとRobot Initの影響が大きく、BackgroundやLightの影響が相対的に小さいという傾向を同一表から比較できる。</p>
+              </details>
+              <details class="vlm-finding">
+                <summary><span>03</span>Figure 3〜7で性能低下の要因を多角的に追跡できる</summary>
+                <p>難易度L1〜L5での性能低下、レイアウト内のconfoundingとdisplacementの差、照明・視覚入力アブレーション、言語除去・目標置換、多次元摂動の相互作用まで可視化されている。モデルごとの強みと弱みを、難易度やタスクスイートの違いと結びつけて解釈しやすい。</p>
+              </details>
+            </div>
+          </article>
             </div>
           </section>
         </div>

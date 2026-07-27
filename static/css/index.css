@@ -303,7 +303,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .vlm-result-card { --result-accent: #9cb9ff; overflow: hidden; background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--result-accent); box-shadow: var(--shadow-soft); transition: border-color .2s ease, box-shadow .2s ease; }
 .result-method { --result-accent: #b5caff; }
 .result-experiments { --result-accent: #ccdaff; }
-.vlm-result-trigger { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-2); align-items: end; width: 100%; height: 80px; padding: 8px var(--space-2); color: inherit; background: linear-gradient(90deg, rgba(7, 47, 144, .055), transparent 70%); border: 0; cursor: pointer; font: inherit; text-align: left; transition: background .2s ease; }
+.result-discussion { --result-accent: #e0e8ff; }
+.vlm-result-trigger { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-2); align-items: end; width: 100%; height: 72px; padding: 7px var(--space-2); color: inherit; background: linear-gradient(90deg, rgba(7, 47, 144, .055), transparent 70%); border: 0; cursor: pointer; font: inherit; text-align: left; transition: background .2s ease; }
 .vlm-result-trigger:hover { background: #f8faff; }
 .vlm-result-card.is-active { border-color: #9ab0dc; box-shadow: 0 0 0 2px rgba(7, 47, 144, .12); }
 .vlm-result-card.is-active .vlm-result-trigger { background: #f8faff; }
@@ -511,7 +512,7 @@ footer p, footer > a:last-child { font: 500 var(--text-xs) "DM Sans"; letter-spa
   .vlm-output-detail > header > p { grid-column: 1; }
   .vlm-detail-close { grid-column: 2; grid-row: 1 / 3; }
   .vlm-shared-findings { grid-template-columns: 1fr; padding: var(--space-2); }
-  .vlm-result-trigger { height: auto; min-height: 74px; padding: 8px var(--space-2); }
+  .vlm-result-trigger { height: auto; min-height: 70px; padding: 7px var(--space-2); }
   .vlm-finding summary { grid-template-columns: 28px 1fr 24px; gap: var(--space-2); padding: 16px var(--space-4); }
   .vlm-finding > p { padding: 0 var(--space-4) 20px 64px; }
   .paper-controls { grid-template-columns: 1fr; }

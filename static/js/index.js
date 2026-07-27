@@ -340,7 +340,7 @@
       if (wasActive || !vlmOutputDetail) return;
 
       const source = card.querySelector(".vlm-findings");
-      const title = card.querySelector(".vlm-result-title").textContent;
+      const title = card.dataset.detailTitle || card.querySelector(".vlm-result-title").textContent;
       const section = card.querySelector(".vlm-section-tag").textContent;
       const score = card.querySelector(".vlm-score strong").textContent;
       const findings = source.cloneNode(true);
